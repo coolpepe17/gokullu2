@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gokullu/constant.dart';
+import 'package:gokullu/screen/home/widget/continue_button.dart';
 import 'package:gokullu/screen/home/widget/login_and_register.dart';
 import 'package:gokullu/screen/home/widget/slider_dot.dart';
 
@@ -8,14 +9,24 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
+        // color: Colors.blueAccent,
         children: <Widget>[
           SizedBox(
-            height: 150,
+            height: 50,
           ),
-          Image.asset('assets/images/trek2.jpg'),
+
+          Padding(
+            padding: const EdgeInsets.all(0.0),
+            child: ClipRRect(
+                borderRadius: BorderRadius.circular(15.0),
+                child: Image.asset(
+                  'assets/images/trek3.jpg',
+                  //height: 250,
+                )),
+          ),
           SliderDot(),
           SizedBox(
-            height: 50,
+            height: 70,
           ),
           Text(
             'Welcome to Kullu!\n "The Valley of GODS" ',
@@ -27,10 +38,11 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 40,
+            height: 50,
           ),
+          ContinueButton(),
           //RegisterScreen(),
-          LoginAndRegister(),
+          // LoginAndRegister(),
           //LoginWithFacebook()
         ],
       ),

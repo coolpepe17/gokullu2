@@ -11,14 +11,11 @@ class WelcomeTo extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
       child: Center(
-        child: Text(
-          'Kindly Fill the details!',
-          style: TextStyle(
-            color: mPrimaryTextColor,
-            fontSize: 18,
-            fontWeight: FontWeight.w500,
-          ),
-        ),
+        child: ClipRRect(
+            borderRadius: BorderRadius.circular(15.0),
+            child: Image.asset(
+              'assets/images/register.jpg',
+            )),
       ),
     );
   }

@@ -15,31 +15,31 @@ class SliderDot extends StatelessWidget {
         children: <Widget>[
           Container(
             margin: const EdgeInsets.symmetric(horizontal: 2),
-            width: 6,
-            height: 6,
+            width: 100,
+            height: 4,
             decoration: BoxDecoration(
               color: mPrimaryColor,
               borderRadius: BorderRadius.circular(50),
             ),
           ),
-          Container(
-            margin: const EdgeInsets.symmetric(horizontal: 2),
-            width: 6,
-            height: 6,
-            decoration: BoxDecoration(
-              color: mPrimaryColor.withOpacity(0.3),
-              borderRadius: BorderRadius.circular(50),
-            ),
-          ),
-          Container(
-            margin: const EdgeInsets.symmetric(horizontal: 2),
-            width: 6,
-            height: 6,
-            decoration: BoxDecoration(
-              color: mPrimaryColor.withOpacity(0.3),
-              borderRadius: BorderRadius.circular(50),
-            ),
-          ),
+          // Container(
+          //   margin: const EdgeInsets.symmetric(horizontal: 2),
+          //   width: 6,
+          //   height: 6,
+          //   decoration: BoxDecoration(
+          //     color: mPrimaryColor.withOpacity(0.3),
+          //     borderRadius: BorderRadius.circular(50),
+          //   ),
+          // ),
+          // Container(
+          //   margin: const EdgeInsets.symmetric(horizontal: 2),
+          //   width: 6,
+          //   height: 6,
+          //   decoration: BoxDecoration(
+          //     color: mPrimaryColor.withOpacity(0.3),
+          //     borderRadius: BorderRadius.circular(50),
+          //   ),
+          // ),
         ],
       ),
     );

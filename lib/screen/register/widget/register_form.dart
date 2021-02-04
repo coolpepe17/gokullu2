@@ -35,32 +35,32 @@ class RegForm extends StatelessWidget {
                 SizedBox(
                   height: 5,
                 ),
-                InputTextField(
-                  label: 'Mobile No',
-                  hint: 'Enter Mobile No.',
-                  onChange: (value) {},
-                ),
-                SizedBox(
-                  height: 5,
-                ),
-                InputTextField(
-                  label: 'Password',
-                  hint: 'Enter Password',
-                  password: true,
-                  onChange: (value) {},
-                ),
-                SizedBox(
-                  height: 5,
-                ),
-                InputTextField(
-                  label: 'Confirm Password',
-                  hint: 'Confirm Password',
-                  password: true,
-                  onChange: (value) {},
-                ),
-                SizedBox(
-                  height: 5,
-                ),
+                // InputTextField(
+                //   label: 'Mobile No',
+                //   hint: 'Enter Mobile No.',
+                //   onChange: (value) {},
+                // ),
+                // SizedBox(
+                //   height: 5,
+                // ),
+                // InputTextField(
+                //   label: 'Password',
+                //   hint: 'Enter Password',
+                //   password: true,
+                //   onChange: (value) {},
+                // ),
+                // SizedBox(
+                //   height: 5,
+                // ),
+                // InputTextField(
+                //   label: 'Confirm Password',
+                //   hint: 'Confirm Password',
+                //   password: true,
+                //   onChange: (value) {},
+                // ),
+                // SizedBox(
+                //   height: 5,
+                // ),
                 InputTextField(
                   label: 'Address',
                   hint: 'Enter Address',
