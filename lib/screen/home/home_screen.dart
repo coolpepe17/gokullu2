@@ -10,7 +10,7 @@ class HomeScreen extends StatelessWidget {
       body: Column(
         children: <Widget>[
           SizedBox(
-            height: 100,
+            height: 150,
           ),
           Image.asset('assets/images/trek2.jpg'),
           SliderDot(),
@@ -18,7 +18,7 @@ class HomeScreen extends StatelessWidget {
             height: 50,
           ),
           Text(
-            'Welcome to Kullu!\n The Valley of GODS ',
+            'Welcome to Kullu!\n "The Valley of GODS" ',
             textAlign: TextAlign.center,
             style: TextStyle(
               color: mPrimaryTextColor,
