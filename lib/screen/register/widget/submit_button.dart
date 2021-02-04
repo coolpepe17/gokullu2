@@ -11,7 +11,7 @@ class SubmitButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.fromLTRB(80, 50, 50, 10),
+      padding: const EdgeInsets.fromLTRB(80, 20, 50, 10),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[

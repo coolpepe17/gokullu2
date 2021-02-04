@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gokullu/constant.dart';
 import 'package:gokullu/screen/home/widget/continue_button.dart';
-import 'package:gokullu/screen/home/widget/login_and_register.dart';
+// import 'package:gokullu/screen/home/widget/login_and_register.dart';
 import 'package:gokullu/screen/home/widget/slider_dot.dart';
 
 class HomeScreen extends StatelessWidget {

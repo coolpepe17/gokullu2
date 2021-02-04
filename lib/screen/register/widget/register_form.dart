@@ -9,12 +9,11 @@ class RegForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(
-        vertical: 0,
-        horizontal: 15,
-      ),
+      padding: const EdgeInsets.all(20.0),
       child: SingleChildScrollView(
         child: Card(
+          //color: Colors.white70,
+          shadowColor: Colors.purple,
           child: Padding(
             padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
             child: Column(
@@ -35,43 +34,66 @@ class RegForm extends StatelessWidget {
                 SizedBox(
                   height: 5,
                 ),
-                // InputTextField(
-                //   label: 'Mobile No',
-                //   hint: 'Enter Mobile No.',
-                //   onChange: (value) {},
-                // ),
-                // SizedBox(
-                //   height: 5,
-                // ),
-                // InputTextField(
-                //   label: 'Password',
-                //   hint: 'Enter Password',
-                //   password: true,
-                //   onChange: (value) {},
-                // ),
-                // SizedBox(
-                //   height: 5,
-                // ),
-                // InputTextField(
-                //   label: 'Confirm Password',
-                //   hint: 'Confirm Password',
-                //   password: true,
-                //   onChange: (value) {},
-                // ),
-                // SizedBox(
-                //   height: 5,
-                // ),
                 InputTextField(
                   label: 'Address',
                   hint: 'Enter Address',
+                  onChange: (value) {},
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class EmergencyForm extends StatelessWidget {
+  const EmergencyForm({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(
+        vertical: 0,
+        horizontal: 15,
+      ),
+      child: SingleChildScrollView(
+        child: Card(
+          shadowColor: Colors.purple,
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
+            child: Column(
+              children: <Widget>[
+                InputTextField(
+                  label: 'Emergency Contact 1:',
+                  hint: 'Enter Name',
                   onChange: (value) {},
                 ),
                 SizedBox(
                   height: 5,
                 ),
                 InputTextField(
-                  label: 'Emergency Contacts',
-                  hint: '2 Emergency Contacts Seperated by comma',
+                  label: 'Phone No.',
+                  hint: 'Enter Mobile/Landline',
+                  onChange: (value) {},
+                ),
+                SizedBox(
+                  height: 5,
+                ),
+                InputTextField(
+                  label: 'Emergency Contact 2',
+                  hint: 'Enter Name',
+                  onChange: (value) {},
+                ),
+                SizedBox(
+                  height: 5,
+                ),
+                InputTextField(
+                  label: 'Phone No.',
+                  hint: 'Enter Mobile/Landline',
                   onChange: (value) {},
                 ),
               ],

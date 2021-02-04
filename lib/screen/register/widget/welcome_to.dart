@@ -14,7 +14,8 @@ class WelcomeTo extends StatelessWidget {
         child: ClipRRect(
             borderRadius: BorderRadius.circular(15.0),
             child: Image.asset(
-              'assets/images/register.jpg',
+              'assets/images/reg.png',
+              height: 200,
             )),
       ),
     );
