@@ -26,7 +26,7 @@ class ContinueButton extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return RegisterScreen();
+                      return LoginScreen();
                     },
                   ),
                 );
