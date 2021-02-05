@@ -16,14 +16,23 @@ class LoginForm extends StatelessWidget {
       child: Column(
         children: <Widget>[
           InputTextField(
-            label: 'Email',
+            keyboardType: TextInputType.phone,
+            label: 'Mobile',
             onChange: (value) {},
           ),
           SizedBox(
             height: 16,
           ),
           InputTextField(
-            label: 'Password',
+            label: 'PIN',
+            password: true,
+            onChange: (value) {},
+          ),
+          SizedBox(
+            height: 16,
+          ),
+          InputTextField(
+            label: 'Confirm PIN',
             password: true,
             onChange: (value) {},
           ),

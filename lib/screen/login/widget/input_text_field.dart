@@ -8,12 +8,14 @@ class InputTextField extends StatelessWidget {
     this.onChange,
     this.password = false,
     this.hint,
+    this.number,
   }) : super(key: key);
 
   final String label;
   final String hint;
   final Function onChange;
   final bool password;
+  final String number;
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +28,7 @@ class InputTextField extends StatelessWidget {
         hintText: hint,
         hintStyle: TextStyle(fontSize: 12, color: Colors.grey),
         labelText: label,
-        labelStyle: TextStyle(fontSize: 12, color: Colors.purpleAccent),
+        labelStyle: TextStyle(fontSize: 12, color: Colors.purple),
         border: OutlineInputBorder(
             borderSide: BorderSide(
           color: mSecondColor,

@@ -16,7 +16,7 @@ class LoginScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            WelcomeBack(),
+            MobileReg(),
             LoginForm(),
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 30),
@@ -61,10 +61,10 @@ class LoginScreen extends StatelessWidget {
   AppBar buildAppBar(BuildContext context) {
     return AppBar(
       backgroundColor: mBackgroundColor,
-      elevation: 0,
+      elevation: 5,
       centerTitle: true,
       title: Text(
-        'Login',
+        'Register your Mobile',
         style: TextStyle(
           color: mPrimaryTextColor,
         ),

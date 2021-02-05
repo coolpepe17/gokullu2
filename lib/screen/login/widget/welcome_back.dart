@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gokullu/constant.dart';
 
-class WelcomeBack extends StatelessWidget {
-  const WelcomeBack({
+class MobileReg extends StatelessWidget {
+  const MobileReg({
     Key key,
   }) : super(key: key);
 
@@ -12,7 +12,7 @@ class WelcomeBack extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
       child: Center(
         child: Text(
-          'Welcome back!',
+          'Enter Details!',
           style: TextStyle(
             color: mPrimaryTextColor,
             fontSize: 30,
