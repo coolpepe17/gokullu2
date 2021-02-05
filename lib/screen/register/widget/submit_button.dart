@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gokullu/constant.dart';
-import 'package:gokullu/screen/login/login_screen.dart';
+// import 'package:gokullu/screen/login/login_screen.dart';
 import 'package:gokullu/screen/register/register_screen.dart';
 
 class SubmitButton extends StatelessWidget {
@@ -26,7 +26,7 @@ class SubmitButton extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return RegisterScreen();
+                      return RegScreen();
                     },
                   ),
                 );

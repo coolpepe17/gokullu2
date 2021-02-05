@@ -15,7 +15,7 @@ class InputTextField extends StatelessWidget {
   final String hint;
   final Function onChange;
   final bool password;
-  final String number;
+  final int number;
 
   @override
   Widget build(BuildContext context) {
@@ -26,24 +26,27 @@ class InputTextField extends StatelessWidget {
       decoration: InputDecoration(
         // border: OutlineInputBorder(),
         hintText: hint,
-        hintStyle: TextStyle(fontSize: 12, color: Colors.grey),
+        hintStyle: TextStyle(fontSize: 14, color: Colors.grey),
         labelText: label,
-        labelStyle: TextStyle(fontSize: 12, color: Colors.purple),
+        labelStyle: TextStyle(fontSize: 14, color: Colors.purple),
         border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(25.0),
             borderSide: BorderSide(
-          color: mSecondColor,
-          width: 2,
-        )),
+              color: mSecondColor,
+              width: 2,
+            )),
         focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(25.0),
             borderSide: BorderSide(
-          color: mPrimaryColor,
-          width: 2,
-        )),
+              color: mPrimaryColor,
+              width: 2,
+            )),
         enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(25.0),
             borderSide: BorderSide(
-          color: Colors.grey,
-          width: 0.5,
-        )),
+              color: Colors.grey,
+              width: 1,
+            )),
       ),
     );
   }

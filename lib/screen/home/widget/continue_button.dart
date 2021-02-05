@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gokullu/constant.dart';
 import 'package:gokullu/screen/login/login_screen.dart';
+import 'package:gokullu/screen/main/main_screen.dart';
+// import 'package:gokullu/screen/login/login_screen.dart';
 import 'package:gokullu/screen/register/register_screen.dart';
 
 class ContinueButton extends StatelessWidget {
@@ -26,7 +28,7 @@ class ContinueButton extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return LoginScreen();
+                      return MainScreen();
                     },
                   ),
                 );

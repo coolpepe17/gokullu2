@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gokullu/constant.dart';
+import 'package:gokullu/screen/home/home_screen.dart';
 import 'package:gokullu/screen/main/main_screen.dart';
 
 class LoginButton extends StatelessWidget {
@@ -21,19 +22,20 @@ class LoginButton extends StatelessWidget {
             context,
             MaterialPageRoute(
               builder: (context) {
-                return MainScreen();
+                return HomeScreen();
               },
             ),
           );
         },
         child: Container(
           width: double.infinity,
-          padding: const EdgeInsets.symmetric(vertical: 16),
+          padding: const EdgeInsets.symmetric(vertical: 20),
           alignment: Alignment.center,
           child: Text(
-            'Login',
+            'Submit',
             style: TextStyle(
               color: Colors.white,
+              fontSize: 20,
             ),
           ),
         ),

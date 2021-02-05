@@ -21,7 +21,7 @@ class MainScreen extends StatelessWidget {
             left: 10,
             right: 10,
             bottom: 20,
-            top: 20,
+            top: 60,
             child: Container(
               padding: const EdgeInsets.fromLTRB(16, 6, 16, 60),
               decoration: BoxDecoration(

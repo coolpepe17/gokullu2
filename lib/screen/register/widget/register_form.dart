@@ -11,36 +11,32 @@ class RegForm extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(20.0),
       child: SingleChildScrollView(
-        child: Card(
-          //color: Colors.white70,
-          shadowColor: Colors.purple,
-          child: Padding(
-            padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
-            child: Column(
-              children: <Widget>[
-                InputTextField(
-                  label: 'Name',
-                  hint: 'Enter Name',
-                  onChange: (value) {},
-                ),
-                SizedBox(
-                  height: 5,
-                ),
-                InputTextField(
-                  label: 'Fathers Name',
-                  hint: 'Enter Fathers Name',
-                  onChange: (value) {},
-                ),
-                SizedBox(
-                  height: 5,
-                ),
-                InputTextField(
-                  label: 'Address',
-                  hint: 'Enter Address',
-                  onChange: (value) {},
-                ),
-              ],
-            ),
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+          child: Column(
+            children: <Widget>[
+              InputTextField(
+                label: 'Name',
+                hint: 'Enter Name',
+                onChange: (value) {},
+              ),
+              SizedBox(
+                height: 5,
+              ),
+              InputTextField(
+                label: 'Fathers Name',
+                hint: 'Enter Fathers Name',
+                onChange: (value) {},
+              ),
+              SizedBox(
+                height: 5,
+              ),
+              InputTextField(
+                label: 'Address',
+                hint: 'Enter Address',
+                onChange: (value) {},
+              ),
+            ],
           ),
         ),
       ),
@@ -61,43 +57,40 @@ class EmergencyForm extends StatelessWidget {
         horizontal: 15,
       ),
       child: SingleChildScrollView(
-        child: Card(
-          shadowColor: Colors.purple,
-          child: Padding(
-            padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
-            child: Column(
-              children: <Widget>[
-                InputTextField(
-                  label: 'Emergency Contact 1:',
-                  hint: 'Enter Name',
-                  onChange: (value) {},
-                ),
-                SizedBox(
-                  height: 5,
-                ),
-                InputTextField(
-                  label: 'Phone No.',
-                  hint: 'Enter Mobile/Landline',
-                  onChange: (value) {},
-                ),
-                SizedBox(
-                  height: 5,
-                ),
-                InputTextField(
-                  label: 'Emergency Contact 2',
-                  hint: 'Enter Name',
-                  onChange: (value) {},
-                ),
-                SizedBox(
-                  height: 5,
-                ),
-                InputTextField(
-                  label: 'Phone No.',
-                  hint: 'Enter Mobile/Landline',
-                  onChange: (value) {},
-                ),
-              ],
-            ),
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+          child: Column(
+            children: <Widget>[
+              InputTextField(
+                label: 'Emergency Contact 1:',
+                hint: 'Enter Name',
+                onChange: (value) {},
+              ),
+              SizedBox(
+                height: 5,
+              ),
+              InputTextField(
+                label: 'Phone No.',
+                hint: 'Enter Mobile/Landline',
+                onChange: (value) {},
+              ),
+              SizedBox(
+                height: 5,
+              ),
+              InputTextField(
+                label: 'Emergency Contact 2',
+                hint: 'Enter Name',
+                onChange: (value) {},
+              ),
+              SizedBox(
+                height: 5,
+              ),
+              InputTextField(
+                label: 'Phone No.',
+                hint: 'Enter Mobile/Landline',
+                onChange: (value) {},
+              ),
+            ],
           ),
         ),
       ),

@@ -11,15 +11,19 @@ class MobileReg extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
       child: Center(
-        child: Text(
-          'Enter Details!',
-          style: TextStyle(
-            color: mPrimaryTextColor,
-            fontSize: 30,
-            fontWeight: FontWeight.w500,
+          child: Image.asset(
+        'assets/images/register.jpg',
+        //height: 250,
+      )
+          // Text(
+          //   'Enter Details!',
+          //   style: TextStyle(
+          //     color: mPrimaryTextColor,
+          //     fontSize: 30,
+          //     fontWeight: FontWeight.w500,
+          //   ),
+          // ),
           ),
-        ),
-      ),
     );
   }
 }

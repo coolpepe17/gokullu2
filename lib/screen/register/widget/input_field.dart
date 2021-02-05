@@ -26,22 +26,26 @@ class InputTextField extends StatelessWidget {
         hintText: hint,
         hintStyle: TextStyle(fontSize: 12, color: Colors.grey),
         labelText: label,
-        labelStyle: TextStyle(fontSize: 12, color: Colors.purpleAccent),
+        labelStyle: TextStyle(fontSize: 12, color: Colors.purple),
+
         border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(35.0),
             borderSide: BorderSide(
-          color: mSecondColor,
-          width: 2,
-        )),
+              color: mSecondColor,
+              width: 2,
+            )),
         focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(35.0),
             borderSide: BorderSide(
-          color: mPrimaryColor,
-          width: 2,
-        )),
+              color: mPrimaryColor,
+              width: 2,
+            )),
         enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(36.0),
             borderSide: BorderSide(
-          color: Colors.grey,
-          width: 0.5,
-        )),
+              color: Colors.grey,
+              width: 1,
+            )),
       ),
     );
   }
