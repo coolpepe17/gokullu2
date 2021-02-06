@@ -9,10 +9,10 @@ class MyLine extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 46,
-      height: 5,
+      width: 100,
+      height: 4,
       decoration: BoxDecoration(
-        color: mTitleTextColor,
+        color: mPrimaryTextColor,
         borderRadius: BorderRadius.circular(2.5),
       ),
     );

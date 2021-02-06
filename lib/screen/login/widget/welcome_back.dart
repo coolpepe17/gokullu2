@@ -9,7 +9,7 @@ class MobileReg extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+      padding: const EdgeInsets.fromLTRB(0, 20, 0, 20),
       child: Center(
           child: Image.asset(
         'assets/images/register.jpg',

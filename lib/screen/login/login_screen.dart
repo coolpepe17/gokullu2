@@ -37,15 +37,15 @@ class LoginScreen extends StatelessWidget {
           color: mPrimaryTextColor,
         ),
       ),
-      leading: IconButton(
-        icon: Icon(
-          Icons.arrow_back_ios,
-          color: mPrimaryTextColor,
-        ),
-        onPressed: () {
-          Navigator.pop(context);
-        },
-      ),
+      // leading: IconButton(
+      //   icon: Icon(
+      //     Icons.arrow_back_ios,
+      //     color: mPrimaryTextColor,
+      //   ),
+      //   onPressed: () {
+      //     Navigator.pop(context);
+      //   },
+      // ),
     );
   }
 }

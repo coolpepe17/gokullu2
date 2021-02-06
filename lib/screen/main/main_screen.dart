@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:gokullu/screen/About/about_app.dart';
 import 'package:gokullu/screen/main/widget/address.dart';
+import 'package:gokullu/screen/main/widget/my_line.dart';
 //import 'package:flutter_coffee/screen/main/widget/my_line.dart';
 import 'package:gokullu/screen/main/widget/store_name.dart';
 import 'package:gokullu/screen/main/widget/view_menu.dart';
@@ -20,25 +22,26 @@ class MainScreen extends StatelessWidget {
           Positioned(
             left: 10,
             right: 10,
-            bottom: 20,
+            bottom: 10,
             top: 60,
             child: Container(
               padding: const EdgeInsets.fromLTRB(16, 6, 16, 60),
               decoration: BoxDecoration(
                 color: Colors.white70,
                 borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(9),
-                  topRight: Radius.circular(9),
-                  bottomLeft: Radius.circular(9),
-                  bottomRight: Radius.circular(9),
+                  topLeft: Radius.circular(15),
+                  topRight: Radius.circular(15),
+                  bottomLeft: Radius.circular(15),
+                  bottomRight: Radius.circular(15),
                 ),
               ),
               child: Column(
                 children: <Widget>[
-                  //MyLine(),
-                  StoreName(),
+                  AboutApp(),
+                  MyLine(),
+                  AboutText(),
                   ViewMenu(),
-                  Address()
+                  //Address()
                 ],
               ),
             ),
