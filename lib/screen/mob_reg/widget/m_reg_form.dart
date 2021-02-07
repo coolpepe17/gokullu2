@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:gokullu/screen/login/widget/input_text_field.dart';
+import 'package:gokullu/screen/mob_reg/widget/input_text_field.dart';
 
-class LoginForm extends StatelessWidget {
-  const LoginForm({
+class MobRegForm extends StatelessWidget {
+  const MobRegForm({
     Key key,
   }) : super(key: key);
 

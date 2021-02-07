@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:gokullu/constant.dart';
+// import 'package:gokullu/constant.dart';
 
-class MobileReg extends StatelessWidget {
-  const MobileReg({
+class MobRegImg extends StatelessWidget {
+  const MobRegImg({
     Key key,
   }) : super(key: key);
 

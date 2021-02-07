@@ -21,7 +21,7 @@ class Header extends StatelessWidget {
       ),
       child: UnconstrainedBox(
         child: SvgPicture.asset(
-          'assets/icons/${coffeeNames[index]}.svg',
+          'assets/icons/${trekNames[index]}.svg',
           height: 100,
         ),
       ),

@@ -1,11 +1,15 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:gokullu/constant.dart';
-import 'package:gokullu/screen/login/widget/login_button.dart';
-import 'package:gokullu/screen/login/widget/login_form.dart';
-import 'package:gokullu/screen/login/widget/welcome_back.dart';
+import 'package:gokullu/screen/mob_reg/widget/m_reg_submit.dart';
+// import 'package:gokullu/screen/login/widget/login_form.dart';
+import 'package:gokullu/screen/mob_reg/widget/m_reg_form.dart';
+import 'package:gokullu/screen/mob_reg/widget/m_reg_image.dart';
+// import 'package:gokullu/screen/mob_reg/widget/m_reg_button.dart';
+// import 'package:gokullu/screen/mob_reg/widget/m_reg_form.dart';
+// import 'package:gokullu/screen/mob_reg/widget/m_reg_image.dart';
 
-class LoginScreen extends StatelessWidget {
+class MobRegScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,12 +18,12 @@ class LoginScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            MobileReg(),
-            LoginForm(),
+            MobRegImg(),
+            MobRegForm(),
             SizedBox(
               height: 30,
             ),
-            LoginButton(),
+            SubmitRegButton(),
           ],
         ),
       ),
@@ -37,15 +41,6 @@ class LoginScreen extends StatelessWidget {
           color: mPrimaryTextColor,
         ),
       ),
-      // leading: IconButton(
-      //   icon: Icon(
-      //     Icons.arrow_back_ios,
-      //     color: mPrimaryTextColor,
-      //   ),
-      //   onPressed: () {
-      //     Navigator.pop(context);
-      //   },
-      // ),
     );
   }
 }

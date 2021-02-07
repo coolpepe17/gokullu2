@@ -23,7 +23,7 @@ class NameAndNumber extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Text(
-                coffeeNames[index],
+                trekNames[index],
                 style: TextStyle(
                   color: mTitleTextColor,
                   fontSize: 20,

@@ -14,10 +14,12 @@ Color mFacebookColor = Color(0xFF4277BC);
 
 Color mTitleTextColor = Color(0xFF2D140D);
 
-List<String> coffeeNames = [
-  'Espresso',
-  'Cappuccino',
-  'Macciato',
-  'Mocha',
-  'Latte',
+List<String> trekNames = [
+  'Malana Trek',
+  'Chandrakhani Pass Trek',
+  'Hamta Pass Trek',
+  'Saar Pass Trek',
+  'Lamadugh Trek',
+  'Kheerganga Trek',
+  'Shrikhand Mahadev',
 ];

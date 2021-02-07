@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:gokullu/constant.dart';
-import 'package:gokullu/screen/menu/widget/menu_item.dart';
+import 'package:gokullu/screen/trek_menu/widget/treks_item.dart';
 
-class MenuScreen extends StatelessWidget {
+class TrekMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(context),
       body: ListView.builder(
-        itemCount: coffeeNames.length,
+        itemCount: trekNames.length,
         itemBuilder: (context, index) => MenuItem(
           index: index,
         ),
@@ -19,9 +19,10 @@ class MenuScreen extends StatelessWidget {
   AppBar buildAppBar(BuildContext context) {
     return AppBar(
       backgroundColor: Colors.white,
-      elevation: 0,
+      elevation: 5,
+      centerTitle: true,
       title: Text(
-        'Menu',
+        'Trek Menu',
         style: TextStyle(
           color: mPrimaryTextColor,
         ),

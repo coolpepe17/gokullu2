@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gokullu/screen/menu/menu_screen.dart';
+
+import 'package:gokullu/screen/trek_menu/trek_menu.dart';
 import 'package:gokullu/widget/round_button.dart';
 
 class ViewMenu extends StatelessWidget {
@@ -15,13 +16,13 @@ class ViewMenu extends StatelessWidget {
         vertical: 20,
       ),
       child: RoundButton(
-        title: 'View Menu',
+        title: 'View Treks',
         press: () {
           Navigator.push(
             context,
             MaterialPageRoute(
               builder: (context) {
-                return MenuScreen();
+                return TrekMenu();
               },
             ),
           );

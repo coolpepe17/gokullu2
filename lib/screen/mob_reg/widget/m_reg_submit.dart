@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:gokullu/constant.dart';
-import 'package:gokullu/screen/home/home_screen.dart';
-import 'package:gokullu/screen/main/main_screen.dart';
+import 'package:gokullu/screen/about/about_app.dart';
 
-class LoginButton extends StatelessWidget {
-  const LoginButton({
+class SubmitRegButton extends StatelessWidget {
+  const SubmitRegButton({
     Key key,
   }) : super(key: key);
 
@@ -22,7 +21,7 @@ class LoginButton extends StatelessWidget {
             context,
             MaterialPageRoute(
               builder: (context) {
-                return HomeScreen();
+                return AboutApp();
               },
             ),
           );

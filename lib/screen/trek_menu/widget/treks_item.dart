@@ -39,14 +39,14 @@ class MenuItem extends StatelessWidget {
             Container(
               width: 55,
               height: 55,
-              child: SvgPicture.asset('assets/icons/${coffeeNames[index]}.svg'),
+              child: SvgPicture.asset('assets/icons/${trekNames[index]}.svg'),
             ),
             SizedBox(
               width: 30,
             ),
             Expanded(
               child: Text(
-                coffeeNames[index],
+                trekNames[index],
                 style: TextStyle(
                   color: mTitleTextColor,
                   fontSize: 20,

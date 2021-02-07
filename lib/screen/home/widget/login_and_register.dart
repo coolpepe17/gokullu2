@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gokullu/constant.dart';
-import 'package:gokullu/screen/login/login_screen.dart';
+import 'package:gokullu/screen/mob_reg/m_reg_screen.dart';
 import 'package:gokullu/screen/register/register_screen.dart';
 
 class LoginAndRegister extends StatelessWidget {
@@ -56,7 +56,7 @@ class LoginAndRegister extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return LoginScreen();
+                      return MobRegScreen();
                     },
                   ),
                 );
