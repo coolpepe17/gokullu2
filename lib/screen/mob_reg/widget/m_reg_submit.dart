@@ -10,12 +10,19 @@ class SubmitRegButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 30),
-      child: FlatButton(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(36),
+      padding: const EdgeInsets.symmetric(horizontal: 40),
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 4),
+          primary: mPrimaryTextColor,
+          // onPrimary: mPrimaryTextColor,
+
+          shape: const RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(36))),
+          elevation: 8,
+          shadowColor: Colors.black,
+          onSurface: Colors.red,
         ),
-        color: mPrimaryColor,
         onPressed: () {
           Navigator.push(
             context,
@@ -42,3 +49,40 @@ class SubmitRegButton extends StatelessWidget {
     );
   }
 }
+
+//       padding: const EdgeInsets.symmetric(horizontal: 30),
+//       child: TextButton(
+//         style: TextButton.styleFrom(
+//           backgroundColor: mPrimaryTextColor,
+//           shape: const RoundedRectangleBorder(
+//               borderRadius: BorderRadius.all(Radius.circular(36))),
+//           shadowColor: Colors.grey,
+//           primary: Colors.blue,
+//           onSurface: Colors.red,
+//         ),
+//         onPressed: () {
+//           Navigator.push(
+//             context,
+//             MaterialPageRoute(
+//               builder: (context) {
+//                 return AboutApp();
+//               },
+//             ),
+//           );
+//         },
+//         child: Container(
+//           width: double.infinity,
+//           padding: const EdgeInsets.symmetric(vertical: 20),
+//           alignment: Alignment.center,
+//           child: Text(
+//             'Submit',
+//             style: TextStyle(
+//               color: Colors.white,
+//               fontSize: 20,
+//             ),
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }

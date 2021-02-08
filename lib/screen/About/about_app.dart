@@ -3,6 +3,8 @@ import 'package:gokullu/screen/about/widget/about.dart';
 import 'package:gokullu/screen/about/widget/my_line.dart';
 import 'package:gokullu/screen/about/widget/view_menu.dart';
 
+import 'widget/about_image.dart';
+
 class AboutApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -36,7 +38,11 @@ class AboutApp extends StatelessWidget {
                 children: <Widget>[
                   About(),
                   MyLine(),
+                  SizedBox(height: 50),
+                  AbtImage(),
+                  SizedBox(height: 50),
                   AboutText(),
+                  SizedBox(height: 50),
                   ViewMenu(),
                   //Address()
                 ],

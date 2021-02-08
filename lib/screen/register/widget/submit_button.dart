@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gokullu/constant.dart';
-// import 'package:gokullu/screen/login/login_screen.dart';
 import 'package:gokullu/screen/register/register_screen.dart';
 
 class SubmitButton extends StatelessWidget {
@@ -16,11 +14,11 @@ class SubmitButton extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Expanded(
-            child: FlatButton(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(30),
+            child: OutlinedButton(
+              style: OutlinedButton.styleFrom(
+                shape: StadiumBorder(),
+                side: BorderSide(width: 2, color: Colors.red),
               ),
-              color: mPrimaryColor,
               onPressed: () {
                 Navigator.push(
                   context,

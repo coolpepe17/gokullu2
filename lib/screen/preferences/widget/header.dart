@@ -17,14 +17,14 @@ class Header extends StatelessWidget {
       height: 183,
       decoration: BoxDecoration(
         image: DecorationImage(
-            image: AssetImage('assets/images/header.png'), fit: BoxFit.cover),
+            image: AssetImage('assets/images/trek.jpg'), fit: BoxFit.cover),
       ),
-      child: UnconstrainedBox(
-        child: SvgPicture.asset(
-          'assets/icons/${trekNames[index]}.svg',
-          height: 100,
-        ),
-      ),
+      // child: UnconstrainedBox(
+      //   child: SvgPicture.asset(
+      //     'assets/icons/${trekNames[index]}.svg',
+      //     height: 100,
+      //   ),
+      // ),
     );
   }
 }

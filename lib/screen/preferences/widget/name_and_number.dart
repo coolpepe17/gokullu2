@@ -33,69 +33,69 @@ class NameAndNumber extends StatelessWidget {
               SizedBox(
                 height: 6,
               ),
-              Text(
-                '36 EGP',
-                style: TextStyle(
-                  color: mTitleTextColor,
-                  fontSize: 16,
-                ),
-              ),
+              // Text(
+              //   '36 EGP',
+              //   style: TextStyle(
+              //     color: mTitleTextColor,
+              //     fontSize: 16,
+              //   ),
+              // ),
             ],
           ),
-          Row(
-            children: <Widget>[
-              Text(
-                '1',
-                style: TextStyle(
-                  color: mTitleTextColor,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              SizedBox(
-                width: 6,
-              ),
-              Container(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 2, horizontal: 14),
-                decoration: BoxDecoration(
-                  border: Border.all(color: mTitleTextColor),
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(36),
-                    bottomLeft: Radius.circular(36),
-                  ),
-                ),
-                child: Text(
-                  '-',
-                  style: TextStyle(
-                    color: mTitleTextColor,
-                    fontSize: 20,
-                  ),
-                ),
-              ),
-              SizedBox(
-                width: 6,
-              ),
-              Container(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 2, horizontal: 14),
-                decoration: BoxDecoration(
-                  border: Border.all(color: mTitleTextColor),
-                  borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(36),
-                    bottomRight: Radius.circular(36),
-                  ),
-                ),
-                child: Text(
-                  '+',
-                  style: TextStyle(
-                    color: mTitleTextColor,
-                    fontSize: 20,
-                  ),
-                ),
-              )
-            ],
-          )
+          // Row(
+          //   children: <Widget>[
+          //     Text(
+          //       '1',
+          //       style: TextStyle(
+          //         color: mTitleTextColor,
+          //         fontSize: 20,
+          //         fontWeight: FontWeight.bold,
+          //       ),
+          //     ),
+          //     SizedBox(
+          //       width: 6,
+          //     ),
+          //     Container(
+          //       padding:
+          //           const EdgeInsets.symmetric(vertical: 2, horizontal: 14),
+          //       decoration: BoxDecoration(
+          //         border: Border.all(color: mTitleTextColor),
+          //         borderRadius: BorderRadius.only(
+          //           topLeft: Radius.circular(36),
+          //           bottomLeft: Radius.circular(36),
+          //         ),
+          //       ),
+          //       child: Text(
+          //         '-',
+          //         style: TextStyle(
+          //           color: mTitleTextColor,
+          //           fontSize: 20,
+          //         ),
+          //       ),
+          //     ),
+          //     SizedBox(
+          //       width: 6,
+          //     ),
+          //     Container(
+          //       padding:
+          //           const EdgeInsets.symmetric(vertical: 2, horizontal: 14),
+          //       decoration: BoxDecoration(
+          //         border: Border.all(color: mTitleTextColor),
+          //         borderRadius: BorderRadius.only(
+          //           topRight: Radius.circular(36),
+          //           bottomRight: Radius.circular(36),
+          //         ),
+          //       ),
+          //       child: Text(
+          //         '+',
+          //         style: TextStyle(
+          //           color: mTitleTextColor,
+          //           fontSize: 20,
+          //         ),
+          //       ),
+          //     )
+          //   ],
+          // )
         ],
       ),
     );

@@ -15,11 +15,11 @@ class LoginAndRegister extends StatelessWidget {
       child: Row(
         children: <Widget>[
           Expanded(
-            child: FlatButton(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(36),
+            child: OutlinedButton(
+              style: OutlinedButton.styleFrom(
+                shape: StadiumBorder(),
+                side: BorderSide(width: 2, color: Colors.red),
               ),
-              color: mPrimaryColor,
               onPressed: () {
                 Navigator.push(
                   context,
@@ -47,10 +47,11 @@ class LoginAndRegister extends StatelessWidget {
             width: 30,
           ),
           Expanded(
-            child: FlatButton(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(36),
-                  side: BorderSide(color: mPrimaryColor)),
+            child: OutlinedButton(
+              style: OutlinedButton.styleFrom(
+                shape: StadiumBorder(),
+                side: BorderSide(width: 2, color: Colors.red),
+              ),
               onPressed: () {
                 Navigator.push(
                   context,

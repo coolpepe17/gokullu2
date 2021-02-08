@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gokullu/constant.dart';
+// import 'package:gokullu/constant.dart';
 import 'package:gokullu/screen/About/about_app.dart';
 // import 'package:gokullu/screen/about_app/about_app.dart';
 // import 'package:gokullu/screen/login/m_reg_screen.dart';
@@ -20,11 +20,11 @@ class ContinueButton extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Expanded(
-            child: FlatButton(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(30),
+            child: OutlinedButton(
+              style: OutlinedButton.styleFrom(
+                shape: StadiumBorder(),
+                side: BorderSide(width: 2, color: Colors.red),
               ),
-              color: mPrimaryColor,
               onPressed: () {
                 Navigator.push(
                   context,

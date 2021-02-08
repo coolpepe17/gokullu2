@@ -11,10 +11,11 @@ class LoginWithFacebook extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 30),
-      child: FlatButton(
-        shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(36),
-            side: BorderSide(color: mFacebookColor)),
+      child: OutlinedButton(
+        style: OutlinedButton.styleFrom(
+          shape: StadiumBorder(),
+          side: BorderSide(width: 2, color: Colors.red),
+        ),
         onPressed: () {},
         child: Container(
           padding: const EdgeInsets.symmetric(vertical: 16),

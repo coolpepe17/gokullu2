@@ -24,7 +24,7 @@ class PreferencesScreen extends StatelessWidget {
             color: mPrimaryTextColor.withOpacity(0.5),
           ),
           Attribute(
-            title: 'Size',
+            title: 'Difficulty :',
             iconNames: [
               'size1',
               'size2',
@@ -37,7 +37,7 @@ class PreferencesScreen extends StatelessWidget {
             color: mPrimaryTextColor.withOpacity(0.5),
           ),
           Attribute(
-            title: 'Sugar',
+            title: 'Altitude :',
             iconNames: ['sugar1', 'sugar2', 'sugar3', 'sugar4'],
             check: 2,
           ),
@@ -45,18 +45,19 @@ class PreferencesScreen extends StatelessWidget {
             color: mPrimaryTextColor.withOpacity(0.5),
           ),
           Attribute(
-            title: 'Additions',
+            title: 'Duration :',
             iconNames: ['additions1', 'additions2'],
             check: 2,
           ),
           Divider(
             color: mPrimaryTextColor.withOpacity(0.5),
           ),
-          TotalPrice(),
+          // TotalPrice(),
+          SizedBox(height: 50),
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 16),
             child: RoundButton(
-              title: 'Add to cart',
+              title: 'Proceed to Start Trek',
               press: () {},
             ),
           )
@@ -68,9 +69,10 @@ class PreferencesScreen extends StatelessWidget {
   AppBar buildAppBar(BuildContext context) {
     return AppBar(
       backgroundColor: Colors.white,
-      elevation: 0,
+      elevation: 5,
+      centerTitle: true,
       title: Text(
-        'Preferences',
+        'Trek Details',
         style: TextStyle(
           color: mPrimaryTextColor,
         ),
