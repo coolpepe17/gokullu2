@@ -3,8 +3,8 @@ import 'package:gokullu/constant.dart';
 // import 'package:gokullu/screen/about/about_app.dart';
 import 'package:gokullu/screen/trek_menu/trek_menu.dart';
 
-class ViewMenu extends StatelessWidget {
-  const ViewMenu({
+class ViewTrekButton extends StatelessWidget {
+  const ViewTrekButton({
     Key key,
   }) : super(key: key);
 
