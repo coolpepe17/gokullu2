@@ -3,8 +3,8 @@ import 'package:gokullu/constant.dart';
 import 'package:gokullu/screen/preferences/preferences_screen.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class MenuItem extends StatelessWidget {
-  const MenuItem({
+class TrekSelect extends StatelessWidget {
+  const TrekSelect({
     Key key,
     this.index,
   }) : super(key: key);
@@ -25,12 +25,12 @@ class MenuItem extends StatelessWidget {
         );
       },
       child: Container(
-        padding: const EdgeInsets.all(30),
+        padding: const EdgeInsets.all(25),
         decoration: BoxDecoration(
           border: Border(
             bottom: BorderSide(
               color: mPrimaryTextColor.withOpacity(0.2),
-              width: 1,
+              width: 2,
             ),
           ),
         ),
@@ -38,17 +38,17 @@ class MenuItem extends StatelessWidget {
           children: <Widget>[
             Container(
               width: 55,
-              height: 55,
+              height: 50,
               child: SvgPicture.asset('assets/icons/${trekNames[index]}.svg'),
             ),
             SizedBox(
-              width: 30,
+              width: 25,
             ),
             Expanded(
               child: Text(
                 trekNames[index],
                 style: TextStyle(
-                  color: mTitleTextColor,
+                  color: mSecondColor,
                   fontSize: 20,
                   fontWeight: FontWeight.w500,
                 ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gokullu/constant.dart';
-import 'package:gokullu/screen/trek_menu/widget/treks_item.dart';
+import 'package:gokullu/screen/trek_menu/widget/treks_select.dart';
 
 class TrekMenu extends StatelessWidget {
   @override
@@ -9,7 +9,7 @@ class TrekMenu extends StatelessWidget {
       appBar: buildAppBar(context),
       body: ListView.builder(
         itemCount: trekNames.length,
-        itemBuilder: (context, index) => MenuItem(
+        itemBuilder: (context, index) => TrekSelect(
           index: index,
         ),
       ),
@@ -22,7 +22,7 @@ class TrekMenu extends StatelessWidget {
       elevation: 5,
       centerTitle: true,
       title: Text(
-        'Trek Menu',
+        'Trek Selector',
         style: TextStyle(
           color: mPrimaryTextColor,
         ),
