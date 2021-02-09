@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:gokullu/constant.dart';
 // import 'package:gokullu/constant.dart';
 
-class RoundButton extends StatelessWidget {
-  const RoundButton({
+class Button extends StatelessWidget {
+  const Button({
     Key key,
     this.title,
     this.press,
@@ -17,7 +17,7 @@ class RoundButton extends StatelessWidget {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
         shape: StadiumBorder(),
-        padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 4),
+        padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
         primary: mPrimaryTextColor,
         // shape: const RoundedRectangleBorder(
         //     borderRadius: BorderRadius.all(Radius.circular(36))),
@@ -28,7 +28,7 @@ class RoundButton extends StatelessWidget {
       onPressed: press,
       child: Container(
         width: double.infinity,
-        padding: const EdgeInsets.symmetric(vertical: 16),
+        padding: const EdgeInsets.symmetric(horizontal: 60, vertical: 15),
         alignment: Alignment.center,
         child: Text(
           title,

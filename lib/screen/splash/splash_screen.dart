@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-// import 'package:gokullu/screen/home/home_screen.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gokullu/screen/mob_reg/m_reg_screen.dart';
-// import 'package:gokullu/screen/mob_reg/m_reg_screen.dart';
-// import 'package:gokullu/screen/register/register_screen.dart';
+import 'package:gokullu/screen/mob_reg/widget/form.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -21,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
         context,
         MaterialPageRoute(
           builder: (context) {
-            return MobRegScreen();
+            return MyForm();
           },
         ),
         (route) => false,
@@ -41,7 +39,7 @@ class _SplashScreenState extends State<SplashScreen> {
         //  ),
         //),
         child: Center(
-          child: SvgPicture.asset('assets/images/logo2_s.svg'),
+          child: SvgPicture.asset('assets/icons/logo2_s.svg'),
         ),
       ),
     );

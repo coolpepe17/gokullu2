@@ -11,7 +11,7 @@ class AbtImage extends StatelessWidget {
       //padding: const EdgeInsets.fromLTRB(0, 20, 0, 20),
       child: Center(
           child: Image.asset(
-        'assets/images/trek4.jpg',
+        'assets/images/trek.jpg',
         // height: 350,
       )),
     );
