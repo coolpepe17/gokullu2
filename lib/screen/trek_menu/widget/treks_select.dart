@@ -3,8 +3,8 @@ import 'package:gokullu/constant.dart';
 import 'package:gokullu/screen/preferences/preferences_screen.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class MenuItem extends StatelessWidget {
-  const MenuItem({
+class TrekSelect extends StatelessWidget {
+  const TrekSelect({
     Key key,
     this.index,
   }) : super(key: key);
@@ -48,7 +48,7 @@ class MenuItem extends StatelessWidget {
               child: Text(
                 trekNames[index],
                 style: TextStyle(
-                  color: mTitleTextColor,
+                  color: Colors.black,
                   fontSize: 20,
                   fontWeight: FontWeight.w500,
                 ),
