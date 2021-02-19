@@ -13,7 +13,7 @@ class MobRegImg extends StatelessWidget {
       child: Center(
           child: Image.asset(
         'assets/images/register.jpg',
-        //height: 250,
+        height: 230,
       )
           // Text(
           //   'Enter Details!',

@@ -2,7 +2,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:gokullu/constant.dart';
 import 'package:gokullu/screen/about/about_app.dart';
-import 'package:gokullu/screen/mob_reg/widget/form.dart';
+// import 'package:gokullu/screen/mob_reg/widget/form.dart';
 import 'package:gokullu/screen/mob_reg/widget/m_reg_form.dart';
 import 'package:gokullu/screen/mob_reg/widget/m_reg_image.dart';
 import 'package:gokullu/widget/round_button.dart';
@@ -18,7 +18,7 @@ class MobRegScreen extends StatelessWidget {
                 children: <Widget>[
               MobRegImg(),
               MobRegForm(),
-              MyForm(),
+              // MyForm(),
               SizedBox(
                 height: 30,
               ),

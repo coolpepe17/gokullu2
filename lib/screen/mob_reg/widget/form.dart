@@ -3,6 +3,7 @@ import 'dart:ui';
 // import 'package:flutter/material.dart';
 import 'package:gokullu/constant.dart';
 import 'package:gokullu/screen/about/about_app.dart';
+import 'package:gokullu/services/auth.dart';
 import 'package:gokullu/widget/round_button.dart';
 // import 'package:gokullu/screen/about/about_app.dart';
 // import 'package:gokullu/screen/mob_reg/widget/m_reg_form.dart';
@@ -10,6 +11,7 @@ import 'package:gokullu/widget/round_button.dart';
 // import 'package:gokullu/widget/round_button.dart';
 
 import '../../../constant.dart';
+import 'm_reg_image.dart';
 
 // class MyApp extends StatelessWidget {
 //   // This widget is the root of your application.
@@ -35,6 +37,7 @@ import '../../../constant.dart';
 // }
 
 class MyForm extends StatelessWidget {
+  final AuthService _auth = AuthService();
   final _key = GlobalKey<FormState>();
 
   @override
@@ -48,7 +51,8 @@ class MyForm extends StatelessWidget {
           key: _key,
           child: Column(
             children: <Widget>[
-              SizedBox(height: 150),
+              MobRegImg(),
+              // SizedBox(height: 30),
               TextFormField(
                 keyboardType: TextInputType.phone,
                 // style: TextStyle(color: mPrimaryColor),
@@ -111,10 +115,38 @@ class MyForm extends StatelessWidget {
                 //     icon: Icon(Icons.phone_android),
                 //     fillColor: Colors.white),
               ),
-
+              SizedBox(height: 10),
               TextFormField(
-                keyboardType: TextInputType.number,
-                textInputAction: TextInputAction.done,
+                keyboardType: TextInputType.phone,
+                // style: TextStyle(color: mPrimaryColor),
+                decoration: InputDecoration(
+                  labelStyle: TextStyle(fontSize: 14, color: Colors.purple),
+                  labelText: "Enter a 4 digit PIN",
+                  icon: Icon(
+                    Icons.fiber_pin_rounded,
+                    color: Colors.purple,
+                  ),
+                  fillColor: Colors.white,
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15.0),
+                    borderSide: BorderSide(
+                      color: mPrimaryColor,
+                    ),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(15.0),
+                      borderSide: BorderSide(
+                        color: mPrimaryColor,
+                        width: 2,
+                      )),
+                  enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(15.0),
+                      borderSide: BorderSide(
+                        color: Colors.grey,
+                        width: 1,
+                      )),
+                  //fillColor: Colors.green
+                ),
                 validator: (value) {
                   if (value.isEmpty) {
                     return "PIN can not be empty";
@@ -125,16 +157,45 @@ class MyForm extends StatelessWidget {
                   } else
                     return null;
                 },
-                decoration: InputDecoration(
-                    hintText: 'Enter 4 digit PIN',
-                    // labelText: _weightMessage,
-                    icon: Icon(Icons.fiber_pin_rounded),
-                    fillColor: Colors.white),
+                // decoration: InputDecoration(
+                //     hintText: 'Enter 4 digit PIN',
+                //     // labelText: _weightMessage,
+                //     icon: Icon(Icons.fiber_pin_rounded),
+                //     fillColor: Colors.white),
               ),
 
+              SizedBox(height: 10),
               TextFormField(
-                keyboardType: TextInputType.number,
-                textInputAction: TextInputAction.done,
+                keyboardType: TextInputType.phone,
+                // style: TextStyle(color: mPrimaryColor),
+                decoration: InputDecoration(
+                  labelStyle: TextStyle(fontSize: 14, color: Colors.purple),
+                  labelText: "Confirm the 4 digit PIN",
+                  icon: Icon(
+                    Icons.fiber_pin_rounded,
+                    color: Colors.purple,
+                  ),
+                  fillColor: Colors.white,
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15.0),
+                    borderSide: BorderSide(
+                      color: mPrimaryColor,
+                    ),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(15.0),
+                      borderSide: BorderSide(
+                        color: mPrimaryColor,
+                        width: 2,
+                      )),
+                  enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(15.0),
+                      borderSide: BorderSide(
+                        color: Colors.grey,
+                        width: 1,
+                      )),
+                  //fillColor: Colors.green
+                ),
                 validator: (value) {
                   if (value.isEmpty) {
                     return "PIN can not be empty";
@@ -145,14 +206,14 @@ class MyForm extends StatelessWidget {
                   } else
                     return null;
                 },
-                decoration: InputDecoration(
-                    hintText: 'Confirm the 4 digit PIN',
-                    // labelText: _weightMessage,
-                    icon: Icon(Icons.fiber_pin_rounded),
-                    fillColor: Colors.white),
+                // decoration: InputDecoration(
+                //     hintText: 'Confirm the 4 digit PIN',
+                //     // labelText: _weightMessage,
+                //     icon: Icon(Icons.fiber_pin_rounded),
+                //     fillColor: Colors.white),
               ),
               // Button(),
-              SizedBox(height: 50),
+              SizedBox(height: 20),
               // FlatButton(
               //   child: Text("Submit"),
               //   color: Colors.purple,
@@ -165,7 +226,7 @@ class MyForm extends StatelessWidget {
               //     }
               //   },
               // ),
-              SizedBox(height: 30),
+              // SizedBox(height: 30),
               Container(
                 padding: const EdgeInsets.fromLTRB(20, 5, 20, 5),
                 child: Row(
@@ -184,25 +245,34 @@ class MyForm extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 50),
+              SizedBox(height: 10),
               Container(
                 padding: const EdgeInsets.fromLTRB(20, 5, 20, 5),
                 child: Row(
                   children: <Widget>[
                     Expanded(
                         child: Button(
-                      title: 'Proceed',
-                      press: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) {
-                              return AboutApp();
-                            },
-                          ),
-                        );
-                      },
-                    )),
+                            title: 'Proceed',
+                            press: () async {
+                              dynamic result = await _auth.signInAnon();
+                              if (result == null) {
+                                print('Error Signing In');
+                              } else {
+                                print('Signed In');
+                                // print('result');
+                              }
+                            }
+
+                            // Navigator.push(
+                            //   context,
+                            //   MaterialPageRoute(
+                            //     builder: (context) {
+                            //       return AboutApp();
+                            //     },
+                            //   ),
+                            // );
+                            // },
+                            )),
                   ],
                 ),
               ),

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "782500519073",
+    "project_id": "gokullu-98dac",
+    "storage_bucket": "gokullu-98dac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:782500519073:android:a90892058a5709d66424e0",
+        "android_client_info": {
+          "package_name": "com.example.gokullu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "782500519073-vrlvhiferlksucich2stfrc2cs805j1e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA740guuCpxeOxaNbvltHPF7a57fZeR1uA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "782500519073-vrlvhiferlksucich2stfrc2cs805j1e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
