@@ -94,26 +94,6 @@ class MyForm extends StatelessWidget {
                   } else
                     return null;
                 },
-
-                // style: new TextStyle(
-                // fontFamily: "Poppins",
-                // keyboardType: TextInputType.number,
-                // textInputAction: TextInputAction.done,
-                // validator: (value) {
-                //   if (value.isEmpty) {
-                //     return "Username can not be empty";
-                //   } else if (value.length < 10) {
-                //     return "Enter a Valid Mobile Number";
-                //   } else if (value.length > 10) {
-                //     return "Enter a Valid Mobile Number";
-                //   } else
-                //     return null;
-                // },
-                // decoration: InputDecoration(
-                //     hintText: 'Enter Mobile Number',
-                //     // labelText: _weightMessage,
-                //     icon: Icon(Icons.phone_android),
-                //     fillColor: Colors.white),
               ),
               SizedBox(height: 10),
               TextFormField(
@@ -157,11 +137,6 @@ class MyForm extends StatelessWidget {
                   } else
                     return null;
                 },
-                // decoration: InputDecoration(
-                //     hintText: 'Enter 4 digit PIN',
-                //     // labelText: _weightMessage,
-                //     icon: Icon(Icons.fiber_pin_rounded),
-                //     fillColor: Colors.white),
               ),
 
               SizedBox(height: 10),
@@ -214,19 +189,6 @@ class MyForm extends StatelessWidget {
               ),
               // Button(),
               SizedBox(height: 20),
-              // FlatButton(
-              //   child: Text("Submit"),
-              //   color: Colors.purple,
-              //   textColor: Colors.white,
-              //   onPressed: () {
-              //     if (_key.currentState.validate()) {
-              //       ScaffoldMessenger.of(context).showSnackBar(
-              //           SnackBar(content: Text('Data Submitted')));
-              //       // print("Your data is submitted");
-              //     }
-              //   },
-              // ),
-              // SizedBox(height: 30),
               Container(
                 padding: const EdgeInsets.fromLTRB(20, 5, 20, 5),
                 child: Row(
@@ -259,20 +221,9 @@ class MyForm extends StatelessWidget {
                                 print('Error Signing In');
                               } else {
                                 print('Signed In');
-                                // print('result');
+                                print(result.uid);
                               }
-                            }
-
-                            // Navigator.push(
-                            //   context,
-                            //   MaterialPageRoute(
-                            //     builder: (context) {
-                            //       return AboutApp();
-                            //     },
-                            //   ),
-                            // );
-                            // },
-                            )),
+                            })),
                   ],
                 ),
               ),

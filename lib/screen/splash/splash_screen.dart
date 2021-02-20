@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:gokullu/models/user.dart';
+import 'package:gokullu/screen/about/about_app.dart';
 import 'package:gokullu/screen/authenticate/authenticate.dart';
 // import 'package:gokullu/screen/mob_reg/m_reg_screen.dart';
 import 'package:gokullu/screen/mob_reg/widget/form.dart';
+import 'package:provider/provider.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -18,11 +21,15 @@ class _SplashScreenState extends State<SplashScreen> {
       // to next page and close this page
       Navigator.pushAndRemoveUntil(
         context,
-        MaterialPageRoute(
-          builder: (context) {
+        MaterialPageRoute(builder: (context) {
+          final user = Provider.of<User>(context);
+
+          if (user == null) {
             return Authenticate();
-          },
-        ),
+          } else {
+            return AboutApp();
+          }
+        }),
         (route) => false,
       );
     });
@@ -34,11 +41,6 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        //decoration: BoxDecoration(
-        //image: DecorationImage(
-        //image: AssetImage('assets/images/trek.g'),
-        //  ),
-        //),
         child: Center(
           child: SvgPicture.asset('assets/icons/logo2_s.svg'),
         ),
