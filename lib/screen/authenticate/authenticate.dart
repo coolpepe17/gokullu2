@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gokullu/screen/mob_reg/widget/form.dart';
+// import 'package:gokullu/screen/mob_reg/widget/form.dart';
+import 'package:gokullu/screen/mob_reg/widget/form1.dart';
 
 class Authenticate extends StatefulWidget {
   @override
@@ -10,7 +11,7 @@ class _AuthenticateState extends State<Authenticate> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: MyForm(),
+      child: RegForm(),
     );
   }
 }

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:ui';
 // import 'package:flutter/material.dart';
 import 'package:gokullu/constant.dart';
-import 'package:gokullu/screen/about/about_app.dart';
+// import 'package:gokullu/screen/about/about_app.dart';
 import 'package:gokullu/services/auth.dart';
 import 'package:gokullu/widget/round_button.dart';
 // import 'package:gokullu/screen/about/about_app.dart';

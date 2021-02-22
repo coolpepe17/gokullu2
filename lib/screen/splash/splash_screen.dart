@@ -4,7 +4,7 @@ import 'package:gokullu/models/user.dart';
 import 'package:gokullu/screen/about/about_app.dart';
 import 'package:gokullu/screen/authenticate/authenticate.dart';
 // import 'package:gokullu/screen/mob_reg/m_reg_screen.dart';
-import 'package:gokullu/screen/mob_reg/widget/form.dart';
+// import 'package:gokullu/screen/mob_reg/widget/form.dart';
 import 'package:provider/provider.dart';
 
 class SplashScreen extends StatefulWidget {
