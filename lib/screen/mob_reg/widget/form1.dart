@@ -36,12 +36,12 @@ import 'm_reg_image.dart';
 //   }
 // }
 
-class RegForm extends StatefulWidget {
+class SignUp extends StatefulWidget {
   @override
-  _RegFormState createState() => _RegFormState();
+  _SignUpState createState() => _SignUpState();
 }
 
-class _RegFormState extends State<RegForm> {
+class _SignUpState extends State<SignUp> {
   final AuthService _auth = AuthService();
 
   final _formKey = GlobalKey<FormState>();

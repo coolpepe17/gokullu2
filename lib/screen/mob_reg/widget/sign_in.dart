@@ -14,13 +14,11 @@ class SignIn extends StatefulWidget {
 class _SignInState extends State<SignIn> {
   final AuthService _auth = AuthService();
 
-  final _key = GlobalKey<FormState>();
+  final _formKey = GlobalKey<FormState>();
 
   String email = '';
-
   String password = '';
-
-  String confirmPassword = '';
+  String error = '';
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +28,7 @@ class _SignInState extends State<SignIn> {
         // body: Container(
         padding: EdgeInsets.all(16),
         child: Form(
-          key: _key,
+          key: _formKey,
           child: Column(
             children: <Widget>[
               MobRegImg(),
@@ -66,16 +64,7 @@ class _SignInState extends State<SignIn> {
                         )),
                     //fillColor: Colors.green
                   ),
-                  validator: (value) {
-                    if (value.isEmpty) {
-                      return 'email can not be empty';
-                    } else if (value.length < 10) {
-                      return 'Enter a Valid email Id';
-                      // } else if (value.length > 10) {
-                      //   return 'Enter a Valid Mobile Number';
-                    } else
-                      return null;
-                  },
+                  validator: (val) => val.isEmpty ? 'Enter an email' : null,
                   onChanged: (val) {
                     setState(() => email = val);
                   }),
@@ -112,95 +101,40 @@ class _SignInState extends State<SignIn> {
                         )),
                     //fillColor: Colors.green
                   ),
-                  validator: (value) {
-                    if (value.isEmpty) {
-                      return 'This can not be empty';
-                    } else if (value.length < 6) {
-                      return 'Min 6 Characters required';
-                      // } else if (value.length > 4) {
-                      //   return "Enter a Valid 4 Digit Pin";
-                    } else
-                      return null;
-                  },
+                  validator: (val) =>
+                      val.length < 8 ? 'Minimum 8 character password' : null,
                   onChanged: (val) {
                     setState(() => password = val);
                   }),
-
-              SizedBox(height: 10),
-              // TextFormField(
-              //     keyboardType: TextInputType.phone,
-              //     // style: TextStyle(color: mPrimaryColor),
-              //     obscureText: true,
-              //     decoration: InputDecoration(
-              //       labelStyle: TextStyle(fontSize: 14, color: Colors.purple),
-              //       labelText: 'Confirm Passwword',
-              //       icon: Icon(
-              //         Icons.lock,
-              //         color: Colors.purple,
-              //       ),
-              //       fillColor: Colors.white,
-              //       border: OutlineInputBorder(
-              //         borderRadius: BorderRadius.circular(15.0),
-              //         borderSide: BorderSide(
-              //           color: mPrimaryColor,
-              //         ),
-              //       ),
-              //       focusedBorder: OutlineInputBorder(
-              //           borderRadius: BorderRadius.circular(15.0),
-              //           borderSide: BorderSide(
-              //             color: mPrimaryColor,
-              //             width: 2,
-              //           )),
-              //       enabledBorder: OutlineInputBorder(
-              //           borderRadius: BorderRadius.circular(15.0),
-              //           borderSide: BorderSide(
-              //             color: Colors.grey,
-              //             width: 1,
-              //           )),
-              //       //fillColor: Colors.green
-              //     ),
-              //     validator: (value) {
-              //       if (value.isEmpty) {
-              //         return 'This can not be empty';
-              //       } else if (value.length < 4) {
-              //         return 'Min 6 Characters required';
-              //         // } else if (value.length > 4) {
-              //         //   return 'Enter a Valid 4 Digit Pin';
-              //       } else
-              //         return null;
-              //     },
-              //     onChanged: (val) {
-              //       setState(() => confirmPassword = val);
-              //     }
-              //     // decoration: InputDecoration(
-              //     //     hintText: 'Confirm the 4 digit PIN',
-              //     //     // labelText: _weightMessage,
-              //     //     icon: Icon(Icons.fiber_pin_rounded),
-              //     //     fillColor: Colors.white),
-              //     ),
-              // Button(),
-              SizedBox(height: 20),
-              Container(
-                padding: const EdgeInsets.fromLTRB(20, 5, 20, 5),
-                child: Row(
-                  children: <Widget>[
-                    Expanded(
-                        child: Button(
-                      title: 'Submit',
-                      press: () async {
-                        print(email);
-                        print(password);
-                        print(confirmPassword);
-                        if (_key.currentState.validate()) {
-                          ScaffoldMessenger.of(context).showSnackBar(
-                              SnackBar(content: Text('Data Submitted')));
-                          // print("Your data is submitted");
-                        }
-                      },
-                    )),
-                  ],
-                ),
+              SizedBox(height: 20.0),
+              Text(
+                error,
+                style: TextStyle(color: mPrimaryColor, fontSize: 14.0),
               ),
+
+              // SizedBox(height: 10),
+              // SizedBox(height: 20),
+              // Container(
+              //   padding: const EdgeInsets.fromLTRB(20, 5, 20, 5),
+              //   child: Row(
+              //     children: <Widget>[
+              //       Expanded(
+              //           child: Button(
+              //         title: 'Submit',
+              //         press: () async {
+              //           print(email);
+              //           print(password);
+              //           print(confirmPassword);
+              //           if (_formKey.currentState.validate()) {
+              //             ScaffoldMessenger.of(context).showSnackBar(
+              //                 SnackBar(content: Text('Data Submitted')));
+              //             // print("Your data is submitted");
+              //           }
+              //         },
+              //       )),
+              //     ],
+              //   ),
+              // ),
               SizedBox(height: 10),
               Container(
                 padding: const EdgeInsets.fromLTRB(20, 5, 20, 5),
@@ -210,12 +144,14 @@ class _SignInState extends State<SignIn> {
                         child: Button(
                             title: 'Sing In & Proceed',
                             press: () async {
-                              dynamic result = await _auth.signInAnon();
-                              if (result == null) {
-                                print('Error Signing In');
-                              } else {
-                                print('Signed In');
-                                print(result.uid);
+                              if (_formKey.currentState.validate()) {
+                                dynamic result =
+                                    await _auth.signInWithEmailAndPassword(
+                                        email, password);
+                                if (result == null) {
+                                  setState(() => error =
+                                      'Could not Sign in with those Credentials');
+                                }
                               }
                             })),
                   ],
