@@ -7,6 +7,8 @@ class Button extends StatelessWidget {
     Key key,
     this.title,
     this.press,
+    Text children,
+    Text child,
   }) : super(key: key);
 
   final String title;

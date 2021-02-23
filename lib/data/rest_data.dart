@@ -1,16 +1,16 @@
-import 'dart:async';
+// import 'dart:async';
 
-// import 'package:fluttersqflite/models/user.dart';
-// import 'package:fluttersqflite/utils/network_util.dart';
-import 'package:gokullu/models/user.dart';
-import 'package:gokullu/utils/network_utils.dart';
+// // import 'package:fluttersqflite/models/user.dart';
+// // import 'package:fluttersqflite/utils/network_util.dart';
+// import 'package:gokullu/models/user.dart';
+// import 'package:gokullu/utils/network_utils.dart';
 
-class RestData {
-  NetworkUtil _netUtil = new NetworkUtil();
-  static final BASE_URL = '';
-  static final LOGIN_URL = BASE_URL + '/';
+// class RestData {
+//   NetworkUtil _netUtil = new NetworkUtil();
+//   static final BASE_URL = '';
+//   static final LOGIN_URL = BASE_URL + '/';
 
-  Future<User> login(String username, String password) {
-    return new Future.value(new User(username, password));
-  }
-}
+//   Future<User> login(String username, String password) {
+//     return new Future.value(new User(username, password));
+//   }
+// }
