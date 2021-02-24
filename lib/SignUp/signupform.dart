@@ -19,7 +19,7 @@ enum GenderEnum { man, woman }
 class _SignUpForm extends State<SignUpForm>
     with AutomaticKeepAliveClientMixin<SignUpForm> {
   GenderEnum _userGender = GenderEnum.man;
-  String _selectDateString = 'Select your birthday';
+  String _selectDateString = 'Select your DOB';
 
   bool _agreedToTerm = false;
   DateTime _selectedDate = DateTime.now();
@@ -144,7 +144,7 @@ class _SignUpForm extends State<SignUpForm>
                 groupValue: _userGender,
                 onChanged: (GenderEnum value) {
                   setState(() {
-                    _passDataToParent('gender', 'Man');
+                    _passDataToParent('gender', 'Male');
                     _userGender = value;
                   });
                 },
@@ -152,11 +152,11 @@ class _SignUpForm extends State<SignUpForm>
               new GestureDetector(
                 onTap: () {
                   setState(() {
-                    _passDataToParent('gender', 'Man');
+                    _passDataToParent('gender', 'Male');
                     _userGender = GenderEnum.man;
                   });
                 },
-                child: Text('Man'),
+                child: Text('Male'),
               ),
               SizedBox(
                 width: 20,
@@ -166,7 +166,7 @@ class _SignUpForm extends State<SignUpForm>
                 groupValue: _userGender,
                 onChanged: (GenderEnum value) {
                   setState(() {
-                    _passDataToParent('gender', 'Woman');
+                    _passDataToParent('gender', 'Female');
                     _userGender = value;
                   });
                 },
@@ -174,11 +174,11 @@ class _SignUpForm extends State<SignUpForm>
               new GestureDetector(
                 onTap: () {
                   setState(() {
-                    _passDataToParent('gender', 'Woman');
+                    _passDataToParent('gender', 'Female');
                     _userGender = GenderEnum.woman;
                   });
                 },
-                child: Text('Woman'),
+                child: Text('Female'),
               ),
             ],
           ),

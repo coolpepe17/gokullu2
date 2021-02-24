@@ -9,6 +9,8 @@ import 'package:gokullu/userscreen/userscreen.dart';
 // import 'package:signupexample/SignUp/signupintroduce.dart';
 // import 'package:signupexample/Database/database_helper.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import '../constant.dart';
 // import 'package:signupexample/userscreen/userscreen.dart';
 
 class SignUpWithMail extends StatefulWidget {
@@ -27,7 +29,7 @@ class _SignUpWithMail extends State<SignUpWithMail> {
   PageController _pageController = PageController();
 
   String _nextText = 'Next';
-  Color _nextColor = Colors.green[800];
+  Color _nextColor = mPrimaryColor;
 
   _updateMyTitle(List<dynamic> data) {
     setState(() {
@@ -46,7 +48,7 @@ class _SignUpWithMail extends State<SignUpWithMail> {
   @override
   void initState() {
     _query();
-    _userDataMap['gender'] = 'Man';
+    _userDataMap['gender'] = 'Male';
     _userDataMap['term'] = false;
     super.initState();
   }
@@ -56,10 +58,11 @@ class _SignUpWithMail extends State<SignUpWithMail> {
     return Scaffold(
       body: Container(
           decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: NetworkImage(
-                      'https://cdn.pixabay.com/photo/2020/03/19/04/58/coconut-trees-4946270_1280.jpg'),
-                  fit: BoxFit.fill)),
+              // image: DecorationImage(
+              //     image: NetworkImage(
+              //         'https://cdn.pixabay.com/photo/2020/03/19/04/58/coconut-trees-4946270_1280.jpg'),
+              //     fit: BoxFit.fill)
+              ),
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -69,7 +72,7 @@ class _SignUpWithMail extends State<SignUpWithMail> {
                   padding: const EdgeInsets.only(top: 10, bottom: 24),
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    border: Border.all(color: Colors.grey[400]),
+                    border: Border.all(color: mPrimaryColor),
                     borderRadius: BorderRadius.all(Radius.circular(25.0)),
                   ),
                   child: Column(
@@ -77,11 +80,11 @@ class _SignUpWithMail extends State<SignUpWithMail> {
                       Padding(
                         padding: const EdgeInsets.only(left: 18.0, top: 10),
                         child: Align(
-                          alignment: Alignment.centerLeft,
+                          alignment: Alignment.center,
                           child: Text(
                             'Create Account',
                             style: TextStyle(
-                                fontSize: 34, fontWeight: FontWeight.bold),
+                                fontSize: 25, fontWeight: FontWeight.bold),
                           ),
                         ),
                       ),
@@ -110,8 +113,8 @@ class _SignUpWithMail extends State<SignUpWithMail> {
                                 _passwordTextController,
                                 _nameTextController,
                                 _updateMyTitle),
-                            SignUpImages(_updateMyTitle),
-                            SignUpIntroduce(_introduceTextController)
+                            // SignUpImages(_updateMyTitle),
+                            // SignUpIntroduce(_introduceTextController)
                           ],
                         ),
                       ),
@@ -145,7 +148,7 @@ class _SignUpWithMail extends State<SignUpWithMail> {
                                   print(
                                       'intro: ${_introduceTextController.text}');
 
-                                  print('_userDataMap $_userDataMap');
+                                  // print('_userDataMap $_userDataMap');
                                   Navigator.pop(context);
 //                              _query();
                                 },
@@ -173,7 +176,7 @@ class _SignUpWithMail extends State<SignUpWithMail> {
                                 color: _nextColor,
                                 padding: EdgeInsets.all(10),
                                 onPressed: () {
-                                  if (_pageController.page.toInt() == 2) {
+                                  if (_pageController.page.toInt() == 0) {
                                     print('last page');
                                     _insert();
                                     _setIsLogin();

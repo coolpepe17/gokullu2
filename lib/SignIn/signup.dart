@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gokullu/SignUp/signupwithmail.dart';
+
+import '../constant.dart';
 // import 'package:signupexample/SignUp/signupwithmail.dart';
 
 class SignUp extends StatefulWidget {
@@ -15,7 +17,7 @@ class _SignUp extends State<SignUp> {
       padding: const EdgeInsets.only(top: 10),
       decoration: BoxDecoration(
         color: Colors.white,
-        border: Border.all(color: Colors.grey[400]),
+        border: Border.all(color: mPrimaryColor),
         borderRadius: BorderRadius.all(Radius.circular(25.0)),
       ),
       child: Column(
@@ -52,50 +54,50 @@ class _SignUp extends State<SignUp> {
                     );
                   },
                   child: new Icon(
-                    Icons.mail,
+                    Icons.person_add,
                     color: Colors.white,
-                    size: 50.0,
+                    size: 40.0,
                   ),
                   shape: new CircleBorder(),
                   elevation: 2.0,
-                  fillColor: Colors.redAccent,
+                  fillColor: mPrimaryColor,
                   padding: const EdgeInsets.all(15.0),
                 ),
                 margin: EdgeInsets.only(left: 10, right: 10, bottom: 14),
               ),
-              Container(
-                child: new RawMaterialButton(
-                  onPressed: () {},
-                  child: Text(
-                    'f',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 56,
-                        fontWeight: FontWeight.bold),
-                  ),
-                  shape: new CircleBorder(),
-                  elevation: 2.0,
-                  fillColor: Colors.blue[900],
-                  padding: const EdgeInsets.all(8.0),
-                ),
-                margin: EdgeInsets.only(left: 10, right: 10, bottom: 14),
-              ),
-              Container(
-                child: new RawMaterialButton(
-                  onPressed: () {},
-                  child: Image.network(
-                    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/64px-Google_%22G%22_Logo.svg.png',
-                    fit: BoxFit.cover,
-                    width: 40,
-                    height: 40,
-                  ),
-                  shape: new CircleBorder(),
-                  elevation: 2.0,
-                  fillColor: Colors.white,
-                  padding: const EdgeInsets.all(22.0),
-                ),
-                margin: EdgeInsets.only(left: 10, right: 10, bottom: 14),
-              ),
+              // Container(
+              //   child: new RawMaterialButton(
+              //     onPressed: () {},
+              //     child: Text(
+              //       'f',
+              //       style: TextStyle(
+              //           color: Colors.white,
+              //           fontSize: 56,
+              //           fontWeight: FontWeight.bold),
+              //     ),
+              //     shape: new CircleBorder(),
+              //     elevation: 2.0,
+              //     fillColor: Colors.blue[900],
+              //     padding: const EdgeInsets.all(8.0),
+              //   ),
+              //   margin: EdgeInsets.only(left: 10, right: 10, bottom: 14),
+              // ),
+              // Container(
+              //   child: new RawMaterialButton(
+              //     onPressed: () {},
+              //     child: Image.network(
+              //       'https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/64px-Google_%22G%22_Logo.svg.png',
+              //       fit: BoxFit.cover,
+              //       width: 40,
+              //       height: 40,
+              //     ),
+              //     shape: new CircleBorder(),
+              //     elevation: 2.0,
+              //     fillColor: Colors.white,
+              //     padding: const EdgeInsets.all(22.0),
+              //   ),
+              //   margin: EdgeInsets.only(left: 10, right: 10, bottom: 14),
+              // ),
             ],
           )
         ],

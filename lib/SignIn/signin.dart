@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gokullu/constant.dart';
 
 class SignIn extends StatefulWidget {
   @override
@@ -23,7 +24,7 @@ class _SignIn extends State<SignIn> {
       padding: const EdgeInsets.only(top: 10, bottom: 24),
       decoration: BoxDecoration(
         color: Colors.white,
-        border: Border.all(color: Colors.grey[400]),
+        border: Border.all(color: mPrimaryColor),
         borderRadius: BorderRadius.all(Radius.circular(25.0)),
       ),
       child: Column(
@@ -34,7 +35,7 @@ class _SignIn extends State<SignIn> {
               alignment: Alignment.centerLeft,
               child: Text(
                 'Login',
-                style: TextStyle(fontSize: 34, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
               ),
             ),
           ),
@@ -42,7 +43,7 @@ class _SignIn extends State<SignIn> {
             margin: const EdgeInsets.all(15.0),
             padding: const EdgeInsets.all(13.0),
             decoration: BoxDecoration(
-              border: Border.all(color: Colors.grey[400]),
+              border: Border.all(color: mPrimaryColor),
               borderRadius: BorderRadius.all(Radius.circular(25.0)),
             ),
             child: Column(
@@ -108,7 +109,7 @@ class _SignIn extends State<SignIn> {
                       ],
                     ),
                     textColor: Colors.white,
-                    color: Colors.green[700],
+                    color: mPrimaryColor,
                     padding: EdgeInsets.all(10),
                     onPressed: () {},
                   ),

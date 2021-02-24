@@ -7,6 +7,7 @@ import 'package:gokullu/userscreen/userscreen.dart';
 // import 'package:signupexample/SignIn/signin.dart';
 // import 'package:signupexample/SignIn/signup.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
 // import 'package:signupexample/userscreen/userscreen.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -43,9 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: NetworkImage(
-                    'https://cdn.pixabay.com/photo/2020/03/19/04/58/coconut-trees-4946270_1280.jpg'),
-                fit: BoxFit.fill)),
+                image: AssetImage('assets/images/trek.jpg'), fit: BoxFit.fill)),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
