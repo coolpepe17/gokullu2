@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gokullu/screen/mob_reg/m_reg_screen.dart';
 import 'package:gokullu/screen/mob_reg/widget/form.dart';
+import 'package:gokullu/userscreen/home.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -19,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
         context,
         MaterialPageRoute(
           builder: (context) {
-            return MyForm();
+            return MyHomePage();
           },
         ),
         (route) => false,
