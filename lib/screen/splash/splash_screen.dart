@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:gokullu/pages/home_page.dart';
 // import 'package:gokullu/models/user.dart';
 // import 'package:gokullu/pages/login/login_page.dart';
 // import 'package:gokullu/screen/about/about_app.dart';
@@ -14,6 +15,12 @@ class SplashScreen extends StatefulWidget {
   _SplashScreenState createState() => _SplashScreenState();
 }
 
+final routes = {
+  '/signin': (BuildContext context) => new SignIn(),
+  '/home': (BuildContext context) => new HomePage(),
+  '/': (BuildContext context) => new SignIn(),
+};
+
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
@@ -25,7 +32,7 @@ class _SplashScreenState extends State<SplashScreen> {
         context,
         MaterialPageRoute(
           builder: (context) {
-            return SignUp();
+            return SignIn();
           },
         ),
         (route) => false,
