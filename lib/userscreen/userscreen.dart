@@ -1,10 +1,13 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:gokullu/Database/database_helper.dart';
-import 'package:gokullu/userscreen/home.dart';
+import 'package:gokullu/screen/About/about_app.dart';
 // import 'package:signupexample/Database/database_helper.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 // import 'package:signupexample/main.dart';
+
+import '../constant.dart';
+import 'home.dart';
 
 class UserScreen extends StatefulWidget {
   @override
@@ -24,7 +27,7 @@ class _UserScreen extends State<UserScreen> with WidgetsBindingObserver {
 
   Widget titleSection() {
     return Container(
-      padding: const EdgeInsets.all(32),
+      padding: const EdgeInsets.all(50),
       child: Row(
         children: [
           Expanded(
@@ -78,17 +81,47 @@ class _UserScreen extends State<UserScreen> with WidgetsBindingObserver {
     );
   }
 
-  Widget _deleteUser() {
+  // Widget _deleteUser() {
+  //   return Container(
+  //     padding: const EdgeInsets.all(16),
+  //     child: RaisedButton(
+  //       onPressed: () {
+  //         print('delete user');
+  //         _delete();
+  //       },
+  //       child: Text('Delete user'),
+  //     ),
+  //   );
+  // }
+
+  Widget proceed() {
     return Container(
-      padding: const EdgeInsets.all(16),
-      child: RaisedButton(
-        onPressed: () {
-          print('delete user');
-          _delete();
-        },
-        child: Text('Delete user'),
-      ),
-    );
+        padding: const EdgeInsets.all(16),
+        child: RaisedButton(
+          shape: RoundedRectangleBorder(
+            borderRadius: new BorderRadius.circular(35.0),
+//                    side: BorderSide(color: Colors.red)
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                'Proceed',
+                style: TextStyle(fontSize: 20),
+              ),
+            ],
+          ),
+          textColor: Colors.white,
+          color: mPrimaryTextColor,
+          padding: EdgeInsets.all(20),
+          onPressed: () {
+            print('Proceed');
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => AboutApp()),
+            );
+          },
+        ));
   }
 
   @override
@@ -100,7 +133,16 @@ class _UserScreen extends State<UserScreen> with WidgetsBindingObserver {
       },
       child: Scaffold(
         appBar: AppBar(
-          title: Text('This is user screen'),
+          backgroundColor: mBackgroundColor,
+          centerTitle: true,
+          elevation: 10,
+          title: Center(
+              child: Text(
+            'Welcome to Go Kullu',
+            style: TextStyle(
+              color: mPrimaryTextColor,
+            ),
+          )),
           automaticallyImplyLeading: false,
         ),
         body: _fetchingData
@@ -113,8 +155,9 @@ class _UserScreen extends State<UserScreen> with WidgetsBindingObserver {
                     fit: BoxFit.cover,
                   ),
                   titleSection(),
-                  textSection(),
-                  _deleteUser()
+                  // textSection(),
+                  proceed(),
+                  // _deleteUser()
                 ],
               ),
       ),

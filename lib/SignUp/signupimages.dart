@@ -18,118 +18,124 @@ class _SignUpImages extends State<SignUpImages>
   @override
   Widget build(BuildContext context) {
     super.build(context);
-    return Padding(
-      padding: const EdgeInsets.only(top: 28.0, bottom: 28.0),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.only(left: 18.0),
-            child: Align(
-              alignment: Alignment.topLeft,
-              child: Text(
-                'Select your photos',
-                style: TextStyle(fontSize: 26),
-              ),
-            ),
-          ),
-          Container(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: new GestureDetector(
-                    onTap: () {
-                      _imagePosition = 0;
-                      _getImage();
-                    },
-                    child: Container(
-                      width: 184,
-                      height: 180,
-                      child: Card(
-                          child: (_imageList[0].path != '')
-                              ? Image.file(
-                                  _imageList[0],
-                                  fit: BoxFit.fill,
-                                )
-                              : Icon(Icons.add_photo_alternate,
-                                  size: 130, color: Colors.grey[700])),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: new GestureDetector(
-                    onTap: () {
-                      _imagePosition = 1;
-                      _getImage();
-                    },
-                    child: Container(
-                      width: 184,
-                      height: 180,
-                      child: Card(
-                          child: (_imageList[1].path != '')
-                              ? Image.file(
-                                  _imageList[1],
-                                  fit: BoxFit.fill,
-                                )
-                              : Icon(Icons.add_photo_alternate,
-                                  size: 130, color: Colors.grey[700])),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Row(
-//              mainAxisAlignment: MainAxisAlignment.center,
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.only(top: 28.0, bottom: 28.0),
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
               Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: new GestureDetector(
-                  onTap: () {
-                    _imagePosition = 2;
-                    _getImage();
-                  },
-                  child: Container(
-                    width: 184,
-                    height: 180,
-                    child: Card(
-                        child: (_imageList[2].path != '')
-                            ? Image.file(
-                                _imageList[2],
-                                fit: BoxFit.fill,
-                              )
-                            : Icon(Icons.add_photo_alternate,
-                                size: 130, color: Colors.grey[700])),
+                padding: const EdgeInsets.only(left: 18.0),
+                child: Align(
+                  alignment: Alignment.center,
+                  child: Text(
+                    'Select Profile Pic',
+                    style: TextStyle(fontSize: 20),
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: new GestureDetector(
-                  onTap: () {
-                    _imagePosition = 3;
-                    _getImage();
-                  },
-                  child: Container(
-                    width: 184,
-                    height: 180,
-                    child: Card(
-                        child: (_imageList[3].path != '')
-                            ? Image.file(
-                                _imageList[3],
-                                fit: BoxFit.fill,
-                              )
-                            : Icon(Icons.add_photo_alternate,
-                                size: 130, color: Colors.grey[700])),
-                  ),
+              Container(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Padding(
+                      padding: const EdgeInsets.all(15.0),
+                      child: new GestureDetector(
+                        onTap: () {
+                          _imagePosition = 0;
+                          _getImage();
+                        },
+                        child: Container(
+                          width: 120,
+                          height: 120,
+                          child: Card(
+                              child: (_imageList[0].path != '')
+                                  ? Image.file(
+                                      _imageList[0],
+                                      fit: BoxFit.fill,
+                                    )
+                                  : Icon(Icons.add_photo_alternate,
+                                      size: 100, color: Colors.grey[700])),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(15.0),
+                      child: new GestureDetector(
+                        onTap: () {
+                          _imagePosition = 1;
+                          _getImage();
+                        },
+                        child: Container(
+                          width: 120,
+                          height: 120,
+                          child: Card(
+                              child: (_imageList[1].path != '')
+                                  ? Image.file(
+                                      _imageList[1],
+                                      fit: BoxFit.fill,
+                                    )
+                                  : Icon(Icons.add_photo_alternate,
+                                      size: 100, color: Colors.grey[700])),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Padding(
+                      padding: const EdgeInsets.all(15.0),
+                      child: new GestureDetector(
+                        onTap: () {
+                          _imagePosition = 2;
+                          _getImage();
+                        },
+                        child: Container(
+                          width: 120,
+                          height: 120,
+                          child: Card(
+                              child: (_imageList[2].path != '')
+                                  ? Image.file(
+                                      _imageList[2],
+                                      fit: BoxFit.fill,
+                                    )
+                                  : Icon(Icons.add_photo_alternate,
+                                      size: 100, color: Colors.grey[700])),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(15.0),
+                      child: new GestureDetector(
+                        onTap: () {
+                          _imagePosition = 3;
+                          _getImage();
+                        },
+                        child: Container(
+                          width: 120,
+                          height: 120,
+                          child: Card(
+                              child: (_imageList[3].path != '')
+                                  ? Image.file(
+                                      _imageList[3],
+                                      fit: BoxFit.fill,
+                                    )
+                                  : Icon(Icons.add_photo_alternate,
+                                      size: 100, color: Colors.grey[700])),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ],
           ),
-        ],
+        ),
       ),
     );
   }

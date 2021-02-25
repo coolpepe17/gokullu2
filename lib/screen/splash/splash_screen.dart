@@ -36,7 +36,7 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Container(
         //decoration: BoxDecoration(
         //image: DecorationImage(
-        //image: AssetImage('assets/images/trek.g'),
+        //image: AssetImage('assets/images/trek.jpg'),
         //  ),
         //),
         child: Center(

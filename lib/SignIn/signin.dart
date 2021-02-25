@@ -34,7 +34,7 @@ class _SignIn extends State<SignIn> {
               alignment: Alignment.centerLeft,
               child: Text(
                 'Login',
-                style: TextStyle(fontSize: 34, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
               ),
             ),
           ),

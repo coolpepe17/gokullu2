@@ -43,8 +43,9 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: NetworkImage(
-                    'https://cdn.pixabay.com/photo/2020/03/19/04/58/coconut-trees-4946270_1280.jpg'),
+                image: AssetImage('assets/images/trek.jpg'),
+                // NetworkImage(
+                //     'https://cdn.pixabay.com/photo/2020/03/19/04/58/coconut-trees-4946270_1280.jpg'),
                 fit: BoxFit.fill)),
         child: Center(
           child: Column(

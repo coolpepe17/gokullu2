@@ -14,11 +14,11 @@ class SignUpForm extends StatefulWidget {
   State<StatefulWidget> createState() => _SignUpForm();
 }
 
-enum GenderEnum { man, woman }
+enum GenderEnum { male, female }
 
 class _SignUpForm extends State<SignUpForm>
     with AutomaticKeepAliveClientMixin<SignUpForm> {
-  GenderEnum _userGender = GenderEnum.man;
+  GenderEnum _userGender = GenderEnum.male;
   String _selectDateString = 'Select your birthday';
 
   bool _agreedToTerm = false;
@@ -140,11 +140,11 @@ class _SignUpForm extends State<SignUpForm>
                 color: Colors.grey,
               ),
               Radio(
-                value: GenderEnum.man,
+                value: GenderEnum.male,
                 groupValue: _userGender,
                 onChanged: (GenderEnum value) {
                   setState(() {
-                    _passDataToParent('gender', 'Man');
+                    _passDataToParent('gender', 'Male');
                     _userGender = value;
                   });
                 },
@@ -152,8 +152,8 @@ class _SignUpForm extends State<SignUpForm>
               new GestureDetector(
                 onTap: () {
                   setState(() {
-                    _passDataToParent('gender', 'Man');
-                    _userGender = GenderEnum.man;
+                    _passDataToParent('gender', 'Male');
+                    _userGender = GenderEnum.male;
                   });
                 },
                 child: Text('Man'),
@@ -162,11 +162,11 @@ class _SignUpForm extends State<SignUpForm>
                 width: 20,
               ),
               Radio(
-                value: GenderEnum.woman,
+                value: GenderEnum.female,
                 groupValue: _userGender,
                 onChanged: (GenderEnum value) {
                   setState(() {
-                    _passDataToParent('gender', 'Woman');
+                    _passDataToParent('gender', 'Female');
                     _userGender = value;
                   });
                 },
@@ -174,11 +174,11 @@ class _SignUpForm extends State<SignUpForm>
               new GestureDetector(
                 onTap: () {
                   setState(() {
-                    _passDataToParent('gender', 'Woman');
-                    _userGender = GenderEnum.woman;
+                    _passDataToParent('gender', 'Female');
+                    _userGender = GenderEnum.female;
                   });
                 },
-                child: Text('Woman'),
+                child: Text('Female'),
               ),
             ],
           ),
@@ -218,7 +218,7 @@ class _SignUpForm extends State<SignUpForm>
                 GestureDetector(
                   onTap: () => _setAgreedToTerm(!_agreedToTerm),
                   child: const Text(
-                    'I agree to Terms of Services, Privacy Policy',
+                    'I agree to Terms & Conditions',
                   ),
                 ),
               ],

@@ -11,9 +11,15 @@ class MyApp extends StatelessWidget {
       title: 'Go Kullu',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        scaffoldBackgroundColor: mBackgroundColor,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
+          scaffoldBackgroundColor: mBackgroundColor,
+          visualDensity: VisualDensity.adaptivePlatformDensity,
+          primaryColor: Colors.purple,
+          accentColor: Colors.purple,
+          textSelectionTheme: TextSelectionThemeData(
+            cursorColor: Colors.purple,
+            selectionColor: Colors.purple,
+            selectionHandleColor: Colors.purple,
+          )),
       home: SplashScreen(),
     );
   }
