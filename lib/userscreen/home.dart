@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gokullu/SignIn/mainlogo.dart';
 import 'package:gokullu/SignIn/signin.dart';
 import 'package:gokullu/SignIn/signup.dart';
+import 'package:gokullu/screen/about/about_app.dart';
 import 'package:gokullu/userscreen/userscreen.dart';
 // import 'package:signupexample/SignIn/mainlogo.dart';
 // import 'package:signupexample/SignIn/signin.dart';
@@ -35,7 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return !_isLogin ? _signInWidget() : UserScreen();
+    return !_isLogin ? _signInWidget() : AboutApp();
   }
 
   Widget _signInWidget() {

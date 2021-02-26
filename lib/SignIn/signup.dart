@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gokullu/SignUp/signupwithmail.dart';
+import 'package:gokullu/constant.dart';
 // import 'package:signupexample/SignUp/signupwithmail.dart';
 
 class SignUp extends StatefulWidget {
@@ -44,7 +45,7 @@ class _SignUp extends State<SignUp> {
               Container(
                 child: new RawMaterialButton(
                   onPressed: () {
-                    print('touched email');
+                    print('Register Page');
 //                    widget.parentAction(true);
                     Navigator.push(
                       context,
@@ -58,7 +59,7 @@ class _SignUp extends State<SignUp> {
                   ),
                   shape: new CircleBorder(),
                   elevation: 2.0,
-                  fillColor: Colors.redAccent,
+                  fillColor: mPrimaryColor,
                   padding: const EdgeInsets.all(15.0),
                 ),
                 margin: EdgeInsets.only(left: 10, right: 10, bottom: 14),

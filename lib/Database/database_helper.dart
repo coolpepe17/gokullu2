@@ -15,12 +15,13 @@ class DatabaseHelper {
   static final columnGender = 'gender';
   static final columnEmail = 'email';
   static final columnPassword = 'password';
+  static final columnMobile = 'mobile';
   static final columnAge = 'age';
-  static final columnImageOne = 'image0';
-  static final columnImageTwo = 'image1';
-  static final columnImageThree = 'image2';
-  static final columnImageFour = 'image3';
-  static final columnImageIntro = 'intro';
+  // static final columnImageOne = 'image0';
+  // static final columnImageTwo = 'image1';
+  // static final columnImageThree = 'image2';
+  // static final columnImageFour = 'image3';
+  // static final columnImageIntro = 'intro';
 
   // make this a singleton class
   DatabaseHelper._privateConstructor();
@@ -52,15 +53,16 @@ class DatabaseHelper {
             $columnGender TEXT NOT NULL,
             $columnEmail TEXT NOT NULL,
             $columnPassword TEXT NOT NULL,
+            $columnMobile INTEGER NOT NULL,
             $columnAge INTEGER NOT NULL,
-            $columnImageOne TEXT,
-            $columnImageTwo TEXT,
-            $columnImageThree TEXT,
-            $columnImageFour TEXT,
-            $columnImageIntro TEXT
           )
           ''');
   }
+  //   $columnImageOne TEXT,
+  // $columnImageTwo TEXT,
+  // $columnImageThree TEXT,
+  // $columnImageFour TEXT,
+  // $columnImageIntro TEXT
 
   // Helper methods
 

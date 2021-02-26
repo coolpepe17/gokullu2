@@ -24,6 +24,12 @@ class _SignUpIntroduce extends State<SignUpIntroduce>
                   child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: TextFormField(
+                  validator: (value) {
+                    if (value.isEmpty) {
+                      return "Kindly Fill Some Details";
+                    } else
+                      return null;
+                  },
                   decoration: InputDecoration(
                       border: InputBorder.none, hintText: 'Type about you'),
                   controller: widget.introduceTextController,

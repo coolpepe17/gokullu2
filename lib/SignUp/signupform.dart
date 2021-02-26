@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 
 class SignUpForm extends StatefulWidget {
   SignUpForm(this.emailTextController, this.passwordTextController,
-      this.nameTextController, this.parentAction);
+      this.nameTextController, this.mobileTextController, this.parentAction);
 
   final TextEditingController emailTextController;
   final TextEditingController passwordTextController;
   final TextEditingController nameTextController;
+  final TextEditingController mobileTextController;
 
   final ValueChanged<List<dynamic>> parentAction;
 
@@ -19,49 +20,49 @@ enum GenderEnum { male, female }
 class _SignUpForm extends State<SignUpForm>
     with AutomaticKeepAliveClientMixin<SignUpForm> {
   GenderEnum _userGender = GenderEnum.male;
-  String _selectDateString = 'Select your birthday';
+  // String _selectDateString = 'Select your birthday';
 
-  bool _agreedToTerm = false;
-  DateTime _selectedDate = DateTime.now();
+  // bool _agreedToTerm = false;
+  // DateTime _selectedDate = DateTime.now();
 
-  Future<Null> _selectDate(BuildContext context) async {
-    final DateTime picked = await showDatePicker(
-        context: context,
-        initialDate: _selectedDate,
-        firstDate: DateTime(1930, 8),
-        lastDate: DateTime(2101));
-    if (picked != null && picked != _selectedDate)
-      setState(() {
-        _selectedDate = picked;
-        _selectDateString = "${_selectedDate.toLocal()}".split(' ')[0];
-        _passDataToParent('age', calculateAge(picked));
-      });
-    print('your age is ${calculateAge(picked)}');
-  }
+  // Future<Null> _selectDate(BuildContext context) async {
+  //   final DateTime picked = await showDatePicker(
+  //       context: context,
+  //       initialDate: _selectedDate,
+  //       firstDate: DateTime(1930, 8),
+  //       lastDate: DateTime(2101));
+  //   if (picked != null && picked != _selectedDate)
+  //     setState(() {
+  //       _selectedDate = picked;
+  //       _selectDateString = "${_selectedDate.toLocal()}".split(' ')[0];
+  //       _passDataToParent('age', calculateAge(picked));
+  //     });
+  //   print('your age is ${calculateAge(picked)}');
+  // }
 
-  calculateAge(DateTime birthDate) {
-    DateTime currentDate = DateTime.now();
-    int age = currentDate.year - birthDate.year;
-    int month1 = currentDate.month;
-    int month2 = birthDate.month;
-    if (month2 > month1) {
-      age--;
-    } else if (month1 == month2) {
-      int day1 = currentDate.day;
-      int day2 = birthDate.day;
-      if (day2 > day1) {
-        age--;
-      }
-    }
-    return age;
-  }
+  // calculateAge(DateTime birthDate) {
+  //   DateTime currentDate = DateTime.now();
+  //   int age = currentDate.year - birthDate.year;
+  //   int month1 = currentDate.month;
+  //   int month2 = birthDate.month;
+  //   if (month2 > month1) {
+  //     age--;
+  //   } else if (month1 == month2) {
+  //     int day1 = currentDate.day;
+  //     int day2 = birthDate.day;
+  //     if (day2 > day1) {
+  //       age--;
+  //     }
+  //   }
+  //   return age;
+  // }
 
-  void _setAgreedToTerm(bool newValue) {
-    _passDataToParent('term', newValue);
-    setState(() {
-      _agreedToTerm = newValue;
-    });
-  }
+  // void _setAgreedToTerm(bool newValue) {
+  //   _passDataToParent('term', newValue);
+  //   setState(() {
+  //     _agreedToTerm = newValue;
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -133,6 +134,25 @@ class _SignUpForm extends State<SignUpForm>
             ),
           ),
           Divider(),
+          SizedBox(
+            width: 360,
+            child: TextFormField(
+              decoration: InputDecoration(
+                  border: InputBorder.none,
+                  icon: Icon(Icons.mobile_friendly),
+                  labelText: 'Mobile No.',
+                  hintText: 'Enter Your Mobile'),
+              validator: (String value) {
+                if (value.trim().isEmpty) {
+                  return 'Mobile is required';
+                } else {
+                  return null;
+                }
+              },
+              controller: widget.mobileTextController,
+            ),
+          ),
+          Divider(),
           Row(
             children: <Widget>[
               Icon(
@@ -156,7 +176,7 @@ class _SignUpForm extends State<SignUpForm>
                     _userGender = GenderEnum.male;
                   });
                 },
-                child: Text('Man'),
+                child: Text('Male'),
               ),
               SizedBox(
                 width: 20,
@@ -182,48 +202,48 @@ class _SignUpForm extends State<SignUpForm>
               ),
             ],
           ),
-          Divider(),
-          SizedBox(
-            width: 360,
-            child: Row(
-              children: <Widget>[
-                Icon(
-                  Icons.cake,
-                  color: Colors.grey,
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 14.0),
-                  child: Container(
-                    width: 260,
-                    child: RaisedButton(
-                      onPressed: () {
-                        _selectDate(context);
-                      },
-                      child: Text(_selectDateString),
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 10.0),
-            child: Row(
-              children: <Widget>[
-                Checkbox(
-                  value: _agreedToTerm,
-                  onChanged: _setAgreedToTerm,
-                ),
-                GestureDetector(
-                  onTap: () => _setAgreedToTerm(!_agreedToTerm),
-                  child: const Text(
-                    'I agree to Terms & Conditions',
-                  ),
-                ),
-              ],
-            ),
-          ),
+          // Divider(),
+          // SizedBox(
+          //   width: 360,
+          //   child: Row(
+          //     children: <Widget>[
+          //       Icon(
+          //         Icons.cake,
+          //         color: Colors.grey,
+          //       ),
+          //       Padding(
+          //         padding: const EdgeInsets.only(left: 14.0),
+          //         child: Container(
+          //           width: 260,
+          //           child: RaisedButton(
+          //             onPressed: () {
+          //               _selectDate(context);
+          //             },
+          //             child: Text(_selectDateString),
+          //             color: Colors.white,
+          //           ),
+          //         ),
+          //       ),
+          //     ],
+          //   ),
+          // ),
+          // Padding(
+          //   padding: const EdgeInsets.symmetric(vertical: 10.0),
+          //   child: Row(
+          //     children: <Widget>[
+          //       Checkbox(
+          //         value: _agreedToTerm,
+          //         onChanged: _setAgreedToTerm,
+          //       ),
+          //       GestureDetector(
+          //         onTap: () => _setAgreedToTerm(!_agreedToTerm),
+          //         child: const Text(
+          //           'I agree to Terms & Conditions',
+          //         ),
+          //       ),
+          //     ],
+          //   ),
+          // ),
         ],
       ),
     );

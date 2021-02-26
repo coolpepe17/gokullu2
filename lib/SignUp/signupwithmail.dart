@@ -1,16 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:gokullu/Database/database_helper.dart';
 import 'package:gokullu/SignUp/signupform.dart';
+import 'package:gokullu/screen/about/about_app.dart';
 import 'package:gokullu/userscreen/userscreen.dart';
-// import 'package:signupexample/SignUp/signupform.dart';
-// import 'package:signupexample/SignUp/signupimages.dart';
-// import 'package:signupexample/SignUp/signupintroduce.dart';
-// import 'package:signupexample/Database/database_helper.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
+import '../constant.dart';
 import 'signupimages.dart';
 import 'signupintroduce.dart';
-// import 'package:signupexample/userscreen/userscreen.dart';
 
 class SignUpWithMail extends StatefulWidget {
   @override
@@ -21,6 +17,7 @@ class _SignUpWithMail extends State<SignUpWithMail> {
   final _emailTextController = TextEditingController();
   final _passwordTextController = TextEditingController();
   final _nameTextController = TextEditingController();
+  final _mobileTextController = TextEditingController();
   final _introduceTextController = TextEditingController();
 
   Map<String, dynamic> _userDataMap = Map<String, dynamic>();
@@ -28,7 +25,7 @@ class _SignUpWithMail extends State<SignUpWithMail> {
   PageController _pageController = PageController();
 
   String _nextText = 'Next';
-  Color _nextColor = Colors.green[800];
+  Color _nextColor = mPrimaryColor;
 
   _updateMyTitle(List<dynamic> data) {
     setState(() {
@@ -47,7 +44,7 @@ class _SignUpWithMail extends State<SignUpWithMail> {
   @override
   void initState() {
     _query();
-    _userDataMap['gender'] = 'Man';
+    _userDataMap['gender'] = 'Male';
     _userDataMap['term'] = false;
     super.initState();
   }
@@ -81,7 +78,7 @@ class _SignUpWithMail extends State<SignUpWithMail> {
                       child: Align(
                         alignment: Alignment.center,
                         child: Text(
-                          'Create Account',
+                          'Register',
                           style: TextStyle(
                               fontSize: 30, fontWeight: FontWeight.bold),
                         ),
@@ -96,12 +93,12 @@ class _SignUpWithMail extends State<SignUpWithMail> {
                           if (page == 2) {
                             setState(() {
                               _nextText = 'Submit';
-                              _nextColor = Colors.blue[900];
+                              _nextColor = Colors.purple[700];
                             });
                           } else {
                             setState(() {
-                              _nextText = 'Next';
-                              _nextColor = Colors.green[800];
+                              _nextText = 'Submit';
+                              _nextColor = mPrimaryColor;
                             });
                           }
                         },
@@ -111,9 +108,10 @@ class _SignUpWithMail extends State<SignUpWithMail> {
                               _emailTextController,
                               _passwordTextController,
                               _nameTextController,
+                              _mobileTextController,
                               _updateMyTitle),
-                          SignUpImages(_updateMyTitle),
-                          SignUpIntroduce(_introduceTextController)
+                          // SignUpImages(_updateMyTitle),
+                          // SignUpIntroduce(_introduceTextController)
                         ],
                       ),
                     ),
@@ -175,7 +173,7 @@ class _SignUpWithMail extends State<SignUpWithMail> {
                               color: _nextColor,
                               padding: EdgeInsets.all(10),
                               onPressed: () {
-                                if (_pageController.page.toInt() == 2) {
+                                if (_pageController.page.toInt() == 0) {
                                   print('last page');
                                   _insert();
                                   _setIsLogin();
@@ -183,7 +181,7 @@ class _SignUpWithMail extends State<SignUpWithMail> {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => UserScreen()),
+                                        builder: (context) => AboutApp()),
                                   );
                                 } else {
                                   _pageController.animateToPage(
@@ -217,11 +215,12 @@ class _SignUpWithMail extends State<SignUpWithMail> {
       DatabaseHelper.columnEmail: _emailTextController.text,
       DatabaseHelper.columnPassword: _passwordTextController.text,
       DatabaseHelper.columnAge: _userDataMap['age'],
-      DatabaseHelper.columnImageOne: _userDataMap['image0'],
-      DatabaseHelper.columnImageTwo: _userDataMap['image1'],
-      DatabaseHelper.columnImageThree: _userDataMap['image2'],
-      DatabaseHelper.columnImageFour: _userDataMap['image3'],
-      DatabaseHelper.columnImageIntro: _introduceTextController.text,
+      DatabaseHelper.columnMobile: _mobileTextController.text,
+      // DatabaseHelper.columnImageOne: _userDataMap['image0'],
+      // DatabaseHelper.columnImageTwo: _userDataMap['image1'],
+      // DatabaseHelper.columnImageThree: _userDataMap['image2'],
+      // DatabaseHelper.columnImageFour: _userDataMap['image3'],
+      // DatabaseHelper.columnImageIntro: _introduceTextController.text,
     };
     final id = await dbHelper.insert(row);
     print('inserted row id: $id');

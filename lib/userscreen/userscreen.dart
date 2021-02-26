@@ -59,7 +59,7 @@ class _UserScreen extends State<UserScreen> with WidgetsBindingObserver {
             padding: const EdgeInsets.all(8.0),
             child: Icon(
               Icons.account_circle,
-              color: _useData['gender'] == 'Man'
+              color: _useData['gender'] == 'Male'
                   ? Colors.blue[700]
                   : Colors.red[700],
               size: 28,

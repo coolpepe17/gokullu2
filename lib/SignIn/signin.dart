@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gokullu/constant.dart';
 
 class SignIn extends StatefulWidget {
   @override
@@ -108,7 +109,7 @@ class _SignIn extends State<SignIn> {
                       ],
                     ),
                     textColor: Colors.white,
-                    color: Colors.green[700],
+                    color: mPrimaryColor,
                     padding: EdgeInsets.all(10),
                     onPressed: () {},
                   ),
