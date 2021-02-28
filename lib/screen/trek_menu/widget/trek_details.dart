@@ -30,7 +30,7 @@ class TrekDetails extends StatelessWidget {
                 textAlign: TextAlign.justify,
                 style: TextStyle(
                   color: mPrimaryTextColor,
-                  fontSize: 20,
+                  fontSize: 18,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -41,10 +41,10 @@ class TrekDetails extends StatelessWidget {
           ),
           Divider(
             color: Colors.grey.withOpacity(1.0),
-            thickness: 3.0,
+            thickness: 2.0,
           ),
           SizedBox(
-            height: 20,
+            height: 15,
           ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -152,6 +152,7 @@ class TrekDetails extends StatelessWidget {
             children: <Widget>[
               Text(
                 bestSeason[index],
+                textAlign: TextAlign.center,
                 style: TextStyle(
                   color: mTitleTextColor,
                   fontSize: 20,

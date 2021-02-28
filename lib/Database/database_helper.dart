@@ -53,12 +53,12 @@ class DatabaseHelper {
             $columnGender TEXT NOT NULL,
             $columnEmail TEXT NOT NULL,
             $columnPassword TEXT NOT NULL,
-            $columnMobile INTEGER NOT NULL,
-            $columnAge INTEGER NOT NULL,
+            $columnMobile INTEGER NOT NULL
           )
           ''');
   }
-  //   $columnImageOne TEXT,
+  // $columnAge INTEGER NOT NULL,
+  // $columnImageOne TEXT,
   // $columnImageTwo TEXT,
   // $columnImageThree TEXT,
   // $columnImageFour TEXT,

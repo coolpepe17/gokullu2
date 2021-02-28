@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:gokullu/Database/database_helper.dart';
 import 'package:gokullu/SignUp/signupform.dart';
 import 'package:gokullu/screen/about/about_app.dart';
-import 'package:gokullu/userscreen/userscreen.dart';
+// import 'package:gokullu/userscreen/userscreen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../constant.dart';
-import 'signupimages.dart';
-import 'signupintroduce.dart';
+// import 'signupimages.dart';
+// import 'signupintroduce.dart';
 
 class SignUpWithMail extends StatefulWidget {
   @override
@@ -142,6 +142,7 @@ class _SignUpWithMail extends State<SignUpWithMail> {
                                 print(
                                     'password: ${_passwordTextController.text}');
                                 print('name: ${_nameTextController.text}');
+                                print('mobile: ${_mobileTextController.text}');
                                 print(
                                     'intro: ${_introduceTextController.text}');
 
@@ -177,6 +178,16 @@ class _SignUpWithMail extends State<SignUpWithMail> {
                                   print('last page');
                                   _insert();
                                   _setIsLogin();
+                                  print('email: ${_emailTextController.text}');
+                                  print(
+                                      'password: ${_passwordTextController.text}');
+                                  print('name: ${_nameTextController.text}');
+                                  print(
+                                      'mobile: ${_mobileTextController.text}');
+                                  // print(
+                                  //     'intro: ${_introduceTextController.text}');
+
+                                  print('_userDataMap $_userDataMap');
 
                                   Navigator.push(
                                     context,
@@ -214,7 +225,7 @@ class _SignUpWithMail extends State<SignUpWithMail> {
       DatabaseHelper.columnGender: _userDataMap['gender'],
       DatabaseHelper.columnEmail: _emailTextController.text,
       DatabaseHelper.columnPassword: _passwordTextController.text,
-      DatabaseHelper.columnAge: _userDataMap['age'],
+      // DatabaseHelper.columnAge: _userDataMap['age'],
       DatabaseHelper.columnMobile: _mobileTextController.text,
       // DatabaseHelper.columnImageOne: _userDataMap['image0'],
       // DatabaseHelper.columnImageTwo: _userDataMap['image1'],
@@ -231,7 +242,7 @@ class _SignUpWithMail extends State<SignUpWithMail> {
     print('query all rows:');
     allRows.forEach((row) {
       print(row);
-      print('row age is ${row[DatabaseHelper.columnAge]}');
+      // print('row age is ${row[DatabaseHelper.columnAge]}');
       return null;
     });
   }

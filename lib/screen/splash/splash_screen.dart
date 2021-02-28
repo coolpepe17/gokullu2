@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:gokullu/expansion/expansion.dart';
+import 'package:gokullu/screen/About/about_app.dart';
 import 'package:gokullu/screen/mob_reg/m_reg_screen.dart';
 import 'package:gokullu/screen/mob_reg/widget/form.dart';
 import 'package:gokullu/userscreen/home.dart';
@@ -20,7 +22,7 @@ class _SplashScreenState extends State<SplashScreen> {
         context,
         MaterialPageRoute(
           builder: (context) {
-            return MyHomePage();
+            return AboutApp();
           },
         ),
         (route) => false,
