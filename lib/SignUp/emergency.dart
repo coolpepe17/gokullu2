@@ -3,6 +3,7 @@ import 'package:gokullu/Database/database_helper.dart';
 import 'package:gokullu/SignUp/e_form.dart';
 // import 'package:gokullu/SignUp/signupform.dart';
 import 'package:gokullu/screen/about/about_app.dart';
+import 'package:gokullu/userscreen/home.dart';
 // import 'package:gokullu/userscreen/userscreen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../constant.dart';
@@ -16,10 +17,10 @@ class EmergencyDetails extends StatefulWidget {
 
 class _EmergencyDetails extends State<EmergencyDetails> {
   final _addressTextController = TextEditingController();
-  final _emerContact1TextController = TextEditingController();
-  final _emerContact2TextController = TextEditingController();
-  final _emerPhone1TextController = TextEditingController();
-  final _emerPhone2TextController = TextEditingController();
+  final _eContact1TextController = TextEditingController();
+  final _eContact2TextController = TextEditingController();
+  final _ePhone1TextController = TextEditingController();
+  final _ePhone2TextController = TextEditingController();
 
   Map<String, dynamic> _userDataMap = Map<String, dynamic>();
 
@@ -107,10 +108,10 @@ class _EmergencyDetails extends State<EmergencyDetails> {
                         children: <Widget>[
                           EmergencyForm(
                               _addressTextController,
-                              _emerContact1TextController,
-                              _emerPhone1TextController,
-                              _emerContact2TextController,
-                              _emerPhone2TextController,
+                              _eContact1TextController,
+                              _ePhone1TextController,
+                              _eContact2TextController,
+                              _ePhone2TextController,
                               _updateMyTitle),
                           // SignUpImages(_updateMyTitle),
                           // SignUpIntroduce(_introduceTextController)
@@ -186,20 +187,20 @@ class _EmergencyDetails extends State<EmergencyDetails> {
                                   print(
                                       'address: ${_addressTextController.text}');
                                   print(
-                                      'contact 1: ${_emerContact1TextController.text}');
+                                      'contact 1: ${_eContact1TextController.text}');
                                   print(
-                                      'phone 1: ${_emerPhone1TextController.text}');
+                                      'phone 1: ${_ePhone1TextController.text}');
                                   print(
-                                      'contact 2: ${_emerContact2TextController.text}');
+                                      'contact 2: ${_eContact2TextController.text}');
                                   print(
-                                      'phone 2: ${_emerPhone2TextController.text}');
+                                      'phone 2: ${_ePhone2TextController.text}');
 
                                   // print('_userDataMap $_userDataMap');
 
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => AboutApp()),
+                                        builder: (context) => MyHomePage()),
                                   );
                                 } else {
                                   _pageController.animateToPage(
@@ -228,14 +229,13 @@ class _EmergencyDetails extends State<EmergencyDetails> {
   void _insert() async {
     // row to insert
     Map<String, dynamic> row = {
-      DatabaseHelper.columnName: _addressTextController.text,
-      DatabaseHelper.columnGender: _userDataMap['gender'],
-      DatabaseHelper.columnEmail: _emerContact1TextController.text,
-      DatabaseHelper.columnPassword: _emerPhone1TextController.text,
-      // DatabaseHelper.columnAge: _userDataMap['age'],
-      DatabaseHelper.columnMobile: _emerContact2TextController.text,
-      // DatabaseHelper.columnImageIntro: _introduceTextController.text,
+      DatabaseHelper.columnAddress: _addressTextController.text,
+      DatabaseHelper.columnEContact1: _eContact1TextController.text,
+      DatabaseHelper.columnEPhone1: _ePhone1TextController.text,
+      DatabaseHelper.columnEContact2: _eContact2TextController.text,
+      DatabaseHelper.columnEPhone2: _ePhone2TextController.text,
     };
+
     final id = await dbHelper.insert(row);
     print('inserted row id: $id');
   }

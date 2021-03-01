@@ -84,8 +84,8 @@ class _SignUpForm extends State<SignUpForm>
                   icon: Icon(Icons.mail),
                   labelText: 'Email',
                   hintText: 'Type your email'),
-              validator: (String value) {
-                if (value.trim().isEmpty) {
+              validator: (value) {
+                if (value.isEmpty) {
                   return 'Nickname is required';
                 } else {
                   return null;
@@ -104,8 +104,8 @@ class _SignUpForm extends State<SignUpForm>
                   icon: Icon(Icons.lock),
                   labelText: 'Password',
                   hintText: 'Type password'),
-              validator: (String value) {
-                if (value.trim().isEmpty) {
+              validator: (value) {
+                if (value.isEmpty) {
                   return 'Password is required';
                 } else {
                   return null;
@@ -123,8 +123,8 @@ class _SignUpForm extends State<SignUpForm>
                   icon: Icon(Icons.account_circle),
                   labelText: 'Name',
                   hintText: 'Type Name'),
-              validator: (String value) {
-                if (value.trim().isEmpty) {
+              validator: (value) {
+                if (value.isEmpty) {
                   return 'Nickname is required';
                 } else {
                   return null;

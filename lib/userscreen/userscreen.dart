@@ -39,14 +39,14 @@ class _UserScreen extends State<UserScreen> with WidgetsBindingObserver {
                 Container(
                   padding: const EdgeInsets.only(bottom: 8),
                   child: Text(
-                    _useData['name'],
+                    _useData['address'],
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
                 Text(
-                  _useData['email'],
+                  _useData['contact1'],
                   style: TextStyle(
                     color: Colors.grey[500],
                   ),
@@ -55,17 +55,17 @@ class _UserScreen extends State<UserScreen> with WidgetsBindingObserver {
             ),
           ),
           /*3*/
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Icon(
-              Icons.account_circle,
-              color: _useData['gender'] == 'Male'
-                  ? Colors.blue[700]
-                  : Colors.red[700],
-              size: 28,
-            ),
-          ),
-          Text(_useData['age'].toString()),
+          // Padding(
+          //   padding: const EdgeInsets.all(8.0),
+          //   child: Icon(
+          //     Icons.account_circle,
+          //     color: _useData['gender'] == 'Male'
+          //         ? Colors.blue[700]
+          //         : Colors.red[700],
+          //     size: 28,
+          //   ),
+          // ),
+          // Text(_useData['age'].toString()),
         ],
       ),
     );
@@ -75,24 +75,24 @@ class _UserScreen extends State<UserScreen> with WidgetsBindingObserver {
     return Container(
       padding: const EdgeInsets.only(left: 32, right: 32),
       child: Text(
-        _useData['intro'],
+        _useData['ephone1'],
         softWrap: true,
       ),
     );
   }
 
-  // Widget _deleteUser() {
-  //   return Container(
-  //     padding: const EdgeInsets.all(16),
-  //     child: RaisedButton(
-  //       onPressed: () {
-  //         print('delete user');
-  //         _delete();
-  //       },
-  //       child: Text('Delete user'),
-  //     ),
-  //   );
-  // }
+  Widget _deleteUser() {
+    return Container(
+      padding: const EdgeInsets.all(16),
+      child: RaisedButton(
+        onPressed: () {
+          print('delete user');
+          _delete();
+        },
+        child: Text('Delete user'),
+      ),
+    );
+  }
 
   Widget proceed() {
     return Container(
@@ -149,15 +149,15 @@ class _UserScreen extends State<UserScreen> with WidgetsBindingObserver {
             ? CircularProgressIndicator()
             : ListView(
                 children: [
-                  Image.file(
-                    File(_useData['image0']),
-                    height: 240,
-                    fit: BoxFit.cover,
-                  ),
+                  // Image.file(
+                  //   File(_useData['image0']),
+                  //   height: 240,
+                  //   fit: BoxFit.cover,
+                  // ),
                   titleSection(),
-                  // textSection(),
+                  textSection(),
                   proceed(),
-                  // _deleteUser()
+                  _deleteUser()
                 ],
               ),
       ),
