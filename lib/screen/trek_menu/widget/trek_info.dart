@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gokullu/constant.dart';
 
-class TrekDetails extends StatelessWidget {
-  const TrekDetails({
+class TrekInfo extends StatelessWidget {
+  const TrekInfo({
     Key key,
     @required this.index,
   }) : super(key: key);
@@ -22,39 +22,12 @@ class TrekDetails extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              // SizedBox(
-              //   height: 10,
-              // ),
-              Text(
-                trekNames[index],
-                textAlign: TextAlign.justify,
-                style: TextStyle(
-                  color: mPrimaryTextColor,
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-            ],
-          ),
-          Divider(
-            color: Colors.grey.withOpacity(1.0),
-            thickness: 2.0,
-          ),
-          SizedBox(
-            height: 15,
-          ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
               Text(
                 route[index],
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: mTitleTextColor,
-                  fontSize: 20,
+                  fontSize: 16,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -74,7 +47,7 @@ class TrekDetails extends StatelessWidget {
                 altitude[index],
                 style: TextStyle(
                   color: mTitleTextColor,
-                  fontSize: 20,
+                  fontSize: 16,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -94,7 +67,7 @@ class TrekDetails extends StatelessWidget {
                 trekLength[index],
                 style: TextStyle(
                   color: mTitleTextColor,
-                  fontSize: 20,
+                  fontSize: 16,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -114,7 +87,7 @@ class TrekDetails extends StatelessWidget {
                 duration[index],
                 style: TextStyle(
                   color: mTitleTextColor,
-                  fontSize: 20,
+                  fontSize: 16,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -134,7 +107,7 @@ class TrekDetails extends StatelessWidget {
                 difficulty[index],
                 style: TextStyle(
                   color: mTitleTextColor,
-                  fontSize: 20,
+                  fontSize: 16,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -155,7 +128,7 @@ class TrekDetails extends StatelessWidget {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: mTitleTextColor,
-                  fontSize: 20,
+                  fontSize: 16,
                   fontWeight: FontWeight.bold,
                 ),
               ),

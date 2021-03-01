@@ -17,7 +17,7 @@ class Button extends StatelessWidget {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
         shape: StadiumBorder(),
-        padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
+        padding: const EdgeInsets.fromLTRB(5, 5, 5, 5),
         primary: mPrimaryTextColor,
         // shape: const RoundedRectangleBorder(
         //     borderRadius: BorderRadius.all(Radius.circular(36))),
@@ -33,7 +33,7 @@ class Button extends StatelessWidget {
         child: Text(
           title,
           style: TextStyle(
-            fontSize: 20,
+            fontSize: 18,
             color: Colors.white,
           ),
         ),

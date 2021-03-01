@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:gokullu/SignUp/emergency.dart';
 import 'package:gokullu/constant.dart';
 import 'package:gokullu/screen/preferences/widget/header.dart';
 import 'package:gokullu/screen/register/register_screen.dart';
-import 'package:gokullu/screen/trek_menu/widget/trek_details.dart';
+import 'package:gokullu/screen/trek_menu/widget/trek_name.dart';
 import 'package:gokullu/widget/round_button.dart';
 
 class PreferencesScreen extends StatelessWidget {
@@ -34,7 +35,7 @@ class PreferencesScreen extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                           builder: (context) {
-                            return RegScreen();
+                            return EmergencyDetails();
                           },
                         ),
                       );

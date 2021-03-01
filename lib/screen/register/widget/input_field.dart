@@ -29,19 +29,19 @@ class InputTextField extends StatelessWidget {
         labelStyle: TextStyle(fontSize: 12, color: Colors.purple),
 
         border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(35.0),
+            borderRadius: BorderRadius.circular(15.0),
             borderSide: BorderSide(
               color: mSecondColor,
               width: 2,
             )),
         focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(35.0),
+            borderRadius: BorderRadius.circular(15.0),
             borderSide: BorderSide(
               color: mPrimaryColor,
               width: 2,
             )),
         enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(36.0),
+            borderRadius: BorderRadius.circular(15.0),
             borderSide: BorderSide(
               color: Colors.grey,
               width: 1,

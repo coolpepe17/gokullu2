@@ -1,7 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:gokullu/constant.dart';
-import 'package:gokullu/screen/register/widget/submit_button.dart';
+// import 'package:gokullu/screen/register/widget/submit_button.dart';
 import 'package:gokullu/screen/trek_menu/trek_menu.dart';
 import 'package:gokullu/widget/round_button.dart';
 import 'widget/emergency_text.dart';
@@ -17,7 +17,7 @@ class RegScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            WelcomeTo(),
+            // WelcomeTo(),
             RegForm(),
             EmergencyText(),
             EmergencyForm(),
@@ -51,14 +51,12 @@ class RegScreen extends StatelessWidget {
 
   AppBar buildAppBar(BuildContext context) {
     return AppBar(
-      backgroundColor: mBackgroundColor,
-      elevation: 0,
+      backgroundColor: Colors.white,
+      elevation: 5,
       centerTitle: true,
       title: Text(
-        'Registration',
+        'Emergency Contacts Details',
         style: TextStyle(
-          fontSize: 18,
-          fontWeight: FontWeight.bold,
           color: mPrimaryTextColor,
         ),
       ),

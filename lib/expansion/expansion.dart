@@ -2,7 +2,7 @@
 // import 'package:expandable_listview_example/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:gokullu/expansion/utils.dart';
-import 'package:gokullu/screen/trek_menu/widget/trek_details.dart';
+import 'package:gokullu/screen/trek_menu/widget/trek_name.dart';
 
 class ExpTile extends StatefulWidget {
   @override
@@ -75,7 +75,7 @@ class _ExpTileState extends State<ExpTile> {
           initiallyExpanded: isExpanded,
           childrenPadding: EdgeInsets.all(16).copyWith(top: 0),
           title: Text(
-            '👩 Sarah Pepperstone',
+            'Trek Details',
             style: TextStyle(fontSize: 24, fontWeight: FontWeight.w500),
           ),
           children: [
