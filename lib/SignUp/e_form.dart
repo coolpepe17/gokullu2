@@ -3,17 +3,17 @@ import 'package:flutter/material.dart';
 class EmergencyForm extends StatefulWidget {
   EmergencyForm(
       this.addressTextController,
-      this.emerContact1TextController,
-      this.emerContact2TextController,
-      this.emerPhone1TextController,
-      this.emerPhone2TextController,
+      this.eContact1TextController,
+      this.ePhone1TextController,
+      this.eContact2TextController,
+      this.ePhone2TextController,
       this.parentAction);
 
   final TextEditingController addressTextController;
-  final TextEditingController emerContact1TextController;
-  final TextEditingController emerContact2TextController;
-  final TextEditingController emerPhone1TextController;
-  final TextEditingController emerPhone2TextController;
+  final TextEditingController eContact1TextController;
+  final TextEditingController ePhone1TextController;
+  final TextEditingController eContact2TextController;
+  final TextEditingController ePhone2TextController;
 
   final ValueChanged<List<dynamic>> parentAction;
 
@@ -87,7 +87,7 @@ class _SignUpForm extends State<EmergencyForm>
             child: TextFormField(
               decoration: InputDecoration(
                   border: InputBorder.none,
-                  icon: Icon(Icons.mail),
+                  icon: Icon(Icons.home_rounded),
                   labelText: 'Address',
                   hintText: 'Enter yoour Address'),
               validator: (String value) {
@@ -104,11 +104,11 @@ class _SignUpForm extends State<EmergencyForm>
           SizedBox(
             width: 360,
             child: TextFormField(
-              obscureText: true,
+              // obscureText: true,
               decoration: InputDecoration(
                   border: InputBorder.none,
-                  icon: Icon(Icons.lock),
-                  labelText: 'Emergency Contact1',
+                  icon: Icon(Icons.account_box),
+                  labelText: 'Emergency Contact 1 Name',
                   hintText: 'Enter Emergency Contact Name'),
               validator: (String value) {
                 if (value.trim().isEmpty) {
@@ -117,45 +117,7 @@ class _SignUpForm extends State<EmergencyForm>
                   return null;
                 }
               },
-              controller: widget.emerContact1TextController,
-            ),
-          ),
-          Divider(),
-          SizedBox(
-            width: 360,
-            child: TextFormField(
-              decoration: InputDecoration(
-                  border: InputBorder.none,
-                  icon: Icon(Icons.account_circle),
-                  labelText: 'Phone No.',
-                  hintText: 'Enter Emergency Contact No.'),
-              validator: (String value) {
-                if (value.trim().isEmpty) {
-                  return 'Enter Emergency Contact Phone required';
-                } else {
-                  return null;
-                }
-              },
-              controller: widget.emerPhone1TextController,
-            ),
-          ),
-          Divider(),
-          SizedBox(
-            width: 360,
-            child: TextFormField(
-              decoration: InputDecoration(
-                  border: InputBorder.none,
-                  icon: Icon(Icons.mobile_friendly),
-                  labelText: 'Emergency Contact 2.',
-                  hintText: 'Enter Emergency Contact Name'),
-              validator: (String value) {
-                if (value.trim().isEmpty) {
-                  return 'Enter Emergency Contact Name required';
-                } else {
-                  return null;
-                }
-              },
-              controller: widget.emerContact2TextController,
+              controller: widget.eContact1TextController,
             ),
           ),
           Divider(),
@@ -174,7 +136,45 @@ class _SignUpForm extends State<EmergencyForm>
                   return null;
                 }
               },
-              controller: widget.emerPhone2TextController,
+              controller: widget.ePhone1TextController,
+            ),
+          ),
+          Divider(),
+          SizedBox(
+            width: 360,
+            child: TextFormField(
+              decoration: InputDecoration(
+                  border: InputBorder.none,
+                  icon: Icon(Icons.account_box),
+                  labelText: 'Emergency Contact 2 Name',
+                  hintText: 'Enter Emergency Contact Name'),
+              validator: (String value) {
+                if (value.trim().isEmpty) {
+                  return 'Enter Emergency Contact Name required';
+                } else {
+                  return null;
+                }
+              },
+              controller: widget.eContact2TextController,
+            ),
+          ),
+          Divider(),
+          SizedBox(
+            width: 360,
+            child: TextFormField(
+              decoration: InputDecoration(
+                  border: InputBorder.none,
+                  icon: Icon(Icons.mobile_friendly),
+                  labelText: 'Phone No.',
+                  hintText: 'Enter Emergency Contact No.'),
+              validator: (String value) {
+                if (value.trim().isEmpty) {
+                  return 'Enter Emergency Contact Phone required';
+                } else {
+                  return null;
+                }
+              },
+              controller: widget.ePhone2TextController,
             ),
           ),
           Divider(),

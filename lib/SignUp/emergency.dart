@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gokullu/Database/database_helper.dart';
 import 'package:gokullu/SignUp/e_form.dart';
-import 'package:gokullu/SignUp/signupform.dart';
+// import 'package:gokullu/SignUp/signupform.dart';
 import 'package:gokullu/screen/about/about_app.dart';
 // import 'package:gokullu/userscreen/userscreen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -79,9 +79,9 @@ class _EmergencyDetails extends State<EmergencyDetails> {
                       child: Align(
                         alignment: Alignment.center,
                         child: Text(
-                          'Register',
+                          'Enter Emergency Contact Details ',
                           style: TextStyle(
-                              fontSize: 30, fontWeight: FontWeight.bold),
+                              fontSize: 20, fontWeight: FontWeight.bold),
                         ),
                       ),
                     ),
@@ -132,7 +132,7 @@ class _EmergencyDetails extends State<EmergencyDetails> {
                                 children: <Widget>[
                                   Text(
                                     'Cancel',
-                                    style: TextStyle(fontSize: 28),
+                                    style: TextStyle(fontSize: 20),
                                   ),
                                 ],
                               ),
@@ -140,18 +140,19 @@ class _EmergencyDetails extends State<EmergencyDetails> {
                               color: Colors.white,
                               padding: EdgeInsets.all(10),
                               onPressed: () {
-                                print('email: ${_addressTextController.text}');
-                                print(
-                                    'password: ${_emerContact1TextController.text}');
-                                print(
-                                    'name: ${_emerPhone1TextController.text}');
-                                print(
-                                    'mobile: ${_emerContact2TextController.text}');
-                                print(
-                                    'intro: ${_emerPhone2TextController.text}');
+                                // print(
+                                //     'address: ${_addressTextController.text}');
+                                // print(
+                                //     'contact 1: ${_emerContact1TextController.text}');
+                                // print(
+                                //     'phone 1: ${_emerPhone1TextController.text}');
+                                // print(
+                                //     'contact 2: ${_emerContact2TextController.text}');
+                                // print(
+                                //     'phone 2: ${_emerPhone2TextController.text}');
 
-                                print('_userDataMap $_userDataMap');
-                                Navigator.pop(context);
+                                // print('_userDataMap $_userDataMap');
+                                // Navigator.pop(context);
 //                              _query();
                               },
                             ),
@@ -170,7 +171,7 @@ class _EmergencyDetails extends State<EmergencyDetails> {
                                 children: <Widget>[
                                   Text(
                                     _nextText,
-                                    style: TextStyle(fontSize: 28),
+                                    style: TextStyle(fontSize: 20),
                                   ),
                                 ],
                               ),
@@ -179,21 +180,21 @@ class _EmergencyDetails extends State<EmergencyDetails> {
                               padding: EdgeInsets.all(10),
                               onPressed: () {
                                 if (_pageController.page.toInt() == 0) {
-                                  print('last page');
+                                  print('Data Submitted');
                                   _insert();
                                   _setIsLogin();
                                   print(
-                                      'email: ${_addressTextController.text}');
+                                      'address: ${_addressTextController.text}');
                                   print(
-                                      'password: ${_emerContact1TextController.text}');
+                                      'contact 1: ${_emerContact1TextController.text}');
                                   print(
-                                      'name: ${_emerPhone1TextController.text}');
+                                      'phone 1: ${_emerPhone1TextController.text}');
                                   print(
-                                      'mobile: ${_emerContact2TextController.text}');
+                                      'contact 2: ${_emerContact2TextController.text}');
                                   print(
-                                      'intro: ${_emerPhone2TextController.text}');
+                                      'phone 2: ${_emerPhone2TextController.text}');
 
-                                  print('_userDataMap $_userDataMap');
+                                  // print('_userDataMap $_userDataMap');
 
                                   Navigator.push(
                                     context,
