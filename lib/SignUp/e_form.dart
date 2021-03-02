@@ -25,7 +25,7 @@ enum GenderEnum { male, female }
 
 class _SignUpForm extends State<EmergencyForm>
     with AutomaticKeepAliveClientMixin<EmergencyForm> {
-  GenderEnum _userGender = GenderEnum.male;
+  // GenderEnum _userGender = GenderEnum.male;
   // String _selectDateString = 'Select your birthday';
 
   // bool _agreedToTerm = false;

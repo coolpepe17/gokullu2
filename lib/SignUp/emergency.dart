@@ -1,15 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:gokullu/Database/e_dbhelper.dart';
-// import 'package:gokullu/Database/datahelper.dart';
 import 'package:gokullu/SignUp/e_form.dart';
-// import 'package:gokullu/SignUp/signupform.dart';
-import 'package:gokullu/screen/about/about_app.dart';
 import 'package:gokullu/userscreen/home.dart';
-// import 'package:gokullu/userscreen/userscreen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../constant.dart';
-// import 'signupimages.dart';
-// import 'signupintroduce.dart';
 
 class EmergencyDetails extends StatefulWidget {
   @override

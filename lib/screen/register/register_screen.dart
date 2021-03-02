@@ -1,12 +1,10 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:gokullu/constant.dart';
-// import 'package:gokullu/screen/register/widget/submit_button.dart';
 import 'package:gokullu/screen/trek_menu/trek_menu.dart';
 import 'package:gokullu/widget/round_button.dart';
 import 'widget/emergency_text.dart';
 import 'widget/register_form.dart';
-import 'widget/welcome_to.dart';
 
 class RegScreen extends StatelessWidget {
   @override
