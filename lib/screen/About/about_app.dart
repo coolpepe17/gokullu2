@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:gokullu/constant.dart';
 import 'package:gokullu/screen/about/widget/about_image.dart';
 import 'package:gokullu/screen/about/widget/kulluroute.dart';
-import 'package:gokullu/screen/reach_kullu.dart';
+// import 'package:gokullu/screen/reach_kullu.dart';
 import 'package:gokullu/screen/trek_menu/trek_menu.dart';
 import 'package:gokullu/widget/round_button.dart';
 import 'widget/about.dart';
@@ -21,7 +21,7 @@ class AboutApp extends StatelessWidget {
             // MyLine(),
             // SizedBox(height: 50),
             AbtImage(),
-            SizedBox(height: 50),
+            SizedBox(height: 20),
             AboutText(),
             SizedBox(height: 20),
             //Button(),
@@ -53,7 +53,7 @@ class AboutApp extends StatelessWidget {
                 children: <Widget>[
                   Expanded(
                       child: Button(
-                    title: 'View All Treks',
+                    title: 'View Treks',
                     press: () {
                       Navigator.push(
                         context,

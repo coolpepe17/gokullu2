@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import '../../../constant.dart';
 
-class Header extends StatelessWidget {
-  const Header({
+class HeaderImage extends StatelessWidget {
+  const HeaderImage({
     Key key,
     @required this.index,
   }) : super(key: key);

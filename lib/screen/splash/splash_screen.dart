@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-// import 'package:gokullu/expansion/expansion.dart';
-// import 'package:gokullu/expansion/expansion.dart';
-// import 'package:gokullu/screen/About/about_app.dart';
-// import 'package:gokullu/screen/mob_reg/m_reg_screen.dart';
-// import 'package:gokullu/screen/mob_reg/widget/form.dart';
 import 'package:gokullu/userscreen/home.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -37,11 +32,6 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        //decoration: BoxDecoration(
-        //image: DecorationImage(
-        //image: AssetImage('assets/images/trek.jpg'),
-        //  ),
-        //),
         child: Center(
           child: SvgPicture.asset('assets/icons/logo2_s.svg'),
         ),

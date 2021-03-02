@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gokullu/constant.dart';
-import 'package:gokullu/screen/preferences/preferences_screen.dart';
+import 'package:gokullu/screen/preferences/trek_details.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class TrekSelect extends StatelessWidget {
@@ -19,7 +19,7 @@ class TrekSelect extends StatelessWidget {
           context,
           MaterialPageRoute(
             builder: (context) {
-              return PreferencesScreen(index);
+              return TrekDetails(index);
             },
           ),
         );

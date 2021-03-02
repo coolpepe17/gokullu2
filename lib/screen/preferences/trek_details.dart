@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:gokullu/SignUp/emergency.dart';
 import 'package:gokullu/constant.dart';
-import 'package:gokullu/screen/preferences/widget/header.dart';
-import 'package:gokullu/screen/register/register_screen.dart';
-import 'package:gokullu/screen/trek_menu/widget/trek_name.dart';
+import 'package:gokullu/screen/preferences/widget/header_image.dart';
+import 'package:gokullu/screen/trek_menu/widget/trek_info.dart';
 import 'package:gokullu/widget/round_button.dart';
 
-class PreferencesScreen extends StatelessWidget {
+class TrekDetails extends StatelessWidget {
   final int index;
 
-  PreferencesScreen(this.index);
+  TrekDetails(this.index);
 
   @override
   Widget build(BuildContext context) {
@@ -19,9 +18,9 @@ class PreferencesScreen extends StatelessWidget {
         child: Column(
           children: <Widget>[
             SizedBox(height: 0),
-            Header(index: index),
+            HeaderImage(index: index),
             //NameAndNumber(index: index),
-            TrekDetails(index: index),
+            TrekInfo(index: index),
             // SizedBox(height: 10),
 
             // Container(

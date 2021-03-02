@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gokullu/constant.dart';
 
-class TrekInfo extends StatelessWidget {
-  const TrekInfo({
+class TrekInfo1 extends StatelessWidget {
+  const TrekInfo1({
     Key key,
     @required this.index,
   }) : super(key: key);
@@ -19,31 +19,6 @@ class TrekInfo extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              // SizedBox(
-              //   height: 10,
-              // ),
-              Text(
-                trekNames[index],
-                textAlign: TextAlign.justify,
-                style: TextStyle(
-                  color: mPrimaryTextColor,
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-            ],
-          ),
-          Divider(
-            color: Colors.grey.withOpacity(1.0),
-            thickness: 2.0,
-          ),
-          // SizedBox(height: 5),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[

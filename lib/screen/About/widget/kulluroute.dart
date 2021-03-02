@@ -1,15 +1,8 @@
-// import 'package:expandable_listview_example/main.dart';
-// import 'package:expandable_listview_example/utils.dart';
 import 'package:flutter/material.dart';
-import 'package:gokullu/expansion/utils.dart';
-import 'package:gokullu/screen/about/widget/about.dart';
 import 'package:gokullu/screen/trek_menu/kullu_map.dart';
-import 'package:gokullu/screen/trek_menu/widget/trek_name.dart';
+import 'package:gokullu/screen/trek_menu/trek_menu.dart';
 import 'package:gokullu/widget/round_button.dart';
-
 import '../../../constant.dart';
-import '../about_app.dart';
-import 'about_image.dart';
 
 class KulluRoute extends StatefulWidget {
   @override
@@ -92,13 +85,13 @@ class _KulluRouteState extends State<KulluRoute> {
                   children: <Widget>[
                     Expanded(
                         child: Button(
-                      title: 'Back to About App',
+                      title: 'View Treks',
                       press: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
                             builder: (context) {
-                              return AboutApp();
+                              return TrekMenu();
                             },
                           ),
                         );
