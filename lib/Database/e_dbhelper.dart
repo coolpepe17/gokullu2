@@ -5,18 +5,16 @@ import 'package:sqflite/sqflite.dart';
 import 'package:path_provider/path_provider.dart';
 
 class DatabaseHelper {
-  static final _databaseName = "MyDatabase.db";
+  static final _databaseName = "MyDatabase_Emergency.db";
   static final _databaseVersion = 1;
 
-  static final table = 'my_table';
-
+  static final table = 'my_etable';
   static final columnId = '_id';
-  static final columnName = 'name';
-  static final columnGender = 'gender';
-  static final columnEmail = 'email';
-  static final columnPassword = 'password';
-  static final columnMobile = 'mobile';
-  static final columnAge = 'age';
+  static final columnAddress = 'address';
+  static final columnEContact1 = 'contact1';
+  static final columnEPhone1 = 'ephone1';
+  static final columnEContact2 = 'contact2';
+  static final columnEPhone2 = 'ephone2';
   // static final columnImageFour = 'image3';
   // static final columnImageIntro = 'intro';
 
@@ -45,13 +43,13 @@ class DatabaseHelper {
   Future _onCreate(Database db, int version) async {
     await db.execute('''
           CREATE TABLE $table (
+            
             $columnId INTEGER PRIMARY KEY,
-            $columnName TEXT NOT NULL,
-            $columnGender TEXT NOT NULL,
-            $columnEmail TEXT NOT NULL,
-            $columnPassword TEXT NOT NULL,
-            $columnMobile INTEGER NOT NULL,
-            $columnAge TEXT NOT NULL
+            $columnAddress TEXT NOT NULL,
+            $columnEContact1 TEXT NOT NULL,
+            $columnEPhone1 TEXT NOT NULL,
+            $columnEContact2 TEXT NOT NULL,
+            $columnEPhone2 TEXT NOT NULL
           )
           ''');
   }

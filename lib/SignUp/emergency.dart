@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gokullu/Database/database_helper.dart';
+import 'package:gokullu/Database/e_dbhelper.dart';
+// import 'package:gokullu/Database/datahelper.dart';
 import 'package:gokullu/SignUp/e_form.dart';
 // import 'package:gokullu/SignUp/signupform.dart';
 import 'package:gokullu/screen/about/about_app.dart';
@@ -26,8 +27,8 @@ class _EmergencyDetails extends State<EmergencyDetails> {
 
   PageController _pageController = PageController();
 
-  String _nextText = 'Next';
-  Color _nextColor = mPrimaryColor;
+  String _submitData = 'Submit';
+  Color _submitColor = mPrimaryColor;
 
   _updateMyTitle(List<dynamic> data) {
     setState(() {
@@ -92,17 +93,17 @@ class _EmergencyDetails extends State<EmergencyDetails> {
                       child: PageView(
                         onPageChanged: (int page) {
                           print('the pageView page is $page');
-                          if (page == 2) {
-                            setState(() {
-                              _nextText = 'Submit';
-                              _nextColor = Colors.purple[700];
-                            });
-                          } else {
-                            setState(() {
-                              _nextText = 'Submit';
-                              _nextColor = mPrimaryColor;
-                            });
-                          }
+                          // if (page == 0) {
+                          //   setState(() {
+                          //     _submitData = 'Submit';
+                          //     _submitColor = Colors.purple[700];
+                          //   });
+                          // } else {
+                          //   setState(() {
+                          //     _submitData = 'Submit';
+                          //     _submitColor = mPrimaryColor;
+                          //   });
+                          // }
                         },
                         controller: _pageController,
                         children: <Widget>[
@@ -171,13 +172,13 @@ class _EmergencyDetails extends State<EmergencyDetails> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[
                                   Text(
-                                    _nextText,
+                                    _submitData,
                                     style: TextStyle(fontSize: 20),
                                   ),
                                 ],
                               ),
                               textColor: Colors.white,
-                              color: _nextColor,
+                              color: _submitColor,
                               padding: EdgeInsets.all(10),
                               onPressed: () {
                                 if (_pageController.page.toInt() == 0) {
