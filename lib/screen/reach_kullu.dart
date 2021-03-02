@@ -1,14 +1,14 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:gokullu/constant.dart';
-import 'package:gokullu/screen/about/widget/about_image.dart';
-import 'package:gokullu/screen/about/widget/kulluroute.dart';
-import 'package:gokullu/screen/reach_kullu.dart';
+// import 'package:gokullu/screen/about/widget/about_image.dart';
 import 'package:gokullu/screen/trek_menu/trek_menu.dart';
 import 'package:gokullu/widget/round_button.dart';
-import 'widget/about.dart';
+import 'about/about_app.dart';
+import 'about/widget/about.dart';
+import 'about/widget/kulluroute.dart';
 
-class AboutApp extends StatelessWidget {
+class ReachKullu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,9 +20,9 @@ class AboutApp extends StatelessWidget {
             // About(),
             // MyLine(),
             // SizedBox(height: 50),
-            AbtImage(),
+            // AbtImage(),
             SizedBox(height: 50),
-            AboutText(),
+            KulluRoute(),
             SizedBox(height: 20),
             //Button(),
             Container(
@@ -31,13 +31,13 @@ class AboutApp extends StatelessWidget {
                 children: <Widget>[
                   Expanded(
                       child: Button(
-                    title: 'How to reach Kullu',
+                    title: 'Back to About App',
                     press: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
                           builder: (context) {
-                            return KulluRoute();
+                            return AboutApp();
                           },
                         ),
                       );
@@ -80,7 +80,7 @@ class AboutApp extends StatelessWidget {
       elevation: 5,
       centerTitle: true,
       title: Text(
-        'About Go Kullu App',
+        'How to reach Kullu',
         style: TextStyle(
           color: mPrimaryTextColor,
         ),

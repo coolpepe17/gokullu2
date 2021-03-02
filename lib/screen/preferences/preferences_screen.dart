@@ -24,6 +24,31 @@ class PreferencesScreen extends StatelessWidget {
             TrekDetails(index: index),
             // SizedBox(height: 10),
 
+            // Container(
+            //   padding: const EdgeInsets.fromLTRB(40, 5, 40, 5),
+            //   child: Row(children: <Widget>[
+            //     Expanded(
+            //       child: Button(
+            //         title: 'How to Reach Kullu',
+            //         press: () {
+            //           Navigator.push(
+            //             context,
+            //             MaterialPageRoute(
+            //               builder: (context) {
+            //                 return EmergencyDetails();
+            //               },
+            //             ),
+            //           );
+            //         },
+            //       ),
+            //     ),
+            //   ]),
+            //   // padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 16),
+            //   // child: RoundButton(
+            //   //   title: 'Proceed to Start Trek',
+            //   //   press: () {},
+            // ),
+            SizedBox(height: 15),
             Container(
               padding: const EdgeInsets.fromLTRB(40, 5, 40, 5),
               child: Row(children: <Widget>[
@@ -47,7 +72,7 @@ class PreferencesScreen extends StatelessWidget {
               // child: RoundButton(
               //   title: 'Proceed to Start Trek',
               //   press: () {},
-            )
+            ),
           ],
         ),
       ),
