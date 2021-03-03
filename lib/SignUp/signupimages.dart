@@ -149,6 +149,7 @@ class _SignUpImages extends State<SignUpImages>
 
   Future _getImage() async {
     // Get image from gallery.
+    // PickedFile imageFile = await ImagePicker.getImage(source: ImageSource.gallery);
     File image = await ImagePicker.pickImage(source: ImageSource.gallery);
     _cropImage(image);
   }

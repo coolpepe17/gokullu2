@@ -15,6 +15,7 @@ class DatabaseHelper {
   static final columnGender = 'gender';
   static final columnEmail = 'email';
   static final columnPassword = 'password';
+  static final columnConfirmPassword = 'confirmPassword';
   static final columnMobile = 'mobile';
   static final columnAge = 'age';
   // static final columnImageFour = 'image3';
@@ -50,6 +51,7 @@ class DatabaseHelper {
             $columnGender TEXT NOT NULL,
             $columnEmail TEXT NOT NULL,
             $columnPassword TEXT NOT NULL,
+            $columnConfirmPassword TEXT NOT NULL,
             $columnMobile INTEGER NOT NULL,
             $columnAge TEXT NOT NULL
           )

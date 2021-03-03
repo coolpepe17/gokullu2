@@ -45,7 +45,7 @@ class _SignUp extends State<SignUp> {
               Container(
                 child: new RawMaterialButton(
                   onPressed: () {
-                    print('Register Page');
+                    print('Sign Up Page');
 //                    widget.parentAction(true);
                     Navigator.push(
                       context,

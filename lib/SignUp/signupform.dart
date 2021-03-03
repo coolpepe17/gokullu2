@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
 
 class SignUpForm extends StatefulWidget {
-  SignUpForm(this.emailTextController, this.passwordTextController,
-      this.nameTextController, this.mobileTextController, this.parentAction);
+  SignUpForm(
+      this.emailTextController,
+      this.passwordTextController,
+      this.confirmPasswordTextController,
+      this.nameTextController,
+      this.mobileTextController,
+      this.parentAction);
 
   final TextEditingController emailTextController;
   final TextEditingController passwordTextController;
+  final TextEditingController confirmPasswordTextController;
   final TextEditingController nameTextController;
   final TextEditingController mobileTextController;
 
@@ -112,6 +118,26 @@ class _SignUpForm extends State<SignUpForm>
                 }
               },
               controller: widget.passwordTextController,
+            ),
+          ),
+          Divider(),
+          SizedBox(
+            width: 360,
+            child: TextFormField(
+              obscureText: true,
+              decoration: InputDecoration(
+                  border: InputBorder.none,
+                  icon: Icon(Icons.lock),
+                  labelText: 'Confirm Password',
+                  hintText: 'Re-Type password'),
+              validator: (value) {
+                if (value.isEmpty) {
+                  return 'Password is required';
+                } else {
+                  return null;
+                }
+              },
+              controller: widget.confirmPasswordTextController,
             ),
           ),
           Divider(),

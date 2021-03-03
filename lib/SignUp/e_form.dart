@@ -127,7 +127,7 @@ class _SignUpForm extends State<EmergencyForm>
               decoration: InputDecoration(
                   border: InputBorder.none,
                   icon: Icon(Icons.mobile_friendly),
-                  labelText: 'Phone No.',
+                  labelText: 'Phone / Mobile No',
                   hintText: 'Enter Emergency Contact No.'),
               validator: (String value) {
                 if (value.trim().isEmpty) {
@@ -165,7 +165,7 @@ class _SignUpForm extends State<EmergencyForm>
               decoration: InputDecoration(
                   border: InputBorder.none,
                   icon: Icon(Icons.mobile_friendly),
-                  labelText: 'Phone No.',
+                  labelText: 'Phone / Mobile No',
                   hintText: 'Enter Emergency Contact No.'),
               validator: (String value) {
                 if (value.trim().isEmpty) {

@@ -16,6 +16,7 @@ class SignUpWithMail extends StatefulWidget {
 class _SignUpWithMail extends State<SignUpWithMail> {
   final _emailTextController = TextEditingController();
   final _passwordTextController = TextEditingController();
+  final _confirmPasswordTextController = TextEditingController();
   final _nameTextController = TextEditingController();
   final _mobileTextController = TextEditingController();
   final _introduceTextController = TextEditingController();
@@ -24,7 +25,7 @@ class _SignUpWithMail extends State<SignUpWithMail> {
 
   PageController _pageController = PageController();
 
-  String _nextText = 'Next';
+  String _nextText = 'Submit';
   Color _nextColor = mPrimaryColor;
 
   _updateMyTitle(List<dynamic> data) {
@@ -78,7 +79,7 @@ class _SignUpWithMail extends State<SignUpWithMail> {
                       child: Align(
                         alignment: Alignment.center,
                         child: Text(
-                          'Register',
+                          'Sign Up',
                           style: TextStyle(
                               fontSize: 30, fontWeight: FontWeight.bold),
                         ),
@@ -107,6 +108,7 @@ class _SignUpWithMail extends State<SignUpWithMail> {
                           SignUpForm(
                               _emailTextController,
                               _passwordTextController,
+                              _confirmPasswordTextController,
                               _nameTextController,
                               _mobileTextController,
                               _updateMyTitle),
@@ -181,6 +183,8 @@ class _SignUpWithMail extends State<SignUpWithMail> {
                                   print('email: ${_emailTextController.text}');
                                   print(
                                       'password: ${_passwordTextController.text}');
+                                  print(
+                                      'password: ${_confirmPasswordTextController.text}');
                                   print('name: ${_nameTextController.text}');
                                   print(
                                       'mobile: ${_mobileTextController.text}');
@@ -225,6 +229,7 @@ class _SignUpWithMail extends State<SignUpWithMail> {
       DatabaseHelper.columnGender: _userDataMap['gender'],
       DatabaseHelper.columnEmail: _emailTextController.text,
       DatabaseHelper.columnPassword: _passwordTextController.text,
+      DatabaseHelper.columnPassword: _confirmPasswordTextController.text,
       // DatabaseHelper.columnAge: _userDataMap['age'],
       DatabaseHelper.columnMobile: _mobileTextController.text,
       // DatabaseHelper.columnImageOne: _userDataMap['image0'],

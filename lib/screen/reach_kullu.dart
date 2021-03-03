@@ -1,11 +1,9 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:gokullu/constant.dart';
-// import 'package:gokullu/screen/about/widget/about_image.dart';
 import 'package:gokullu/screen/trek_menu/trek_menu.dart';
 import 'package:gokullu/widget/round_button.dart';
 import 'about/about_app.dart';
-import 'about/widget/about.dart';
 import 'about/widget/kulluroute.dart';
 
 class ReachKullu extends StatelessWidget {
