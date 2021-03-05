@@ -12,12 +12,17 @@ class DatabaseHelper {
 
   static final columnId = '_id';
   static final columnName = 'name';
-  static final columnGender = 'gender';
+  // static final columnGender = 'gender';
   static final columnEmail = 'email';
   static final columnPassword = 'password';
   static final columnConfirmPassword = 'confirmPassword';
   static final columnMobile = 'mobile';
-  static final columnAge = 'age';
+  static final columnAddress = 'address';
+  static final columnEContact1 = 'contact1';
+  static final columnEPhone1 = 'ephone1';
+  static final columnEContact2 = 'contact2';
+  static final columnEPhone2 = 'ephone2';
+  // static final columnAge = 'age';
   // static final columnImageFour = 'image3';
   // static final columnImageIntro = 'intro';
 
@@ -48,15 +53,20 @@ class DatabaseHelper {
           CREATE TABLE $table (
             $columnId INTEGER PRIMARY KEY,
             $columnName TEXT NOT NULL,
-            $columnGender TEXT NOT NULL,
+
             $columnEmail TEXT NOT NULL,
             $columnPassword TEXT NOT NULL,
-            $columnConfirmPassword TEXT NOT NULL,
-            $columnMobile INTEGER NOT NULL,
-            $columnAge TEXT NOT NULL
-          )
+            $columnConfirmPassword TEXT,
+            $columnMobile TEXT NOT NULL,
+            $columnAddress TEXT NOT NULL,
+            $columnEContact1 TEXT NOT NULL,
+            $columnEPhone1 TEXT NOT NULL,
+            $columnEContact2 TEXT NOT NULL,
+            $columnEPhone2 TEXT NOT NULL
+            )
           ''');
   }
+  // $columnGender TEXT NOT NULL,
   // $columnAge INTEGER NOT NULL,
   // $columnImageOne TEXT,
   // $columnImageTwo TEXT,

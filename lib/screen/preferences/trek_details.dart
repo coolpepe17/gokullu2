@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:gokullu/SignUp/emergency.dart';
+// import 'package:gokullu/SignUp/emergency.dart';
 import 'package:gokullu/constant.dart';
+import 'package:gokullu/screen/about/about_app.dart';
 import 'package:gokullu/screen/preferences/widget/header_image.dart';
 import 'package:gokullu/screen/trek_menu/widget/trek_info.dart';
 import 'package:gokullu/widget/round_button.dart';
@@ -59,7 +60,7 @@ class TrekDetails extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                           builder: (context) {
-                            return EmergencyDetails();
+                            return AboutApp();
                           },
                         ),
                       );
