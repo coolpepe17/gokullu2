@@ -1,4 +1,5 @@
 import 'dart:ui';
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:gokullu/constant.dart';
 import 'package:gokullu/screen/about/widget/about_image.dart';
@@ -71,6 +72,21 @@ class AboutApp extends StatelessWidget {
           ],
         ),
       ),
+      bottomNavigationBar: CurvedNavigationBar(
+          color: mPrimaryColor,
+          backgroundColor: Colors.white,
+          buttonBackgroundColor: mPrimaryColor,
+          height: 60,
+          items: <Widget>[
+            Icon(Icons.home_rounded, size: 30, color: Colors.white),
+            Icon(Icons.list_alt, size: 30, color: Colors.white),
+            Icon(Icons.verified_user, size: 30, color: Colors.white),
+          ],
+          animationDuration: Duration(milliseconds: 300),
+          animationCurve: Curves.ease,
+          onTap: (index) {
+            debugPrint('Current Index');
+          }),
     );
   }
 
