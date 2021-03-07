@@ -3,7 +3,12 @@ import 'package:gokullu/SignIn/mainlogo.dart';
 import 'package:gokullu/SignIn/signin.dart';
 import 'package:gokullu/SignIn/signup.dart';
 import 'package:gokullu/screen/about/about_app.dart';
+// import 'package:gokullu/userscreen/userscreen.dart';
+// import 'package:signupexample/SignIn/mainlogo.dart';
+// import 'package:signupexample/SignIn/signin.dart';
+// import 'package:signupexample/SignIn/signup.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+// import 'package:signupexample/userscreen/userscreen.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -39,7 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/images/trek.jpg'),
+                image: AssetImage('assets/images/sky1.jpg'),
                 // NetworkImage(
                 //     'https://cdn.pixabay.com/photo/2020/03/19/04/58/coconut-trees-4946270_1280.jpg'),
                 fit: BoxFit.fill)),

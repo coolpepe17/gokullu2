@@ -11,7 +11,7 @@ class KulluMap extends StatelessWidget {
       //padding: const EdgeInsets.fromLTRB(0, 20, 0, 20),
       child: Center(
           child: Image.asset(
-        'assets/images/HP_map.jpg',
+        'assets/images/map_kullu.jpg',
         // height: 350,
       )),
     );

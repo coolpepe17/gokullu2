@@ -22,9 +22,9 @@ class AboutApp extends StatelessWidget {
             // MyLine(),
             // SizedBox(height: 50),
             AbtImage(),
-            SizedBox(height: 20),
+            // SizedBox(height: 5),
             AboutText(),
-            SizedBox(height: 20),
+            // SizedBox(height: 0),
             //Button(),
             Container(
               padding: const EdgeInsets.fromLTRB(40, 5, 40, 5),
@@ -72,34 +72,56 @@ class AboutApp extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: CurvedNavigationBar(
-          color: mPrimaryColor,
-          backgroundColor: Colors.white,
-          buttonBackgroundColor: mPrimaryColor,
-          height: 60,
-          items: <Widget>[
-            Icon(Icons.home_rounded, size: 30, color: Colors.white),
-            Icon(Icons.list_alt, size: 30, color: Colors.white),
-            Icon(Icons.verified_user, size: 30, color: Colors.white),
-          ],
-          animationDuration: Duration(milliseconds: 300),
-          animationCurve: Curves.ease,
-          onTap: (index) {
-            debugPrint('Current Index');
-          }),
+      // bottomNavigationBar: CurvedNavigationBar(
+      //     color: mPrimaryColor,
+      //     backgroundColor: Colors.white,
+      //     buttonBackgroundColor: mPrimaryColor,
+      //     height: 60,
+      //     items: <Widget>[
+      //       Icon(Icons.home_rounded, size: 30, color: Colors.white),
+      //       Icon(Icons.list_alt, size: 30, color: Colors.white),
+      //       Icon(Icons.verified_user, size: 30, color: Colors.white),
+      //     ],
+      //     animationDuration: Duration(milliseconds: 300),
+      //     animationCurve: Curves.ease,
+      //     onTap: (index) {
+      //       debugPrint('Current Index');
+      //     }),
     );
   }
 
   AppBar buildAppBar(BuildContext context) {
     return AppBar(
       backgroundColor: mBackgroundColor,
-      elevation: 5,
-      centerTitle: true,
-      title: Text(
-        'About Go Kullu App',
-        style: TextStyle(
-          color: mPrimaryTextColor,
-        ),
+      title: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          // Image.asset(
+          //   'assets/images/hp_logo.png',
+          //   fit: BoxFit.contain,
+          //   height: 32,
+          // ),
+          Container(
+              padding: const EdgeInsets.all(8.0),
+              child: Text('About: Go Kullu',
+                  style: TextStyle(
+                    color: mPrimaryTextColor,
+                  ))),
+          Image.asset(
+            'assets/images/logo2_s.png',
+            fit: BoxFit.contain,
+            height: 32,
+          ),
+        ],
+
+        // backgroundColor: mBackgroundColor,
+        // elevation: 5,
+        // centerTitle: true,
+        // title: Text(
+        // 'About: Go Kullu',
+        // style: TextStyle(
+        //   color: mPrimaryTextColor,
+        //   ),
       ),
     );
   }

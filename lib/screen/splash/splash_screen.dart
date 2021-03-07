@@ -10,7 +10,7 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    var d = Duration(seconds: 3);
+    var d = Duration(seconds: 6);
     // delayed 3 seconds to next page
     Future.delayed(d, () {
       // to next page and close this page
@@ -33,7 +33,8 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       body: Container(
         child: Center(
-          child: SvgPicture.asset('assets/icons/logo2_s.svg'),
+          child: Image.asset('assets/images/splash4.png'),
+          // SvgPicture.asset('assets/icons/logo2_s.svg'),
         ),
       ),
     );

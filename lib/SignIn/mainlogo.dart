@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+// import 'package:flutter_svg/svg.dart';
 
 Widget mainLogo() {
   return Expanded(
@@ -12,11 +12,12 @@ Widget mainLogo() {
             Container(
               child: new RawMaterialButton(
                 onPressed: () {},
-                child: SvgPicture.asset('assets/icons/logo2_s.svg'),
-                shape: new CircleBorder(),
-                elevation: 2.0,
-                fillColor: Colors.white,
-                padding: const EdgeInsets.all(15.0),
+                child: Image.asset('assets/images/logo2_s.png'),
+                // SvgPicture.asset('assets/icons/logo2_s.svg'),
+                // shape: new CircleBorder(),
+                // elevation: 2.0,
+                // fillColor: Colors.white,
+                // padding: const EdgeInsets.all(15.0),
               ),
             ),
           ],
