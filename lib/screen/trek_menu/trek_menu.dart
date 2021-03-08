@@ -6,7 +6,7 @@ class TrekMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: buildAppBar(context),
+      // appBar: buildAppBar(context),
       body: ListView.builder(
         itemCount: trekNames.length,
         itemBuilder: (context, index) => TrekSelect(

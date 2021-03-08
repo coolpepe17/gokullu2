@@ -1,10 +1,9 @@
 import 'dart:ui';
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:gokullu/constant.dart';
-import 'package:gokullu/screen/about/widget/about_image.dart';
+import 'package:gokullu/screen/about/widget/header_image.dart';
 import 'package:gokullu/screen/about/widget/kulluroute.dart';
-// import 'package:gokullu/screen/reach_kullu.dart';
+import 'package:gokullu/screen/about/widget/nic.dart';
 import 'package:gokullu/screen/trek_menu/trek_menu.dart';
 import 'package:gokullu/widget/round_button.dart';
 import 'widget/about.dart';
@@ -19,12 +18,11 @@ class AboutApp extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             // About(),
-            // MyLine(),
-            // SizedBox(height: 50),
-            AbtImage(),
-            SizedBox(height: 20),
+            // MyLinHeaderImage          // SizedBox(height: 50),
+            HeaderImage(),
+            // SizedBox(height: 20),
             AboutText(),
-            SizedBox(height: 20),
+            // SizedBox(height: 10),
             //Button(),
             Container(
               padding: const EdgeInsets.fromLTRB(40, 5, 40, 5),
@@ -69,24 +67,26 @@ class AboutApp extends StatelessWidget {
                 ],
               ),
             ),
+            SizedBox(height: 30),
+            DevNic(),
           ],
         ),
       ),
-      bottomNavigationBar: CurvedNavigationBar(
-          color: mPrimaryColor,
-          backgroundColor: Colors.white,
-          buttonBackgroundColor: mPrimaryColor,
-          height: 60,
-          items: <Widget>[
-            Icon(Icons.home_rounded, size: 30, color: Colors.white),
-            Icon(Icons.list_alt, size: 30, color: Colors.white),
-            Icon(Icons.verified_user, size: 30, color: Colors.white),
-          ],
-          animationDuration: Duration(milliseconds: 300),
-          animationCurve: Curves.ease,
-          onTap: (index) {
-            debugPrint('Current Index');
-          }),
+      // bottomNavigationBar: CurvedNavigationBar(
+      //     color: mPrimaryColor,
+      //     backgroundColor: Colors.white,
+      //     buttonBackgroundColor: mPrimaryColor,
+      //     height: 60,
+      //     items: <Widget>[
+      //       Icon(Icons.home_rounded, size: 30, color: Colors.white),
+      //       Icon(Icons.list_alt, size: 30, color: Colors.white),
+      //       Icon(Icons.verified_user, size: 30, color: Colors.white),
+      //     ],
+      //     animationDuration: Duration(milliseconds: 300),
+      //     animationCurve: Curves.ease,
+      //     onTap: (index) {
+      //       debugPrint('Current Index');
+      //     }),
     );
   }
 
@@ -96,82 +96,12 @@ class AboutApp extends StatelessWidget {
       elevation: 5,
       centerTitle: true,
       title: Text(
-        'About Go Kullu App',
+        'About: Go Kullu',
         style: TextStyle(
+          fontWeight: FontWeight.bold,
           color: mPrimaryTextColor,
         ),
       ),
     );
   }
 }
-
-// import 'package:flutter/material.dart';
-// import 'package:gokullu/screen/about/widget/about.dart';
-// import 'package:gokullu/screen/about/widget/my_line.dart';
-// import 'package:gokullu/screen/about/widget/view_menu.dart';
-
-// import 'widget/about_image.dart';
-
-// class AboutApp extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       body: Stack(
-//         children: <Widget>[
-//           // Container(
-//           //   decoration: BoxDecoration(
-//           //     image: DecorationImage(
-//           //         image: AssetImage('assets/images/trek.jpg'),
-//           //         fit: BoxFit.fitHeight),
-//           //   ),
-//           // ),
-//           Positioned(
-//             left: 10,
-//             right: 10,
-//             bottom: 10,
-//             top: 60,
-//             child: Container(
-//               padding: const EdgeInsets.fromLTRB(16, 6, 16, 60),
-//               decoration: BoxDecoration(
-//                 color: Colors.white70,
-//                 borderRadius: BorderRadius.only(
-//                   topLeft: Radius.circular(15),
-//                   topRight: Radius.circular(15),
-//                   bottomLeft: Radius.circular(15),
-//                   bottomRight: Radius.circular(15),
-//                 ),
-//               ),
-//               child: Column(
-//                 children: <Widget>[
-//                   About(),
-//                   MyLine(),
-//                   SizedBox(height: 50),
-//                   AbtImage(),
-//                   SizedBox(height: 50),
-//                   AboutText(),
-//                   SizedBox(height: 80),
-//                   ViewTrekButton(),
-//                   //Address()
-//                 ],
-//               ),
-//             ),
-//           )
-//         ],
-//       ),
-//     );
-//   }
-// }
-// //   AppBar buildAppBar(BuildContext context) {
-// //     return AppBar(
-// //       backgroundColor: mBackgroundColor,
-// //       elevation: 5,
-// //       centerTitle: true,
-// //       title: Text(
-// //         'Register your Mobile',
-// //         style: TextStyle(
-// //           color: mPrimaryTextColor,
-// //         ),
-// //       ),
-// //     );
-// //   }
-// // }

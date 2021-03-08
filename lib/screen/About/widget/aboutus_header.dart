@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class KulluMap extends StatelessWidget {
-  const KulluMap({
+class AboutUsHeader extends StatelessWidget {
+  const AboutUsHeader({
     Key key,
   }) : super(key: key);
 
@@ -11,7 +11,7 @@ class KulluMap extends StatelessWidget {
       //padding: const EdgeInsets.fromLTRB(0, 20, 0, 20),
       child: Center(
           child: Image.asset(
-        'assets/images/map_kullu.jpg',
+        'assets/images/rath.jpg',
         // height: 350,
       )),
     );

@@ -25,7 +25,7 @@ class _SignUpWithMail extends State<SignUpWithMail> {
 
   Map<String, dynamic> _userDataMap = Map<String, dynamic>();
 
-  PageController _pageController = PageController();
+  // PageController _pageController = PageController();
 
   String _nextText = 'Submit';
   Color _nextColor = mPrimaryColor;
@@ -90,39 +90,18 @@ class _SignUpWithMail extends State<SignUpWithMail> {
                     Container(
                       width: 400,
                       height: 600,
-                      child: PageView(
-                        onPageChanged: (int page) {
-                          print('the pageView page is $page');
-                          if (page == 2) {
-                            setState(() {
-                              _nextText = 'Submit';
-                              _nextColor = Colors.purple[700];
-                            });
-                          } else {
-                            setState(() {
-                              _nextText = 'Submit';
-                              _nextColor = mPrimaryColor;
-                            });
-                          }
-                        },
-                        controller: _pageController,
-                        children: <Widget>[
-                          SignUpForm(
-                              _emailTextController,
-                              _passwordTextController,
-                              _confirmPasswordTextController,
-                              _nameTextController,
-                              _mobileTextController,
-                              _addressTextController,
-                              _eContact1TextController,
-                              _ePhone1TextController,
-                              _eContact2TextController,
-                              _ePhone2TextController,
-                              _updateMyTitle),
-                          // SignUpImages(_updateMyTitle),
-                          // SignUpIntroduce(_introduceTextController)
-                        ],
-                      ),
+                      child: SignUpForm(
+                          _emailTextController,
+                          _passwordTextController,
+                          _confirmPasswordTextController,
+                          _nameTextController,
+                          _mobileTextController,
+                          _addressTextController,
+                          _eContact1TextController,
+                          _ePhone1TextController,
+                          _eContact2TextController,
+                          _ePhone2TextController,
+                          _updateMyTitle),
                     ),
                     Row(
                       children: <Widget>[
@@ -147,22 +126,22 @@ class _SignUpWithMail extends State<SignUpWithMail> {
                               color: Colors.white,
                               padding: EdgeInsets.all(10),
                               onPressed: () {
-                                print('email: ${_emailTextController.text}');
-                                print(
-                                    'password: ${_passwordTextController.text}');
-                                print('name: ${_nameTextController.text}');
-                                print(
-                                    'confirmPassword: ${_confirmPasswordTextController.text}');
-                                print('mobile: ${_mobileTextController.text}');
-                                print('email: ${_addressTextController.text}');
-                                print(
-                                    'password: ${_eContact1TextController.text}');
-                                print('name: ${_ePhone1TextController.text}');
-                                print(
-                                    'mobile: ${_eContact2TextController.text}');
-                                print('intro: ${_ePhone2TextController.text}');
+                                // print('email: ${_emailTextController.text}');
+                                // print(
+                                //     'password: ${_passwordTextController.text}');
+                                // print('name: ${_nameTextController.text}');
+                                // print(
+                                //     'confirmPassword: ${_confirmPasswordTextController.text}');
+                                // print('mobile: ${_mobileTextController.text}');
+                                // print('email: ${_addressTextController.text}');
+                                // print(
+                                //     'password: ${_eContact1TextController.text}');
+                                // print('name: ${_ePhone1TextController.text}');
+                                // print(
+                                //     'mobile: ${_eContact2TextController.text}');
+                                // print('intro: ${_ePhone2TextController.text}');
 
-                                print('_userDataMap $_userDataMap');
+                                // print('_userDataMap $_userDataMap');
                                 Navigator.pop(context);
 //                              _query();
                               },
@@ -174,23 +153,23 @@ class _SignUpWithMail extends State<SignUpWithMail> {
                             padding:
                                 const EdgeInsets.only(left: 8.0, right: 8.0),
                             child: RaisedButton(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: new BorderRadius.circular(12.0),
-                              ),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: <Widget>[
-                                  Text(
-                                    _nextText,
-                                    style: TextStyle(fontSize: 25),
-                                  ),
-                                ],
-                              ),
-                              textColor: Colors.white,
-                              color: _nextColor,
-                              padding: EdgeInsets.all(10),
-                              onPressed: () {
-                                if (_pageController.page.toInt() == 0) {
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: new BorderRadius.circular(12.0),
+                                ),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    Text(
+                                      _nextText,
+                                      style: TextStyle(fontSize: 25),
+                                    ),
+                                  ],
+                                ),
+                                textColor: Colors.white,
+                                color: _nextColor,
+                                padding: EdgeInsets.all(10),
+                                onPressed: () {
+                                  // if (_pageController.page.toInt() == 0) {
                                   print('email: ${_emailTextController.text}');
                                   print(
                                       'password: ${_passwordTextController.text}');
@@ -208,6 +187,8 @@ class _SignUpWithMail extends State<SignUpWithMail> {
                                       'mobile: ${_eContact2TextController.text}');
                                   print(
                                       'intro: ${_ePhone2TextController.text}');
+                                  _insert();
+                                  _setIsLogin();
 
                                   // print('_userDataMap $_userDataMap');
 
@@ -216,14 +197,12 @@ class _SignUpWithMail extends State<SignUpWithMail> {
                                     MaterialPageRoute(
                                         builder: (context) => AboutApp()),
                                   );
-                                } else {
-                                  _pageController.animateToPage(
-                                      _pageController.page.toInt() + 1,
-                                      duration: Duration(milliseconds: 200),
-                                      curve: Curves.easeIn);
-                                }
-                              },
-                            ),
+                                  // } else {
+                                  //   _pageController.animateToPage(
+                                  //       _pageController.page.toInt() + 1,
+                                  //       duration: Duration(milliseconds: 200),
+                                  //       curve: Curves.easeIn);
+                                }),
                           ),
                         ),
                       ],

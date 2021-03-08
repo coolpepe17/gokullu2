@@ -125,6 +125,7 @@ class _KulluRouteState extends State<KulluRoute> {
           children: [
             Text(
               'State owned bus facilities of Himachal Pradesh Road Transport Corporation are accessible from Kullu connecting with the nearby cities. Kullu is linked to the national capital, New Delhi (570 km), Chandigarh (267 km), Pathankot (285 km) and Shimla (270 km) as well by tourist luxury buses of Himachal Pradesh Tourism Development Corporation. These deluxe buses solve much of the problems of the travelers worried about how to reach Kullu.',
+              textAlign: TextAlign.justify,
               style: TextStyle(fontSize: 16, height: 1.4),
             ),
           ],
@@ -148,7 +149,8 @@ class _KulluRouteState extends State<KulluRoute> {
           ),
           children: [
             Text(
-              'The closest airport to Kullu is Bhuntar airport which is situated at a distance of around 10 km from the heart of the city, Kullu.',
+              'The closest airport is Kullu Manali Airport at Bhuntar, which is situated at a distance of around 10 km from the heart of the city, Kullu.',
+              textAlign: TextAlign.justify,
               style: TextStyle(fontSize: 16, height: 1.4),
             ),
           ],
@@ -173,6 +175,7 @@ class _KulluRouteState extends State<KulluRoute> {
           children: [
             Text(
               'Jogindernagar is the nearest railway station located near Kullu which is at a distance of around 125 km. This railway station is well linked to all the major cities and towns of the country through Chandigarh which is 270 km away from Kullu. Therefore, without thinking much about how to reach Kullu by rail, one needs to hop on a train.',
+              textAlign: TextAlign.justify,
               style: TextStyle(fontSize: 16, height: 1.4),
             ),
           ],

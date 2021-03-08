@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gokullu/SignIn/mainlogo.dart';
 import 'package:gokullu/SignIn/signin.dart';
 import 'package:gokullu/SignIn/signup.dart';
-import 'package:gokullu/screen/about/about_app.dart';
+import 'package:gokullu/widget/navbar.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -31,7 +31,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return !_isLogin ? _signInWidget() : AboutApp();
+    return !_isLogin ? _signInWidget() : MyNavBar();
   }
 
   Widget _signInWidget() {
@@ -39,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/images/trek.jpg'),
+                image: AssetImage('assets/images/sky1.jpg'),
                 // NetworkImage(
                 //     'https://cdn.pixabay.com/photo/2020/03/19/04/58/coconut-trees-4946270_1280.jpg'),
                 fit: BoxFit.fill)),
@@ -50,6 +50,11 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
       ),
+      // bottomNavigationBar: CurvedNavigationBar(items: <Widget>[
+      //   Icon(Icons.home_rounded, size: 16, color: mPrimaryTextColor),
+      //   Icon(Icons.list_alt, size: 16, color: mPrimaryTextColor),
+      //   Icon(Icons.verified_user, size: 16, color: mPrimaryTextColor),
+      // ]),
     );
   }
 }

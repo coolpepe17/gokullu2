@@ -16,12 +16,12 @@ class Button extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        shape: StadiumBorder(),
+        // shape: StadiumBorder(),
         padding: const EdgeInsets.fromLTRB(5, 5, 5, 5),
         primary: mPrimaryTextColor,
-        // shape: const RoundedRectangleBorder(
-        //     borderRadius: BorderRadius.all(Radius.circular(36))),
-        elevation: 8,
+        shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(15))),
+        elevation: 5,
         shadowColor: Colors.black,
         onSurface: Colors.red,
       ),

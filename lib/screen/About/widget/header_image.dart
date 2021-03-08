@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class AbtImage extends StatelessWidget {
-  const AbtImage({
+class HeaderImage extends StatelessWidget {
+  const HeaderImage({
     Key key,
   }) : super(key: key);
 
@@ -11,7 +11,7 @@ class AbtImage extends StatelessWidget {
       //padding: const EdgeInsets.fromLTRB(0, 20, 0, 20),
       child: Center(
           child: Image.asset(
-        'assets/images/trek.jpg',
+        'assets/images/trek_s.jpg',
         // height: 350,
       )),
     );
