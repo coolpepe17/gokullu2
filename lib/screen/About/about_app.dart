@@ -25,7 +25,7 @@ class AboutApp extends StatelessWidget {
             // SizedBox(height: 10),
             //Button(),
             Container(
-              padding: const EdgeInsets.fromLTRB(40, 5, 40, 5),
+              padding: const EdgeInsets.fromLTRB(50, 4, 50, 4),
               child: Row(
                 children: <Widget>[
                   Expanded(
@@ -47,7 +47,7 @@ class AboutApp extends StatelessWidget {
             ),
             SizedBox(height: 25),
             Container(
-              padding: const EdgeInsets.fromLTRB(40, 5, 40, 5),
+              padding: const EdgeInsets.fromLTRB(50, 4, 50, 4),
               child: Row(
                 children: <Widget>[
                   Expanded(

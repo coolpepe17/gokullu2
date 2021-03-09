@@ -5,6 +5,8 @@ import 'package:gokullu/SignIn/signup.dart';
 import 'package:gokullu/widget/navbar.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../contact.dart';
+
 class MyHomePage extends StatefulWidget {
   @override
   _MyHomePageState createState() => _MyHomePageState();

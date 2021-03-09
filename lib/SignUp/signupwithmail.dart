@@ -83,7 +83,7 @@ class _SignUpWithMail extends State<SignUpWithMail> {
                         child: Text(
                           'Sign Up',
                           style: TextStyle(
-                              fontSize: 25, fontWeight: FontWeight.bold),
+                              fontSize: 20, fontWeight: FontWeight.bold),
                         ),
                       ),
                     ),
@@ -118,7 +118,7 @@ class _SignUpWithMail extends State<SignUpWithMail> {
                                 children: <Widget>[
                                   Text(
                                     'Cancel',
-                                    style: TextStyle(fontSize: 25),
+                                    style: TextStyle(fontSize: 20),
                                   ),
                                 ],
                               ),
@@ -161,7 +161,7 @@ class _SignUpWithMail extends State<SignUpWithMail> {
                                   children: <Widget>[
                                     Text(
                                       _nextText,
-                                      style: TextStyle(fontSize: 25),
+                                      style: TextStyle(fontSize: 20),
                                     ),
                                   ],
                                 ),

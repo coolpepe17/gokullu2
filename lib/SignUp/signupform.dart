@@ -1,3 +1,4 @@
+import 'package:contact_picker/contact_picker.dart';
 import 'package:flutter/material.dart';
 
 class SignUpForm extends StatefulWidget {
@@ -38,6 +39,18 @@ enum GenderEnum { male, female }
 class _SignUpForm extends State<SignUpForm>
     with AutomaticKeepAliveClientMixin<SignUpForm> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+
+  Future<String> openContactBook() async {
+    Contact contact = await ContactPicker().selectContact();
+    if (contact != null) {
+      var phoneNumber = contact.phoneNumber.number
+          .toString()
+          .replaceAll(new RegExp(r"\s+"), "");
+      return phoneNumber;
+    }
+    return "";
+  }
+
   @override
   Widget build(BuildContext context) {
     super.build(context);
@@ -174,49 +187,52 @@ class _SignUpForm extends State<SignUpForm>
                 width: 360,
                 child: TextFormField(
                   decoration: InputDecoration(
-                      border: InputBorder.none,
-                      icon: Icon(Icons.person_pin),
-                      labelText: 'Emergency Contact 1',
-                      hintText: 'Emergency Contact 1 Name'),
-                  validator: (String value) {
-                    if (!_formKey.currentState.validate()) {
-                      return 'Enter Emergency Contact 1 Name';
-                    } else {
-                      return null;
-                    }
-                  },
+                    border: InputBorder.none,
+                    icon: Icon(Icons.person_add, size: 35),
+                  ),
+                  // onPressed: () {
+                  //   var contactNumber = openContactBook();
+                  // },
+                  // validator: (String value) {
+                  //   if (!_formKey.currentState.validate()) {
+                  //     return 'Enter Emergency Contact 1 Name';
+                  //   } else {
+                  //     return null;
+                  //   }
+                  // },
                   controller: widget.eContact1TextController,
                 ),
               ),
               Divider(),
+              // SizedBox(
+              //   width: 360,
+              //   child: TextFormField(
+              //     keyboardType: TextInputType.number,
+              //     decoration: InputDecoration(
+              //         border: InputBorder.none,
+              //         icon: Icon(Icons.mobile_screen_share),
+              //         labelText: 'Mobile / Phone No.',
+              //         hintText: 'Enter Emergency Contact 1 Mobile or Phone '),
+              //     validator: (String value) {
+              //       if (!_formKey.currentState.validate()) {
+              //         return 'Mobile/Phone is required';
+              //       } else {
+              //         return null;
+              //       }
+              //     },
+              //     controller: widget.ePhone1TextController,
+              //   ),
+              // ),
+              // Divider(),
               SizedBox(
                 width: 360,
                 child: TextFormField(
-                  keyboardType: TextInputType.number,
                   decoration: InputDecoration(
-                      border: InputBorder.none,
-                      icon: Icon(Icons.mobile_screen_share),
-                      labelText: 'Mobile / Phone No.',
-                      hintText: 'Enter Emergency Contact 1 Mobile or Phone '),
-                  validator: (String value) {
-                    if (!_formKey.currentState.validate()) {
-                      return 'Mobile/Phone is required';
-                    } else {
-                      return null;
-                    }
-                  },
-                  controller: widget.ePhone1TextController,
-                ),
-              ),
-              Divider(),
-              SizedBox(
-                width: 360,
-                child: TextFormField(
-                  decoration: InputDecoration(
-                      border: InputBorder.none,
-                      icon: Icon(Icons.person_pin),
-                      labelText: 'Emergency Contact 2',
-                      hintText: 'Emergency Contact 2 Name'),
+                    border: InputBorder.none,
+                    icon: Icon(Icons.person_add, size: 35),
+                    // labelText: 'Emergency Contact 2',
+                    // hintText: 'Emergency Contact 2 Name'
+                  ),
                   validator: (String value) {
                     if (!_formKey.currentState.validate()) {
                       return 'Enter Emergency Contact 2 Name';
@@ -227,26 +243,26 @@ class _SignUpForm extends State<SignUpForm>
                   controller: widget.eContact2TextController,
                 ),
               ),
-              Divider(),
-              SizedBox(
-                width: 360,
-                child: TextFormField(
-                  keyboardType: TextInputType.number,
-                  decoration: InputDecoration(
-                      border: InputBorder.none,
-                      icon: Icon(Icons.mobile_screen_share),
-                      labelText: 'Mobile / Phone No.',
-                      hintText: 'Enter Emergency Contact 2 Mobile or Phone '),
-                  validator: (String value) {
-                    if (!_formKey.currentState.validate()) {
-                      return 'Mobile/Phone is required';
-                    } else {
-                      return null;
-                    }
-                  },
-                  controller: widget.ePhone2TextController,
-                ),
-              ),
+              // Divider(),
+              // SizedBox(
+              //   width: 360,
+              //   child: TextFormField(
+              //     keyboardType: TextInputType.number,
+              //     decoration: InputDecoration(
+              //         border: InputBorder.none,
+              //         icon: Icon(Icons.mobile_screen_share),
+              //         labelText: 'Mobile / Phone No.',
+              //         hintText: 'Enter Emergency Contact 2 Mobile or Phone '),
+              //     validator: (String value) {
+              //       if (!_formKey.currentState.validate()) {
+              //         return 'Mobile/Phone is required';
+              //       } else {
+              //         return null;
+              //       }
+              //     },
+              //     controller: widget.ePhone2TextController,
+              //   ),
+              // ),
               Divider(),
               // Row(
               //   children: <Widget>[

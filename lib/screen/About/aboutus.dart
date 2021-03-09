@@ -21,7 +21,7 @@ class AboutUs extends StatelessWidget {
             SizedBox(height: 20),
             AboutUsText(),
             SizedBox(height: 10),
-            SizedBox(height: 150),
+            SizedBox(height: 70),
             DevNic(),
           ],
         ),

@@ -18,7 +18,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.11.0-213.0.dev <2.12.0"
 
 dependencies:
   flutter:
@@ -36,6 +36,7 @@ dependencies:
   shared_preferences: ^0.5.12+4
   flushbar: ^1.10.4
   curved_navigation_bar: ^0.3.7
+  contact_picker: ^0.0.2
 
 #dependency_overrides:
 #  flutter_svg: ^0.17.4
@@ -47,6 +48,9 @@ dev_dependencies:
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
+analyzer:
+  - enable-experiment:
+        - non-nullable
 # The following section is specific to Flutter.
 flutter:
 
