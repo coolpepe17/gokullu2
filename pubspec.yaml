@@ -37,6 +37,8 @@ dependencies:
   flushbar: ^1.10.4
   curved_navigation_bar: ^0.3.7
   contact_picker: ^0.0.2
+  http: any
+
 
 #dependency_overrides:
 #  flutter_svg: ^0.17.4

@@ -1,9 +1,47 @@
 import 'package:flutter/material.dart';
 import 'package:gokullu/Database/database_helper.dart';
+import 'package:gokullu/SignUp/widgets/e_contact1.dart';
 import 'package:gokullu/SignUp/signupform.dart';
+import 'package:gokullu/SignUp/widgets/e_contact2.dart';
 import 'package:gokullu/screen/about/about_app.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../constant.dart';
+import 'package:http/http.dart' as http;
+import 'dart:async';
+import 'dart:convert';
+
+Future<Album> fetchAlbum() async {
+  final response =
+      // await http.get(Uri.https('jsonplaceholder.typicode.com', 'albums/1'));
+      await http.put(Uri.https(
+          '10.146.105.4/gokullu/service1.svc/RegisterUser?', 'albums/1'));
+
+  if (response.statusCode == 200) {
+    // If the server did return a 200 OK response,
+    // then parse the JSON.
+    return Album.fromJson(jsonDecode(response.body));
+  } else {
+    // If the server did not return a 200 OK response,
+    // then throw an exception.
+    throw Exception('Failed to load album');
+  }
+}
+
+class Album {
+  final int userId;
+  final int id;
+  final String title;
+
+  Album({this.userId, this.id, this.title});
+
+  factory Album.fromJson(Map<String, dynamic> json) {
+    return Album(
+      userId: json['userId'],
+      id: json['id'],
+      title: json['title'],
+    );
+  }
+}
 
 class SignUpWithMail extends StatefulWidget {
   @override
@@ -18,9 +56,9 @@ class _SignUpWithMail extends State<SignUpWithMail> {
   final _mobileTextController = TextEditingController();
   final _addressTextController = TextEditingController();
   final _eContact1TextController = TextEditingController();
-  final _ePhone1TextController = TextEditingController();
+  // final _ePhone1TextController = TextEditingController();
   final _eContact2TextController = TextEditingController();
-  final _ePhone2TextController = TextEditingController();
+  // final _ePhone2TextController = TextEditingController();
   // final _introduceTextController = TextEditingController();
 
   Map<String, dynamic> _userDataMap = Map<String, dynamic>();
@@ -89,7 +127,7 @@ class _SignUpWithMail extends State<SignUpWithMail> {
                     ),
                     Container(
                       width: 400,
-                      height: 600,
+                      height: 380,
                       child: SignUpForm(
                           _emailTextController,
                           _passwordTextController,
@@ -98,11 +136,20 @@ class _SignUpWithMail extends State<SignUpWithMail> {
                           _mobileTextController,
                           _addressTextController,
                           _eContact1TextController,
-                          _ePhone1TextController,
+                          // _ePhone1TextController,
                           _eContact2TextController,
-                          _ePhone2TextController,
+                          // _ePhone2TextController,
                           _updateMyTitle),
+                      // EContact1(),
                     ),
+                    SizedBox(
+                        child: Text(
+                      'Select 2 Emergency Contacts',
+                      style:
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    )),
+                    EContact1(),
+                    EContact2(),
                     Row(
                       children: <Widget>[
                         Flexible(
@@ -182,12 +229,12 @@ class _SignUpWithMail extends State<SignUpWithMail> {
                                       'email: ${_addressTextController.text}');
                                   print(
                                       'password: ${_eContact1TextController.text}');
-                                  print('name: ${_ePhone1TextController.text}');
+                                  // print('name: ${_ePhone1TextController.text}');
                                   print(
                                       'mobile: ${_eContact2TextController.text}');
-                                  print(
-                                      'intro: ${_ePhone2TextController.text}');
-                                  _insert();
+                                  // print(
+                                  //     'intro: ${_ePhone2TextController.text}');
+                                  // _insert();
                                   _setIsLogin();
 
                                   // print('_userDataMap $_userDataMap');
@@ -219,31 +266,31 @@ class _SignUpWithMail extends State<SignUpWithMail> {
 
   // Button onPressed methods
 
-  void _insert() async {
-    // row to insert
-    Map<String, dynamic> row = {
-      DatabaseHelper.columnName: _nameTextController.text,
-      // DatabaseHelper.columnGender: _userDataMap['gender'],
-      DatabaseHelper.columnEmail: _emailTextController.text,
-      DatabaseHelper.columnPassword: _passwordTextController.text,
-      DatabaseHelper.columnPassword: _confirmPasswordTextController.text,
-      // DatabaseHelper.columnAge: _userDataMap['age'],
-      DatabaseHelper.columnMobile: _mobileTextController.text,
-      DatabaseHelper.columnAddress: _addressTextController.text,
-      DatabaseHelper.columnEContact1: _eContact1TextController.text,
-      DatabaseHelper.columnEPhone1: _ePhone1TextController.text,
-      DatabaseHelper.columnEContact2: _eContact2TextController.text,
-      DatabaseHelper.columnEPhone2: _ePhone2TextController.text,
+  // void _insert() async {
+  //   // row to insert
+  //   Map<String, dynamic> row = {
+  //     DatabaseHelper.columnName: _nameTextController.text,
+  //     // DatabaseHelper.columnGender: _userDataMap['gender'],
+  //     DatabaseHelper.columnEmail: _emailTextController.text,
+  //     DatabaseHelper.columnPassword: _passwordTextController.text,
+  //     DatabaseHelper.columnPassword: _confirmPasswordTextController.text,
+  //     // DatabaseHelper.columnAge: _userDataMap['age'],
+  //     DatabaseHelper.columnMobile: _mobileTextController.text,
+  //     DatabaseHelper.columnAddress: _addressTextController.text,
+  //     DatabaseHelper.columnEContact1: _eContact1TextController.text,
+  //     // DatabaseHelper.columnEPhone1: _ePhone1TextController.text,
+  //     DatabaseHelper.columnEContact2: _eContact2TextController.text,
+  //     // DatabaseHelper.columnEPhone2: _ePhone2TextController.text,
 
-      // DatabaseHelper.columnImageOne: _userDataMap['image0'],
-      // DatabaseHelper.columnImageTwo: _userDataMap['image1'],
-      // DatabaseHelper.columnImageThree: _userDataMap['image2'],
-      // DatabaseHelper.columnImageFour: _userDataMap['image3'],
-      // DatabaseHelper.columnImageIntro: _introduceTextController.text,
-    };
-    final id = await dbHelper.insert(row);
-    print('inserted row id: $id');
-  }
+  //     // DatabaseHelper.columnImageOne: _userDataMap['image0'],
+  //     // DatabaseHelper.columnImageTwo: _userDataMap['image1'],
+  //     // DatabaseHelper.columnImageThree: _userDataMap['image2'],
+  //     // DatabaseHelper.columnImageFour: _userDataMap['image3'],
+  //     // DatabaseHelper.columnImageIntro: _introduceTextController.text,
+  //   };
+  //   final id = await dbHelper.insert(row);
+  //   print('inserted row id: $id');
+  // }
 
   void _query() async {
     final allRows = await dbHelper.queryAllRows();
