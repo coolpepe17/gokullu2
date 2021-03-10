@@ -3,6 +3,7 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:gokullu/screen/About/about_app.dart';
 // import 'package:gokullu/screen/About/widget/kulluroute.dart';
 import 'package:gokullu/screen/about/aboutus.dart';
+import 'package:gokullu/screen/about/widget/kulluroute.dart';
 import 'package:gokullu/screen/trek_menu/trek_menu.dart';
 // import 'package:gokullu/userscreen/home.dart';
 
@@ -48,9 +49,10 @@ class MyNavBar extends StatefulWidget {
 class _MyNavBarState extends State<MyNavBar> {
   int _currentIndex = 1;
   final List<Widget> _children = [
-    TrekMenu(),
-    AboutApp(),
     AboutUs(),
+    AboutApp(),
+    KulluRoute(),
+    TrekMenu(),
   ];
 
   void onTappedBar(int index) {
@@ -73,9 +75,11 @@ class _MyNavBarState extends State<MyNavBar> {
           animationDuration: Duration(milliseconds: 300),
           animationCurve: Curves.ease,
           items: <Widget>[
-            Icon(Icons.list_alt, size: 30, color: Colors.white),
-            Icon(Icons.home_rounded, size: 30, color: Colors.white),
             Icon(Icons.alternate_email_outlined, size: 30, color: Colors.white),
+            Icon(Icons.home_rounded, size: 30, color: Colors.white),
+            Icon(Icons.map_rounded, size: 30, color: Colors.white),
+            Icon(Icons.list_alt, size: 30, color: Colors.white),
+            // Icon(Icons.alternate_email_outlined, size: 30, color: Colors.white),
           ],
           // animationDuration: Duration(milliseconds: 300),
           // index: 1,

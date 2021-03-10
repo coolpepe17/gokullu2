@@ -79,27 +79,27 @@ class _KulluRouteState extends State<KulluRoute> {
                 ),
               ),
               SizedBox(height: 20),
-              Container(
-                padding: const EdgeInsets.fromLTRB(40, 5, 40, 5),
-                child: Row(
-                  children: <Widget>[
-                    Expanded(
-                        child: Button(
-                      title: 'View Treks',
-                      press: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) {
-                              return TrekMenu();
-                            },
-                          ),
-                        );
-                      },
-                    )),
-                  ],
-                ),
-              ),
+              // Container(
+              //   padding: const EdgeInsets.fromLTRB(40, 5, 40, 5),
+              //   child: Row(
+              //     children: <Widget>[
+              //       Expanded(
+              //           child: Button(
+              //         title: 'View Treks',
+              //         press: () {
+              //           Navigator.push(
+              //             context,
+              //             MaterialPageRoute(
+              //               builder: (context) {
+              //                 return TrekMenu();
+              //               },
+              //             ),
+              //           );
+              //         },
+              //       )),
+              //     ],
+              //   ),
+              // ),
             ],
           ),
         ),
