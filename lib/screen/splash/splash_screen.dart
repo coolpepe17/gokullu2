@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gokullu/trial_login/login.dart';
 // import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gokullu/userscreen/home.dart';
 
@@ -18,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
         context,
         MaterialPageRoute(
           builder: (context) {
-            return MyHomePage();
+            return LogHome();
           },
         ),
         (route) => false,

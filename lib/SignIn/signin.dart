@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gokullu/constant.dart';
+import 'package:gokullu/widget/navbar.dart';
 import 'package:http/http.dart' as http;
+import 'package:shared_preferences/shared_preferences.dart';
 
 class SignIn extends StatefulWidget {
   @override
@@ -10,6 +12,11 @@ class SignIn extends StatefulWidget {
 class _SignIn extends State<SignIn> {
   final _emailTextController = TextEditingController();
   final _passwordTextController = TextEditingController();
+
+  _setIsLogin() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.setBool('isLogin', true);
+  }
 
   @override
   void dispose() {
@@ -96,24 +103,41 @@ class _SignIn extends State<SignIn> {
                 child: Padding(
                   padding: const EdgeInsets.only(left: 8.0, right: 8.0),
                   child: RaisedButton(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: new BorderRadius.circular(12.0),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: new BorderRadius.circular(12.0),
 //                    side: BorderSide(color: Colors.red)
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Text(
-                          'Sign in',
-                          style: TextStyle(fontSize: 28),
-                        ),
-                      ],
-                    ),
-                    textColor: Colors.white,
-                    color: mPrimaryColor,
-                    padding: EdgeInsets.all(10),
-                    onPressed: () {},
-                  ),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Text(
+                            'Sign in',
+                            style: TextStyle(fontSize: 28),
+                          ),
+                        ],
+                      ),
+                      textColor: Colors.white,
+                      color: mPrimaryColor,
+                      padding: EdgeInsets.all(10),
+                      onPressed: () {
+                        // if (_pageController.page.toInt() == 0) {
+                        print('Email: ${_emailTextController.text}');
+                        print('Password: ${_passwordTextController.text}');
+
+                        _setIsLogin();
+
+                        // print('_userDataMap $_userDataMap');
+
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => MyNavBar()),
+                        );
+                        // } else {
+                        //   _pageController.animateToPage(
+                        //       _pageController.page.toInt() + 1,
+                        //       duration: Duration(milliseconds: 200),
+                        //       curve: Curves.easeIn);
+                      }),
                 ),
               ),
             ],

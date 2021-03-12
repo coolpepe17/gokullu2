@@ -4,6 +4,7 @@ import 'package:gokullu/SignUp/widgets/e_contact1.dart';
 import 'package:gokullu/SignUp/signupform.dart';
 import 'package:gokullu/SignUp/widgets/e_contact2.dart';
 import 'package:gokullu/screen/about/about_app.dart';
+import 'package:gokullu/widget/navbar.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../constant.dart';
 import 'package:http/http.dart' as http;
@@ -217,21 +218,21 @@ class _SignUpWithMail extends State<SignUpWithMail> {
                                 padding: EdgeInsets.all(10),
                                 onPressed: () {
                                   // if (_pageController.page.toInt() == 0) {
-                                  print('email: ${_emailTextController.text}');
+                                  print('Email: ${_emailTextController.text}');
                                   print(
-                                      'password: ${_passwordTextController.text}');
+                                      'Password: ${_passwordTextController.text}');
                                   print(
-                                      'confirmPassword: ${_confirmPasswordTextController.text}');
-                                  print('name: ${_nameTextController.text}');
+                                      'Confirm Password: ${_confirmPasswordTextController.text}');
+                                  print('Name: ${_nameTextController.text}');
                                   print(
-                                      'mobile: ${_mobileTextController.text}');
+                                      'Mobile: ${_mobileTextController.text}');
                                   print(
-                                      'email: ${_addressTextController.text}');
-                                  print(
-                                      'password: ${_eContact1TextController.text}');
-                                  // print('name: ${_ePhone1TextController.text}');
-                                  print(
-                                      'mobile: ${_eContact2TextController.text}');
+                                      'Address: ${_addressTextController.text}');
+                                  // print(
+                                  //     'password: ${_eContact1TextController.text}');
+                                  // // print('name: ${_ePhone1TextController.text}');
+                                  // print(
+                                  //     'mobile: ${_eContact2TextController.text}');
                                   // print(
                                   //     'intro: ${_ePhone2TextController.text}');
                                   // _insert();
@@ -242,7 +243,7 @@ class _SignUpWithMail extends State<SignUpWithMail> {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => AboutApp()),
+                                        builder: (context) => MyNavBar()),
                                   );
                                   // } else {
                                   //   _pageController.animateToPage(
