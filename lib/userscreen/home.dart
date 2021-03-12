@@ -16,9 +16,9 @@ class _MyHomePageState extends State<MyHomePage> {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     bool isLogin = (prefs.get('isLogin') ?? false);
 
-    setState(() {
-      _isLogin = isLogin;
-    });
+    // setState(() {
+    //   _isLogin = isLogin;
+    // });
 
     print('prefs $isLogin');
   }
@@ -39,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/images/sky1.jpg'),
+                image: AssetImage('assets/images/bg.jpg'),
                 // NetworkImage(
                 //     'https://cdn.pixabay.com/photo/2020/03/19/04/58/coconut-trees-4946270_1280.jpg'),
                 fit: BoxFit.fill)),
@@ -50,11 +50,6 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
       ),
-      // bottomNavigationBar: CurvedNavigationBar(items: <Widget>[
-      //   Icon(Icons.home_rounded, size: 16, color: mPrimaryTextColor),
-      //   Icon(Icons.list_alt, size: 16, color: mPrimaryTextColor),
-      //   Icon(Icons.verified_user, size: 16, color: mPrimaryTextColor),
-      // ]),
     );
   }
 }

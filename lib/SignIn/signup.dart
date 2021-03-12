@@ -65,39 +65,6 @@ class _SignUp extends State<SignUp> {
                 ),
                 margin: EdgeInsets.only(left: 10, right: 10, bottom: 14),
               ),
-              // Container(
-              //   child: new RawMaterialButton(
-              //     onPressed: () {},
-              //     child: Text(
-              //       'f',
-              //       style: TextStyle(
-              //           color: Colors.white,
-              //           fontSize: 56,
-              //           fontWeight: FontWeight.bold),
-              //     ),
-              //     shape: new CircleBorder(),
-              //     elevation: 2.0,
-              //     fillColor: Colors.blue[900],
-              //     padding: const EdgeInsets.all(8.0),
-              //   ),
-              //   margin: EdgeInsets.only(left: 10, right: 10, bottom: 14),
-              // ),
-              // Container(
-              //   child: new RawMaterialButton(
-              //     onPressed: () {},
-              //     child: Image.network(
-              //       'https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/64px-Google_%22G%22_Logo.svg.png',
-              //       fit: BoxFit.cover,
-              //       width: 40,
-              //       height: 40,
-              //     ),
-              //     shape: new CircleBorder(),
-              //     elevation: 2.0,
-              //     fillColor: Colors.white,
-              //     padding: const EdgeInsets.all(22.0),
-              //   ),
-              //   margin: EdgeInsets.only(left: 10, right: 10, bottom: 14),
-              // ),
             ],
           )
         ],

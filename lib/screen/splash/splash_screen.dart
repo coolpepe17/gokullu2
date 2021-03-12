@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gokullu/trial_login/login.dart';
-// import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gokullu/userscreen/home.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -19,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
         context,
         MaterialPageRoute(
           builder: (context) {
-            return LogHome();
+            return MyHomePage();
           },
         ),
         (route) => false,
@@ -34,7 +32,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       body: Container(
         child: Center(
-          child: Image.asset('assets/images/splash4.png'),
+          child: Image.asset('assets/images/gks.png'),
           // child: SvgPicture.asset('assets/icons/logo2_s.svg'),
         ),
       ),
