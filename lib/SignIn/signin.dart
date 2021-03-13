@@ -42,9 +42,9 @@ class _SignIn extends State<SignIn> {
       child: Column(
         children: <Widget>[
           Padding(
-            padding: const EdgeInsets.only(left: 18.0, top: 10),
+            padding: const EdgeInsets.only(left: 0, top: 10),
             child: Align(
-              alignment: Alignment.centerLeft,
+              alignment: Alignment.center,
               child: Text(
                 'Sign In',
                 style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
@@ -169,7 +169,7 @@ class _SignIn extends State<SignIn> {
                         children: <Widget>[
                           Text(
                             'Sign in',
-                            style: TextStyle(fontSize: 28),
+                            style: TextStyle(fontSize: 25),
                           ),
                         ],
                       ),

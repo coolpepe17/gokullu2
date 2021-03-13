@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 // import 'package:gokullu/SignUp/emergency.dart';
 import 'package:gokullu/constant.dart';
-import 'package:gokullu/screen/about/about_app.dart';
 import 'package:gokullu/screen/preferences/widget/header_image.dart';
 import 'package:gokullu/screen/trek_menu/widget/trek_info.dart';
-import 'package:gokullu/widget/round_button.dart';
 
 class TrekDetails extends StatelessWidget {
   final int index;
@@ -49,30 +47,33 @@ class TrekDetails extends StatelessWidget {
             //   //   press: () {},
             // ),
             SizedBox(height: 15),
-            Container(
-              padding: const EdgeInsets.fromLTRB(40, 5, 40, 5),
-              child: Row(children: <Widget>[
-                Expanded(
-                  child: Button(
-                    title: 'Start Trek',
-                    press: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) {
-                            return AboutApp();
-                          },
-                        ),
-                      );
-                    },
-                  ),
-                ),
-              ]),
-              // padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 16),
-              // child: RoundButton(
-              //   title: 'Proceed to Start Trek',
-              //   press: () {},
-            ),
+
+            //Start Trek Button
+
+            // Container(
+            //   padding: const EdgeInsets.fromLTRB(40, 5, 40, 5),
+            //   child: Row(children: <Widget>[
+            //     Expanded(
+            //       child: Button(
+            //         title: 'Start Trek',
+            //         press: () {
+            //           Navigator.push(
+            //             context,
+            //             MaterialPageRoute(
+            //               builder: (context) {
+            //                 return AboutApp();
+            //               },
+            //             ),
+            //           );
+            //         },
+            //       ),
+            //     ),
+            //   ]),
+            //   // padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 16),
+            //   // child: RoundButton(
+            //   //   title: 'Proceed to Start Trek',
+            //   //   press: () {},
+            // ),
           ],
         ),
       ),

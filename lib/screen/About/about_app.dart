@@ -2,10 +2,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:gokullu/constant.dart';
 import 'package:gokullu/screen/about/widget/header_image.dart';
-import 'package:gokullu/screen/about/widget/kulluroute.dart';
 import 'package:gokullu/screen/about/widget/nic.dart';
-import 'package:gokullu/screen/trek_menu/trek_menu.dart';
-import 'package:gokullu/widget/round_button.dart';
 import 'widget/about.dart';
 
 class AboutApp extends StatelessWidget {
@@ -20,54 +17,56 @@ class AboutApp extends StatelessWidget {
             // About(),
             // MyLinHeaderImage          // SizedBox(height: 50),
             HeaderImage(),
-            // SizedBox(height: 20),
+            SizedBox(height: 30),
             AboutText(),
             // SizedBox(height: 10),
             //Button(),
-            Container(
-              padding: const EdgeInsets.fromLTRB(50, 4, 50, 4),
-              child: Row(
-                children: <Widget>[
-                  Expanded(
-                      child: Button(
-                    title: 'How to reach Kullu',
-                    press: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) {
-                            return KulluRoute();
-                          },
-                        ),
-                      );
-                    },
-                  )),
-                ],
-              ),
-            ),
-            SizedBox(height: 25),
-            Container(
-              padding: const EdgeInsets.fromLTRB(50, 4, 50, 4),
-              child: Row(
-                children: <Widget>[
-                  Expanded(
-                      child: Button(
-                    title: 'View Treks',
-                    press: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) {
-                            return TrekMenu();
-                          },
-                        ),
-                      );
-                    },
-                  )),
-                ],
-              ),
-            ),
-            SizedBox(height: 30),
+
+            // Container(
+            //   padding: const EdgeInsets.fromLTRB(50, 4, 50, 4),
+            //   child: Row(
+            //     children: <Widget>[
+            //       Expanded(
+            //           child: Button(
+            //         title: 'How to reach Kullu',
+            //         press: () {
+            //           Navigator.push(
+            //             context,
+            //             MaterialPageRoute(
+            //               builder: (context) {
+            //                 return KulluRoute();
+            //               },
+            //             ),
+            //           );
+            //         },
+            //       )),
+            //     ],
+            //   ),
+            // ),
+
+            // SizedBox(height: 25),
+            // Container(
+            //   padding: const EdgeInsets.fromLTRB(50, 4, 50, 4),
+            //   child: Row(
+            //     children: <Widget>[
+            //       Expanded(
+            //           child: Button(
+            //         title: 'View Treks',
+            //         press: () {
+            //           Navigator.push(
+            //             context,
+            //             MaterialPageRoute(
+            //               builder: (context) {
+            //                 return TrekMenu();
+            //               },
+            //             ),
+            //           );
+            //         },
+            //       )),
+            //     ],
+            //   ),
+            // ),
+            SizedBox(height: 100),
             DevNic(),
           ],
         ),
