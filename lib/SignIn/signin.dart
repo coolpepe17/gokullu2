@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:gokullu/constant.dart';
 import 'package:gokullu/trial_login/model/login_model.dart';
 import 'package:gokullu/widget/navbar.dart';
-import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SignIn extends StatefulWidget {
@@ -75,26 +74,6 @@ class _SignIn extends State<SignIn> {
                         return null;
                       }
                     },
-                    // keyboardType: TextInputType.emailAddress,
-                    // onSaved: (input) => loginRequestModel.email = input,
-                    // validator: (input) => !input.contains('@')
-                    //     ? "Email Id should be valid"
-                    //     : null,
-                    // decoration: new InputDecoration(
-                    //   hintText: "Email Address",
-                    //   enabledBorder: UnderlineInputBorder(
-                    //       borderSide: BorderSide(
-                    //           color: Theme.of(context)
-                    //               .accentColor
-                    //               .withOpacity(0.2))),
-                    //   focusedBorder: UnderlineInputBorder(
-                    //       borderSide:
-                    //           BorderSide(color: Theme.of(context).accentColor)),
-                    //   prefixIcon: Icon(
-                    //     Icons.email,
-                    //     color: Theme.of(context).accentColor,
-                    //   ),
-                    // ),
                     controller: _emailTextController,
                   ),
                 ),
@@ -115,39 +94,6 @@ class _SignIn extends State<SignIn> {
                         return null;
                       }
                     },
-                    // style: TextStyle(color: Theme.of(context).accentColor),
-                    // keyboardType: TextInputType.text,
-                    // onSaved: (input) => loginRequestModel.password = input,
-                    // validator: (input) => input.length < 3
-                    //     ? "Password should be more than 3 characters"
-                    //     : null,
-                    // obscureText: hidePassword,
-                    // decoration: new InputDecoration(
-                    //   hintText: "Password",
-                    //   enabledBorder: UnderlineInputBorder(
-                    //       borderSide: BorderSide(
-                    //           color: Theme.of(context)
-                    //               .accentColor
-                    //               .withOpacity(0.2))),
-                    //   focusedBorder: UnderlineInputBorder(
-                    //       borderSide:
-                    //           BorderSide(color: Theme.of(context).accentColor)),
-                    //   prefixIcon: Icon(
-                    //     Icons.lock,
-                    //     color: Theme.of(context).accentColor,
-                    //   ),
-                    //   suffixIcon: IconButton(
-                    //     onPressed: () {
-                    //       setState(() {
-                    //         hidePassword = !hidePassword;
-                    //       });
-                    //     },
-                    //     color: Theme.of(context).accentColor.withOpacity(0.4),
-                    //     icon: Icon(hidePassword
-                    //         ? Icons.visibility_off
-                    //         : Icons.visibility),
-                    //   ),
-                    // ),
                     controller: _passwordTextController,
                   ),
                 ),

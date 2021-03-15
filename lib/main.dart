@@ -19,6 +19,13 @@ class MyApp extends StatelessWidget {
           visualDensity: VisualDensity.adaptivePlatformDensity,
           primaryColor: Colors.purple,
           accentColor: Colors.purple,
+          textTheme: TextTheme(
+            headline1: TextStyle(fontSize: 70.0, fontWeight: FontWeight.bold),
+            headline5: TextStyle(fontSize: 40.0, fontWeight: FontWeight.bold),
+            headline6: TextStyle(fontSize: 35.0, fontWeight: FontWeight.bold),
+            bodyText1: TextStyle(fontSize: 20.0),
+            bodyText2: TextStyle(fontSize: 18.0),
+          ),
           textSelectionTheme: TextSelectionThemeData(
             cursorColor: Colors.purple,
             selectionColor: Colors.purple,
