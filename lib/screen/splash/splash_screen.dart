@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:gokullu/trial_login/login.dart';
-import 'package:gokullu/userscreen/home.dart';
+import 'package:gokullu/trial_login/login_page.dart';
+// import 'package:gokullu/trial_login/Pages/model/login_page.dart';
+// import 'Pages/model/login_page.dart';
+// import 'package:gokullu/userscreen/home.dart';
+
+// import '../../signin.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -18,7 +22,7 @@ class _SplashScreenState extends State<SplashScreen> {
         context,
         MaterialPageRoute(
           builder: (context) {
-            return IntroPage();
+            return SignIn();
           },
         ),
         (route) => false,

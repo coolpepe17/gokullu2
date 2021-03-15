@@ -2,27 +2,32 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gokullu/screen/About/about_app.dart';
 import 'package:gokullu/trial_login/api/api.dart';
-import 'package:gokullu/trial_login/register.dart';
 
 import '../constant.dart';
 import 'Pages/custom_widget.dart';
 
 // ----------------------------------------------------------------
 
-class SignIn extends StatefulWidget {
+class SignUp extends StatefulWidget {
   @override
-  _SignInState createState() => _SignInState();
+  _SignUpState createState() => _SignUpState();
 }
 
-class _SignInState extends State<SignIn> {
+class _SignUpState extends State<SignUp> {
   final _formKey = GlobalKey<FormState>();
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
+  final confirmPasswordController = TextEditingController();
+  final mobileController = TextEditingController();
+
   String message = '';
   @override
   void dispose() {
     emailController.dispose();
     passwordController.dispose();
+    confirmPasswordController.dispose();
+    mobileController.dispose();
+
     super.dispose();
   }
 
@@ -73,27 +78,50 @@ class _SignInState extends State<SignIn> {
                           return null;
                         },
                       ),
-                      SizedBox(height: 20),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Text('New User?'),
-                          FlatButton(
-                            child: Text(
-                              'SignUp',
-                              style: TextStyle(
-                                  fontSize: 18, color: mPrimaryTextColor),
-                            ),
-                            onPressed: () {
-                              Navigator.push(context,
-                                  MaterialPageRoute(builder: (context) {
-                                return SignUp();
-                              }));
-                            },
-                          )
-                        ],
+                      TextFormField(
+                        obscureText: true,
+                        decoration: InputDecoration(
+                            labelText: 'Confirm Password',
+                            labelStyle:
+                                TextStyle(fontSize: 14, color: Colors.purple)),
+                        controller: confirmPasswordController,
+                        validator: (value) {
+                          if (value.isEmpty) {
+                            return 'Password cannot be empty';
+                          }
+                          return null;
+                        },
                       ),
-                      SizedBox(height: 10),
+                      TextFormField(
+                        keyboardType: TextInputType.phone,
+                        // obscureText: true,
+                        decoration: InputDecoration(
+                            labelText: 'Mobile No.',
+                            labelStyle:
+                                TextStyle(fontSize: 14, color: Colors.purple)),
+                        controller: mobileController,
+                        validator: (value) {
+                          if (value.isEmpty) {
+                            return 'Mobile cannot be empty';
+                          }
+                          return null;
+                        },
+                      ),
+                      SizedBox(height: 50),
+                      // Row(
+                      //   mainAxisAlignment: MainAxisAlignment.center,
+                      //   children: <Widget>[
+                      //     Text('New User?'),
+                      //     FlatButton(
+                      //       child: Text(
+                      //         'SignUp',
+                      //         style: TextStyle(
+                      //             fontSize: 18, color: mPrimaryTextColor),
+                      //       ),
+                      //       onPressed: () {},
+                      //     )
+                      //   ],
+                      // ),
                       CustomButton(
                         onBtnPressed: () async {
                           if (_formKey.currentState.validate()) {
@@ -118,7 +146,7 @@ class _SignInState extends State<SignIn> {
                             }
                           }
                         },
-                        btnText: 'Login',
+                        btnText: 'Register',
                       ),
                       SizedBox(height: 10),
                       Text(message),
@@ -135,27 +163,6 @@ class _SignInState extends State<SignIn> {
     );
   }
 }
-
-//Pankaj
-//   fetchData() async {
-//     try {
-//       String url = 'http://164.100.207.5/gokullu/Service1.svc/login?';
-//       Map<String, String> headers = {'Content-Type': 'application/json'};
-//       var bdata = jsonEncode({
-//         "trekkerEmail": "${_emailTextController.text}",
-//         "trekkerPassword": "${_passwordTextController.text}"
-//         // "trekkerEmail": "9418017999",
-//         // "trekkerPassword": "raj@12345"
-//       });
-
-//       Response resp = await http.post(url, headers: headers, body: bdata);
-//       if (resp.statusCode == 200) {
-//         var decoded = jsonDecode(resp.body);
-//         print(decoded);
-//       }
-//     } catch (e) {}
-//   }
-// }
 
 // ----------------------------------------------------------------
 

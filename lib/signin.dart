@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 
-class SignIn extends StatefulWidget {
+class LogIn extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() => _SignIn();
+  State<StatefulWidget> createState() => _LogIn();
 }
 
-class _SignIn extends State<SignIn> {
+class _LogIn extends State<LogIn> {
+  final _formKey = GlobalKey<FormState>();
   final _emailTextController = TextEditingController();
   final _passwordTextController = TextEditingController();
-
+  String message = '';
   @override
   void dispose() {
     _emailTextController.dispose();
