@@ -3,7 +3,7 @@ import 'package:gokullu/trial_login/Pages/custom_widget.dart';
 import 'package:gokullu/trial_login/register.dart';
 
 import '../constant.dart';
-import 'login_page.dart';
+// import 'login_page.dart';
 
 // -------------------------------------------------
 
